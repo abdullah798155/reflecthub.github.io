@@ -1,0 +1,284 @@
+html, body {
+    height: 100%; /* Ensure the html and body take full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #c8ffcd; /* Light Green */
+    color: #6fd34e; /* Text Color */
+    position: sticky; /* Sticky position */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    width: 100%; /* Ensure full-width */
+    padding: 0; /* Remove default padding */
+    height: 80px; /* Set a fixed height for the navbar */
+}
+
+/* Flex properties for container */
+.container-fluid {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make it take full height of the navbar */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+@media (max-width: 1700px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 15vw; /* Responsive width for logo on smaller screens */
+        max-width: 90px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 15vw; /* Responsive width for logo on smaller screens */
+        max-width: 70px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand h1 {
+        font-size: 1.2rem; /* Further smaller font size */
+    }
+
+    .navbar-brand img {
+        width: 25vw; /* Logo size for mobile */
+        max-width: 50px; 
+    }
+
+    /* Further adjustments */
+    .navbar {
+        padding: 5px; /* Add padding for mobile */
+    }
+}
+
+.menu-container {
+    height: auto; /* Increased height */
+    background-color: #c8ffcd;
+    padding: 15px 0; /* Added padding for vertical spacing */
+    overflow-y: auto; /* Prevent overflow */
+}
+
+.btn-group-toggle {
+    width: 100%; /* Full width for better distribution */
+    display: flex; /* Use flexbox for buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+    justify-content: center; /* Center buttons */
+    overflow: hidden;
+    
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Bootstrap Primary Blue */
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    padding: 12px 20px; /* Increased padding for better spacing */
+    margin: 5px; /* Margin between buttons for spacing */
+    flex: 1 1 150px; /* Allow buttons to grow and shrink, with a minimum width */
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 20px) {
+    .btn-group-toggle {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center buttons */
+    }
+
+    .btn-secondary {
+        width: 90%; /* Make buttons wider on small screens */
+        margin: 5px 0; /* Margin between stacked buttons */
+    }
+}
+
+.content-container {
+    flex: 1; /* Allow content container to grow and fill available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: stretch; /* Make children stretch to full width */
+    padding: 20px;
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Adjust height based on content */
+    overflow: auto; /* Allow scrolling if content is too tall */
+    margin: 0; /* Remove margin */
+    background-color: #c8ffcd;
+    
+}
+
+/* Individual Content Div Styling */
+.content-div {
+   
+    display: none;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.25rem;
+    width: 98%; /* Take 98% of the container width */
+    height: auto; /* Let height adjust based on content */
+    color: #333333;
+    margin: 0 auto; /* Center within container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 200px);
+}
+/* Footer with Scrollability */
+.footer {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    background-color: #4CAF50; /* Matching Green */
+    color: #ffffff;
+    text-align: center;
+}
+.footer p {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Colors for each content div */
+#div1 {
+    background-color: #73ff7f;
+    color: #333333;
+}
+#div2 {
+    background-color: #FF7043;
+    color: #ffffff;
+}
+#div3 {
+    background-color: #29B6F6;
+    color: #ffffff;
+}
+#div4 {
+    background-color: #AB47BC;
+    color: #ffffff;
+}
+/* Table Styling */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid black;
+    padding: 12px 15px;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.custom-table img {
+    width: 50px;
+    height: auto;
+}
+
+.custom-table a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.custom-table a:hover {
+    text-decoration: underline;
+}
+
+#typing-effect {
+    font-family: 'Courier New', monospace;
+    color: #009900;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    font-size: 60px;
+    font-weight: bold;
+    border-right: 2px solid rgb(26, 243, 48); /* Blinking cursor */
+    width: 15em;
+    animation: typing 2.3s steps(40, end), blinkCursor 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Expand to full width of the container */
+    }
+}
+
+@keyframes blinkCursor {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(37, 245, 62);
+    }
+}
+
+  .swipers {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    color: #3fc1f9; /* Text color */
+    font-size: 2rem; /* Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    transition: left 0s 5s; /* Delay the start of the animation */
+}
+
+.swipers.start::before {
+    animation: swipe 1s linear infinite; /* Swipe animation */
+}
+
+@keyframes swipe {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* Move to off-screen right */
+    }
+}
