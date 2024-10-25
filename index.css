@@ -107,9 +107,7 @@ body {
     flex: 1 1 150px; /* Allow buttons to grow and shrink, with a minimum width */
 }
 
-.btn-secondary:hover {
-    background-color: #0056b3; /* Darker Blue */
-}
+
 
 /* Responsive Design */
 @media (max-width: 20px) {
@@ -134,37 +132,23 @@ body {
     height: auto; /* Adjust height based on content */
     overflow: auto; /* Allow scrolling if content is too tall */
     margin: 0; /* Remove margin */
-    background-color: #c8ffcd;
-    
+    background-color: #c8ffcd;   
 }
 
 /* Individual Content Div Styling */
 .content-div {
-   
-    display: none;
-    padding: 2rem;
+    display: none; /* Initially hidden */
+    padding: 2rem; /* Initial padding */
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Initial font size */
     width: 98%; /* Take 98% of the container width */
     height: auto; /* Let height adjust based on content */
     color: #333333;
     margin: 0 auto; /* Center within container */
     overflow-y: auto; /* Enable vertical scrolling */
-    max-height: calc(100vh - 200px);
-}
-/* Footer with Scrollability */
-.footer {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-    background-color: #4CAF50; /* Matching Green */
-    color: #ffffff;
-    text-align: center;
-}
-.footer p {
-    margin: 0;
-    color: #ffffff;
+    max-height: calc(100vh - 200px); /* Limit height */
 }
 
 /* Colors for each content div */
@@ -184,39 +168,115 @@ body {
     background-color: #AB47BC;
     color: #ffffff;
 }
+
 /* Table Styling */
 .custom-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 20px 0;
     font-size: 1.1rem;
     text-align: left;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Keeps rounded corners on the edges */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    background-color: #f9f9fb; /* Light aesthetic background */
 }
 
-.custom-table th, .custom-table td {
-    border: 1px solid black;
-    padding: 12px 15px;
-}
-
+/* Table Header */
 .custom-table th {
-    background-color: #f2f2f2;
+    background-color: #e0f7fa; /* Light teal background */
     font-weight: bold;
-    border-bottom: 2px solid black;
+    padding: 14px 16px;
+    color: #00796b; /* Dark teal text color */
+    border-bottom: 2px solid #b2dfdb;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Thin black border for distinction */
 }
 
+/* Table Cells */
+.custom-table th, .custom-table td {
+    padding: 14px 16px;
+    color: #333333;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Thin black border for distinction */
+}
+
+/* Table Images */
 .custom-table img {
     width: 50px;
     height: auto;
+    border-radius: 5px; /* Rounded image corners */
 }
 
+/* Links */
 .custom-table a {
     color: #007BFF;
     text-decoration: none;
+    font-weight: 600;
 }
 
 .custom-table a:hover {
     text-decoration: underline;
 }
+
+/* Hover Effect */
+.custom-table tbody tr {
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e0f2f1; /* Slightly darker teal on hover */
+}
+
+/* Rounded corners for top row only */
+.custom-table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.custom-table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .content-div {
+        padding: 1.5rem; /* Reduce padding */
+        font-size: 1rem; /* Smaller font size */
+        width: 95%; /* Allow more width on smaller screens */
+    }
+
+    .custom-table {
+        font-size: 1rem; /* Adjust font size for tables */
+    }
+
+    .custom-table th, .custom-table td {
+        padding: 10px; /* Reduce padding in table cells */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-container {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    .content-div {
+        padding: 1rem; /* Further reduce padding */
+        font-size: 0.9rem; /* Smaller font size for very small screens */
+        width: 100%; /* Use full width */
+    }
+
+    .custom-table {
+        font-size: 0.9rem; /* Further reduce font size */
+    }
+
+    .custom-table th, .custom-table td {
+        padding: 8px; /* Further reduce padding in table cells */
+    }
+}
+
 
 #typing-effect {
     font-family: 'Courier New', monospace;
@@ -230,6 +290,20 @@ body {
     font-weight: bold;
     border-right: 2px solid rgb(26, 243, 48); /* Blinking cursor */
     width: 15em;
+    animation: typing 3.7s steps(60, end), blinkCursor 0.5s step-end infinite;
+}
+.typing-effect {
+    font-family: 'Courier New', monospace;
+    color: #009900;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-weight: bold;
+    border-right: 2px solid rgb(26, 243, 48); /* Blinking cursor */
+    width: 8em;
     animation: typing 2.3s steps(40, end), blinkCursor 0.5s step-end infinite;
 }
 
@@ -273,6 +347,28 @@ body {
 .swipers.start::before {
     animation: swipe 1s linear infinite; /* Swipe animation */
 }
+  .swipers1 {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    /* color: #3fc1f9; Text color */
+    /* font-size: 2rem; Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers1::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    transition: left 0s 5s; /* Delay the start of the animation */
+}
+
+.swipers1.start::before {
+    animation: swipe 1s linear infinite; /* Swipe animation */
+}
 
 @keyframes swipe {
     0% {
@@ -280,5 +376,127 @@ body {
     }
     100% {
         left: 100%; /* Move to off-screen right */
+    }
+}
+
+
+
+.ground {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+}
+
+/* Panel Icon Styles */
+.panel-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
+    background-color: #2d2d2d; /* Green */
+    /* border-radius: 50%; */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1001; /* Above other elements */
+}
+
+/* Quick Link Styles */
+.quick-link {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* position: fixed;
+    bottom: 20px;
+    left: 20px; */
+    background-color: #2d2d2d;; /* Green */
+    /* border-radius: 50%; */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1001; /* Above other elements */
+}
+.norm {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* position: fixed;
+    bottom: 20px;
+    left: 20px; */
+    background-color: #2d2d2d;; /* Green */
+    /* border-radius: 50%; */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1001; /* Above other elements */
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Below the panel icon and quick link */
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 8px;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+    animation: popupAnimation 0.5s ease forwards;
+}
+
+@keyframes popupAnimation {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button Styles */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .panel-icon,
+    .quick-link {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size */
+        bottom: 15px; /* Adjust bottom position */
+        right: 15px; /* Adjust right position for panel icon */
+        left: auto; /* Reset left position for quick link */
+    }
+
+    .quick-link {
+        left: 15px; /* Adjust left position for quick link */
+    }
+
+    .popup-content {
+        width: 90%; /* Increase width on smaller screens */
+        margin: 10% auto; /* Adjust margin for smaller screens */
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button */
     }
 }
