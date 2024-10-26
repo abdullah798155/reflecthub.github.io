@@ -523,12 +523,54 @@ body {
     height: 100%; /* Full height of the h1 */
     background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
     transition: left 0s 5s; /* Delay the start of the animation */
+    /* background-image: url('./green.png'); */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
 }
 
 .swipers.start::before {
     animation: swipe 1s linear infinite; /* Swipe animation */
 }
-  .swipers1 {
+@keyframes swipe {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* Move to off-screen right */
+    }
+}
+  .swipers2 {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    /* color: #3fc1f9; Text color */
+    /* font-size: 2rem; Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers2::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    transition: left 0s 5s; /* Delay the start of the animation */
+    /* background-image: url('./green.png'); */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
+}
+
+.swipers2.start::before {
+    animation: swipe 1s linear infinite; /* Swipe animation */
+}
+@keyframes swipe {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* Move to off-screen right */
+    }
+}
+.swipers1 {
     position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
     overflow: hidden; /* Hide any overflow */
     /* color: #3fc1f9; Text color */
@@ -541,25 +583,26 @@ body {
     position: absolute; /* Position absolutely to cover the text */
     top: 0;
     left: -100%; /* Start off-screen to the left */
-    width: 100%; /* Full width */
+    width: 35%; /* Full width */
     height: 100%; /* Full height of the h1 */
-    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    /* background: rgba(255, 255, 255, 0.5); Green dim light with opacity */
+    background-image: url('./green.png');
+    background-size: contain; /* Ensure the image scales correctly */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the pseudo-element */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
     transition: left 0s 5s; /* Delay the start of the animation */
 }
 
 .swipers1.start::before {
-    animation: swipe 1s linear infinite; /* Swipe animation */
+    animation: swipe1 2s linear infinite; /* 1s for swipe + 2s for pause = 3s total */
 }
 
-@keyframes swipe {
-    0% {
-        left: -100%; /* Start off-screen to the left */
-    }
-    100% {
-        left: 100%; /* Move to off-screen right */
-    }
+@keyframes swipe1 {
+    0% { left: 0%; }
+    33.33% { left: 65%; }  /* Swipe happens in first 1s */
+    100% { left: 0%; }    /* Stays for remaining 2s */
 }
-
 
 
 .ground {
@@ -568,19 +611,21 @@ body {
 
 /* Panel Icon Styles */
 .panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00bcd4; /* Light blue background */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px; /* rounded panel */
     cursor: pointer;
-    transition: transform 0.3s ease;
-    /* position: fixed;
-    bottom: 20px;
-    right: 20px; */
-    background-color: #2d2d2d; /* Green */
-    /* border-radius: 50%; */
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: white;
-    z-index: 1001; /* Above other elements */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.panel-icon:hover {
+    background-color: #0097a7; /* darker blue on hover */
+    transform: scale(1.05); /* slight zoom on hover */
+}
 /* Quick Link Styles */
 .quick-link {
     cursor: pointer;
