@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Wait for 1.3 seconds (1300 milliseconds)
     setTimeout(() => {
         // Select all elements with class names swipers and swipers1
-        const swipersElements = document.querySelectorAll('.swipers, .swipers1');
+        const swipersElements = document.querySelectorAll('.swipers, .swipers1,.swipers2');
 
         // Add the 'start' class to each selected element
         swipersElements.forEach((element) => {
