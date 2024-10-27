@@ -71,7 +71,6 @@ For any inquiries, suggestions, or feedback, feel free to reach out:
 I would like to acknowledge:
 
 - The **YouTube Channels** featured for their educational and thought-provoking content.
-- The **Developers and Designers** who contributed to creating a user-friendly and visually appealing website.
 - Special thanks to individuals who have provided feedback and suggestions, helping to improve the website's content and design.
 
 ## Additional Resources
