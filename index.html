@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflect !</title>
-    <link rel="icon" type="image/x-icon" href="./icon.png">
+    <link rel="icon" type="image/x-icon" href="./icon2.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -15,14 +15,26 @@
     <!-- Navbar -->
 
     <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid justify-content-center"> <!-- Center the contents -->
+        <div class="container-fluid justify-content-center  pop-up-animate1"> <!-- Center the contents -->
             <a class="navbar-brand" href="https://reflecthub.github.io/">
-                <img src="./icon.png" alt="Logo" class="d-inline-block align-top">
+                <img src="./icon4.png" alt="Logo" class="d-inline-block align-top">
             </a>
-            <h1 id="typing-effect" class="swipers">Reflect !!</h1>
-            <div class="panel-icon" id="panelIcon">
-                <h6  >Contact & Suggest me</h6>
-                </div>
+            <h1 id="typing-effect" class="swipers" style="
+            font-size: 4em;
+            font-weight: bold;
+            background: linear-gradient(to right, #2eaa05, #2eaa05);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 0.57px black;
+            text-align: center;
+          ">
+            Reflect !!
+          </h1>
+
+            <div class="panel-icon pop-up-animate1" id="panelIcon">
+                <h6 >Contact & Suggest me</h6>
+            </div>
         </div>
     </nav>
 
@@ -30,15 +42,31 @@
 
 
 
+<div style="   background-color: #c8ffcd;" >
 
-    <!-- Options Menu with Reduced Height -->
-    <div class="container-fluid menu-container d-flex align-items-center justify-content-center">
-        <h5 >Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!</h5>
+    <h5 id="head" style="
+    text-align: center;
+    background-color: #c8ffcd;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 15px 20px;
+    margin-bottom: 0;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    letter-spacing: 1.2px;
+    color: #2f4f4f;
+    " class="pop-up-animate1">
+    Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!
+</h5>
+
+</div>
+      
+    <div class="menu-container d-flex align-items-center justify-content-center">
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <button class="btn btn-secondary bg-success rounded-pill" onclick="showDiv('div1')">Rational</button>
-            <button class="btn btn-secondary bg-success rounded-pill" onclick="showDiv('div2')">Scientific</button>
-            <button class="btn btn-secondary bg-success rounded-pill" onclick="showDiv('div3')">Inspirational</button>
-            <button class="btn btn-secondary bg-success rounded-pill" onclick="showDiv('div4')">Misc</button>
+            <button id='men-d1'class="btn btn-secondary rounded-pill" onclick="showDiv('div1')">Rational 🧠</button>
+            <button id='men-d2'class="btn btn-secondary rounded-pill" onclick="showDiv('div2')">Scientific 🔬</button>
+            <button id='men-d3'class="btn btn-secondary rounded-pill" onclick="showDiv('div3')">Inspirational ✨</button>
+            <button id='men-d4'class="btn btn-secondary rounded-pill" onclick="showDiv('div4')">Reactions 💻</button>
         </div>
     </div>
     
@@ -111,7 +139,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    
                        
                 </tbody>
             </table>
@@ -120,46 +148,27 @@
         <div id="div4" class="content-div">Content for Misc</div>
     </div>
 
-    <!-- Footer -->
-    <!-- <div class="ground">
-    <div class="norm d-flex">
-            <a href="https://www.quran.com" target="_blank"><h6 style="display:inline">Read the Quran |</h6></a>
-            <a href="https://www.miracles-of-quran.com/index.html" target="_blank"><h6 style="display:inline">Miracles of Quran</h6></a>
-     
-            
-        </div>
-        <div class="panel-icon" id="panelIcon">
-        <h6  >Contact & Suggest me</h6>
-        </div>
-    
-    <div class="popup" id="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <h2 class="typing-effect">About Me</h2>
-            <p>Hello! <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">I'm Mohammed Abdullah</a></p>
-            <p class="swipers1">I am compiling a list of islamic videos which rational people may ponder ,reflect and might accept the truth.</p><br></br>
-            <p>Contact me below to suggest me some videos</p>
-            <p >Email : <a href="mailto:reflect.intel@gmail.com">reflect.intel@gmail.com</a></p>
-            <p >Discord: blaze_0101</p>
-        </div>
-    </div> -->
+
+
     <div class="footer">
         <a href="https://www.quran.com" target="_blank"><h3 style="display:inline" class="swipers1">Read the Quran </h3></a>
-        <a href="https://www.miracles-of-quran.com/index.html" target="_blank"><h3 style="display:inline" class="swipers1">Miracles of Quran</h3></a>
+        <div class="panel-icon pop-up-animate1" id="panelIcon1">
+            <h6 >Contact & Suggest me</h6>
+            </div>
+        <a href="https://www.miracles-of-quran.com/index.html" target="_blank"><h5 style="display:inline" class="swipers1">Scientific Miracles of Quran</h5></a>
  
-        
-        <!-- <div class="panel-icon" id="panelIcon">
-        <h6  >Contact & Suggest me</h6>
-        </div> -->
-</div>
+    </div>
+    
 <div class="popup" id="popup">
     <div class="popup-content">
         <span class="close" id="closePopup">&times;</span>
         <h2 class="typing-effect">About Me</h2>
         <p>Hello! <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">I'm Mohammed Abdullah</a></p>
-        <p class="swipers2">I am compiling a list of islamic videos which rational people may ponder ,reflect and might accept the truth.</p><br></br>
+        <p class="swipers2">I am compiling a list of islamic videos which rational people may reflect upon and might accept the truth.</p><br></br>
         <p>Contact me below to suggest me some videos</p>
         <p >Email : <a href="mailto:reflect.intel@gmail.com">reflect.intel@gmail.com</a></p>
+        <p ><a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank">Feedback</a></p>
+        <p ><a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank">Bug reports</a></p>
         <p >Discord: blaze_0101</p>
     </div>
     
