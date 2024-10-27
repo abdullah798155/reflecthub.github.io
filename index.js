@@ -1,4 +1,3 @@
-// Function to show only the selected div and hide others
 function showDiv(divId) {
     // Hide the menu container
     document.querySelector('.menu-container').style.display = 'none';
@@ -8,9 +7,91 @@ function showDiv(divId) {
     for (let div of divs) {
         div.style.display = 'none';
     }
-    // Show selected div
-    document.getElementById(divId).style.display = 'block';
+    
+    // Show the selected div
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.style.display = 'block';
+
+    // Find the table in the selected div
+    const table = selectedDiv.querySelector('table');
+
+    // Remove the animation class if it's already there
+    if (table) {
+        table.classList.remove('pop-up-animate');
+        // selectedDiv.classList.remove('pop-up-animate');
+        //mouseover
+        //mouseout
+        // Force reflow to restart the animation
+        void table.offsetWidth;
+        // void selectedDiv.offsetWidth;
+
+        // Add the animation class to trigger the effect
+        table.classList.add('pop-up-animate');
+        // selectedDiv.classList.add('pop-up-animate');
+    }
+
+    // Buttons mapping
+    const buttons = [
+        { id: 'men-d1', targetDiv: 'div1' },
+        { id: 'men-d2', targetDiv: 'div2' },
+        { id: 'men-d3', targetDiv: 'div3' },
+        { id: 'men-d4', targetDiv: 'div4' }
+    ];
+
+    // Loop through buttons and apply styles
+    buttons.forEach(button => {
+        const btnElement = document.getElementById(button.id);
+        const isSelected = button.targetDiv === divId;
+
+        // Reset button styles
+        btnElement.style.backgroundColor = 'white';
+        btnElement.style.color = 'black';
+        btnElement.style.position = 'relative';
+        btnElement.style.overflow = 'hidden';
+        
+        // Remove any existing swipe effect
+        const existingHighlight = btnElement.querySelector('.swipe-highlight');
+        if (existingHighlight) {
+            btnElement.removeChild(existingHighlight);
+        }
+
+        if (isSelected) {
+            // Change the text color for the selected button
+            btnElement.style.color = 'black';
+
+            // Create a swipe effect for the selected button
+            const swipeHighlight = document.createElement('div');
+            swipeHighlight.classList.add('swipe-highlight');
+            swipeHighlight.style.position = 'absolute';
+            swipeHighlight.style.top = '0';
+            swipeHighlight.style.left = '-100%';
+            swipeHighlight.style.width = '100%';
+            swipeHighlight.style.height = '100%';
+            //onhover effect to swipehighlight
+            btnElement.classList.remove('pop-up-animate1');
+            void btnElement.offsetWidth;
+            btnElement.classList.add('pop-up-animate1');
+            swipeHighlight.style.backgroundColor = 'rgba(46, 170, 5, 0.5)';
+            swipeHighlight.style.transition = 'left 0.4s ease';
+            
+            // Animate the swipe effect
+            setTimeout(() => {
+                swipeHighlight.style.left = '0';
+            }, 50);
+
+            // Add swipe highlight to the button
+            btnElement.appendChild(swipeHighlight);
+        }
+    });
 }
+
+// Apply animation when the page loads initially
+window.onload = function() {
+    showDiv('div1');
+};
+
+
+
 
 // Show the first section by default on page load
 window.onload = function() {
@@ -34,11 +115,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // Get elements
 const panelIcon = document.getElementById("panelIcon");
+const panelIcon2 = document.getElementById("panelIcon2");
 const panelpopup = document.getElementById("popup");
 const panelclosePopup = document.getElementById("closePopup");
 
 // Open the popup when the panel icon is clicked
 panelIcon.onclick = function() {
+    panelpopup.style.display = "block";
+}
+panelIcon1.onclick = function() {
     panelpopup.style.display = "block";
 }
 
@@ -53,24 +138,24 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
- const quickLink = document.getElementById("quickLink");
- const quickpopup = document.getElementById("quickpopup");
-const quickclosePopup = document.getElementById("quickclosePopup");
+//  const quickLink = document.getElementById("quickLink");
+//  const quickpopup = document.getElementById("quickpopup");
+// const quickclosePopup = document.getElementById("quickclosePopup");
 
-// Open the popup when the panel icon is clicked
-quickLink.onclick = function() {
-    quickpopup.style.display = "block";
-}
+// // Open the popup when the panel icon is clicked
+// quickLink.onclick = function() {
+//     quickpopup.style.display = "block";
+// }
 
-// Close the popup when the close button is clicked
-quickclosePopup.onclick = function() {
-    quickpopup.style.display = "none";
-}
+// // Close the popup when the close button is clicked
+// quickclosePopup.onclick = function() {
+//     quickpopup.style.display = "none";
+// }
 
-// Close the popup when clicking outside of the popup content
-window.onclick = function(event) {
-    if (event.target == quickpopup) {
-        quickpopup.style.display = "none";
-    }
-}
+// // Close the popup when clicking outside of the popup content
+// window.onclick = function(event) {
+//     if (event.target == quickpopup) {
+//         quickpopup.style.display = "none";
+//     }
+// }
 
