@@ -1,4 +1,4 @@
-# ReflectHub Website
+# ReflectHub - Think Rationally
 
 Welcome to **ReflectHub**, a web platform dedicated to showcasing videos that encourage deep reflection and understanding. The goal of this website is to present content that is rational, scientific, inspirational, and reaction-based, inviting viewers to explore different perspectives and potentially discover deeper truths.
 
