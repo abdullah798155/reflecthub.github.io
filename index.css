@@ -56,13 +56,13 @@ body {
 }
 /* Add this class to apply the animation */
 .pop-up-animate {
-    animation: popUp 0.6s ease;
+    animation: popUp 1s ease;
 }
 .pop-up-animate1 {
-    animation: popUp1 0.6s ease;
+    animation: popUp1 1s ease;
 }
 .pop-up-animate2 {
-    animation: popUp2 0.6s ease;
+    animation: popUp2 1s ease;
 }
 
 /* Navbar styling */
@@ -268,7 +268,7 @@ body {
 
     .navbar-brand img {
         width: 50vw; /* Responsive width for logo on smaller screens */
-        max-width: 190px; 
+        max-width: 140px; 
     }
 
     /* Adjust navbar height and padding */
@@ -280,7 +280,7 @@ body {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .navbar-brand h1 {
-        font-size: 1.5rem; /* Smaller font size on smaller screens */
+        font-size: 0.4rem; /* Smaller font size on smaller screens */
     }
 
     .navbar-brand img {
@@ -297,7 +297,7 @@ body {
 
 @media (max-width: 480px) {
     .navbar-brand h1 {
-        font-size: 1.2rem; /* Further smaller font size */
+        font-size: 0.2rem; /* Further smaller font size */
     }
 
     .navbar-brand img {
