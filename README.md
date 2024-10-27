@@ -1,7 +1,13 @@
-# ReflectHub - Think Rationally 
-![Reflecthub](./icon2.png)
+<div align="center">
+    <h1>ReflectHub - Think Rationally! <span style="vertical-align: middle;"><img src="./icon4.png" alt="Reflecthub" width="60" height="60"></span></h1>
+</div>
+
 
 Welcome to **ReflectHub**, a web platform dedicated to showcasing videos that encourage deep reflection and understanding. The goal of this website is to present content that is rational, scientific, inspirational, and reaction-based, inviting viewers to explore different perspectives and potentially discover deeper truths.
+
+<p align="center">
+    <img src="./icon2.png" alt="Reflecthub" width="300" height="300">
+</p>
 
 ## Overview
 
