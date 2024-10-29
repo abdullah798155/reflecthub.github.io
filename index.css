@@ -14,6 +14,49 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Default styles for larger screens */
+/* Default styles for larger screens */
+/* Default styles for larger screens */
+.responsive-description {
+    font-size: 16px;
+    white-space: normal;     /* Allow wrapping on large screens */
+    overflow: visible;       /* Show full text on large screens */
+    max-width: 100%;         /* No max width constraint on large screens */
+}
+
+/* Medium screens */
+@media (max-width: 1000px) {
+    .responsive-description {
+        font-size: 14px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .responsive-description {
+        font-size: 14px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 200px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .responsive-description {
+        font-size: 12px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 150px;
+    }
+}
+
+
+
 /* Keyframes for the pop-up animation */
 @keyframes popUp {
     0% {
@@ -21,20 +64,38 @@ body {
         opacity: 0;
     }
     60% {
-        transform: scale(1.02);
+        transform: scale(1.038);
         opacity: 1;
     }
     100% {
         transform: scale(1);
     }
 }
+/* @keyframes popOut {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1.5);
+        opacity: 0;
+
+    }
+    60% {
+        transform: scale(1.038);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+} */
 @keyframes popUp1 {
     0% {
         transform: scale(0);
         opacity: 0;
     }
     60% {
-        transform: scale(1);
+        transform: scale(1.038);
         opacity: 1;
     }
     100% {
@@ -57,12 +118,16 @@ body {
 /* Add this class to apply the animation */
 .pop-up-animate {
     animation: popUp 1s ease;
+    transform-origin: top center; 
 }
 .pop-up-animate1 {
     animation: popUp1 1s ease;
 }
 .pop-up-animate2 {
     animation: popUp2 1s ease;
+}
+.pop-out-animate {
+    animation: popOut 1s ease;
 }
 
 /* Navbar styling */
@@ -386,6 +451,10 @@ body {
 #div1 {
     background-color: #21dcb4;
     color: #333333;
+    /* background-image: url('./cosmos.jpg');
+    background-size:cover; 
+    background-repeat: no-repeat; 
+    background-position: center; */
 }
 #div2 {
     background-color: #FF7043;
