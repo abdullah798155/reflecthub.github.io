@@ -1,7 +1,98 @@
+var targetjsonFile;
 function showDiv(divId) {
     // Hide the menu container
+    const jsonFiles = {
+        'div1': 'rational',
+        'div2': 'scientific',
+        'div3':'inspirational',
+        'div4':'reactions'
+        // Add other mappings for 'div3' and 'div4' if needed
+    };
     document.querySelector('.menu-container').style.display = 'none';
+    targetjsonFile = jsonFiles[divId];
+        // Fetch the JSON data
+        // console.log("target: "+targetjsonFile);
+        fetch('./Content/' + targetjsonFile + '.json')
+            .then(response => response.json())
+            .then(data => {
+                // Call function to render the table
+                renderTable(data);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
 
+
+    // Function to render the table
+    function renderTable(data) {
+        const tableBody = document.querySelector(`.${targetjsonFile} tbody`);
+    
+        // Clear any existing content
+        tableBody.innerHTML = '';
+    
+        // Loop through the JSON data and create rows
+        data.forEach((item, index) => {
+            const row = document.createElement('tr');
+            const dynamic=item.dynamic;
+row.innerHTML = dynamic==='true' ? `
+    <td>${item.id}</td>
+    <td>
+        <a href="${item.link}" target="_blank">${item.title}</a>
+        <br>
+        <img src="${item.staticThumbnail}" 
+             data-static="${item.staticThumbnail}" 
+             data-dynamic="${item.dynamicThumbnail}" 
+             alt="Dummy row (Ignore this)" 
+             style="height: 100px; width: 200px;" 
+             loading="lazy">
+    </td>
+    <td class="responsive-description">${item.description}</td>
+    <td><a href="${item.link}" target="_blank">Visit</a></td>
+    <td>
+        <a href="${item.channelLink}" target="_blank">
+            <img src="${item.channelImage}" style="height: 20px; width: 20px;">
+            ${item.channelName}
+        </a>
+    </td>
+`: `
+    <td>${item.id}</td>
+    <td>
+        <a href="${item.link}" target="_blank">${item.title}</a>
+        <br>
+        <img src="${item.staticThumbnail}"
+             alt="Dummy row (Ignore this)"
+             style="height: 100px; width: 200px;"
+             loading="lazy">
+             </td>
+             <td class="responsive-description">${item.description}</td>
+             <td><a href="${item.link}" target="_blank">Visit</a></td>
+             <td>
+                 <a href="${item.channelLink}" target="_blank">
+                     <img src="${item.channelImage}" style="height: 20px; width: 20px;">
+                     ${item.channelName}
+                 </a>
+                 </td>
+                 `;
+
+// Append the row to the table body
+tableBody.appendChild(row);
+
+// Add event listeners for hover effect
+const imgElement = row.querySelector('img');
+
+// On hover, switch to the dynamic thumbnail
+if(dynamic  === 'true') {
+imgElement.addEventListener('mouseover', () => {
+    imgElement.src = imgElement.getAttribute('data-dynamic');
+});
+
+// On mouse out, revert to the static thumbnail
+imgElement.addEventListener('mouseout', () => {
+    imgElement.src = imgElement.getAttribute('data-static');
+})
+}
+        });
+    }
+    
+    
     // Hide all content divs
     const divs = document.getElementsByClassName('content-div');
     for (let div of divs) {
@@ -90,14 +181,6 @@ window.onload = function() {
     showDiv('div1');
 };
 
-
-
-
-// Show the first section by default on page load
-window.onload = function() {
-    showDiv('div1');
-    
-};
 document.addEventListener('DOMContentLoaded', (event) => {
     // Wait for 1.3 seconds (1300 milliseconds)
     setTimeout(() => {
