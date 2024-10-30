@@ -14,9 +14,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-/* Default styles for larger screens */
-/* Default styles for larger screens */
-/* Default styles for larger screens */
+
 .responsive-description {
     font-size: 16px;
     white-space: normal;     /* Allow wrapping on large screens */
@@ -52,6 +50,31 @@ body {
         overflow: hidden;         /* Hide overflowed text */
         text-overflow: ellipsis;  /* Show ellipsis when text overflows */
         max-width: 150px;
+    }
+}
+.responsive-description1 {
+    font-size: clamp(1.8rem, 6vw, 4rem) !important; /* Dynamically resize with limits */
+    white-space: normal;                 /* Allow text wrapping if needed */
+    max-width: 100%;                     /* Full width of the container */
+    line-height: 1.2;                    /* Tighten line height */
+    margin: 0;                           /* Remove extra margins */
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 991px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 9vw, 10rem) !important;
+    }
+}
+@media (max-width: 768px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 8vw, 10rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 14vw, 10rem) !important;
     }
 }
 
