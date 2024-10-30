@@ -34,6 +34,12 @@ function showDiv(divId) {
 row.innerHTML = `
     <td>${item.id}</td>
     <td>
+        <a href="${item.channelLink}" target="_blank">
+            <img src="${item.channelImage}" style="height: 20px; width: 20px;">
+            ${item.channelName}
+        </a>
+    </td>
+    <td>
         <a href="${item.link}" target="_blank">${item.title}</a>
         <br>
           <a href="${item.link}" target="_blank">
@@ -45,12 +51,6 @@ row.innerHTML = `
     </td>
     <td class="responsive-description">${item.description}</td>
     <td><a href="${item.link}" target="_blank">Visit</a></td>
-    <td>
-        <a href="${item.channelLink}" target="_blank">
-            <img src="${item.channelImage}" style="height: 20px; width: 20px;">
-            ${item.channelName}
-        </a>
-    </td>
 `;
 
 // Append the row to the table body
