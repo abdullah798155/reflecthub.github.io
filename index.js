@@ -31,18 +31,17 @@ function showDiv(divId) {
         // Loop through the JSON data and create rows
         data.forEach((item, index) => {
             const row = document.createElement('tr');
-            const dynamic=item.dynamic;
-row.innerHTML = dynamic==='true' ? `
+row.innerHTML = `
     <td>${item.id}</td>
     <td>
         <a href="${item.link}" target="_blank">${item.title}</a>
         <br>
-        <img src="${item.staticThumbnail}" 
-             data-static="${item.staticThumbnail}" 
-             data-dynamic="${item.dynamicThumbnail}" 
+          <a href="${item.link}" target="_blank">
+        <img src="${item.thumbnail}" 
              alt="Dummy row (Ignore this)" 
              style="height: 100px; width: 200px;" 
              loading="lazy">
+             </a>
     </td>
     <td class="responsive-description">${item.description}</td>
     <td><a href="${item.link}" target="_blank">Visit</a></td>
@@ -52,43 +51,11 @@ row.innerHTML = dynamic==='true' ? `
             ${item.channelName}
         </a>
     </td>
-`: `
-    <td>${item.id}</td>
-    <td>
-        <a href="${item.link}" target="_blank">${item.title}</a>
-        <br>
-        <img src="${item.staticThumbnail}"
-             alt="Dummy row (Ignore this)"
-             style="height: 100px; width: 200px;"
-             loading="lazy">
-             </td>
-             <td class="responsive-description">${item.description}</td>
-             <td><a href="${item.link}" target="_blank">Visit</a></td>
-             <td>
-                 <a href="${item.channelLink}" target="_blank">
-                     <img src="${item.channelImage}" style="height: 20px; width: 20px;">
-                     ${item.channelName}
-                 </a>
-                 </td>
-                 `;
+`;
 
 // Append the row to the table body
 tableBody.appendChild(row);
 
-// Add event listeners for hover effect
-const imgElement = row.querySelector('img');
-
-// On hover, switch to the dynamic thumbnail
-if(dynamic  === 'true') {
-imgElement.addEventListener('mouseover', () => {
-    imgElement.src = imgElement.getAttribute('data-dynamic');
-});
-
-// On mouse out, revert to the static thumbnail
-imgElement.addEventListener('mouseout', () => {
-    imgElement.src = imgElement.getAttribute('data-static');
-})
-}
         });
     }
     
@@ -221,24 +188,4 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
-//  const quickLink = document.getElementById("quickLink");
-//  const quickpopup = document.getElementById("quickpopup");
-// const quickclosePopup = document.getElementById("quickclosePopup");
-
-// // Open the popup when the panel icon is clicked
-// quickLink.onclick = function() {
-//     quickpopup.style.display = "block";
-// }
-
-// // Close the popup when the close button is clicked
-// quickclosePopup.onclick = function() {
-//     quickpopup.style.display = "none";
-// }
-
-// // Close the popup when clicking outside of the popup content
-// window.onclick = function(event) {
-//     if (event.target == quickpopup) {
-//         quickpopup.style.display = "none";
-//     }
-// }
 
