@@ -5,7 +5,8 @@ function showDiv(divId) {
         'div1': 'rational',
         'div2': 'scientific',
         'div3':'inspirational',
-        'div4':'reactions'
+        'div4':'reactions',
+        'div5':'verses'
         // Add other mappings for 'div3' and 'div4' if needed
     };
     document.querySelector('.menu-container').style.display = 'none';
@@ -16,12 +17,44 @@ function showDiv(divId) {
             .then(response => response.json())
             .then(data => {
                 // Call function to render the table
-                renderTable(data);
+                if(targetjsonFile=='rational' || targetjsonFile=='scientific' || targetjsonFile=='inspirational' || targetjsonFile=='reactions') renderTable(data);
+                if(targetjsonFile=='verses') renderVerse(data);
             })
             .catch(error => console.error('Error fetching JSON:', error));
 
 
     // Function to render the table
+// Function to render the verses
+function renderVerse(data) {
+    const verseContainer = document.querySelector('.verse-data');
+
+    // Clear existing content
+    verseContainer.innerHTML = '';
+
+    // Loop through the JSON data and create an h2 element for each verse
+    data.forEach((item) => {
+        // Create a new h2 element
+        const verseElement = document.createElement('h2');
+        verseElement.classList.add('verse-style'); // Add the verse-style class
+        verseElement.classList.add('pop-up-animate'); // Add the verse-style class
+
+        // Create an h4 element for the verse content
+        const verseContent = document.createElement('h4');
+        verseContent.innerHTML = `
+            ${item.verse}<br>[Quran: <a href='https://quran.com/41?startingVerse=53' target="_blank">${item.quote}</a>]
+        `;
+
+        // Append the h4 element to the h2 element
+        verseElement.appendChild(verseContent);
+
+        // Append the h2 element to the verse container
+        verseContainer.appendChild(verseElement);
+        verseContainer.appendChild(document.createElement('br'));
+    });
+}
+
+    
+    
     function renderTable(data) {
         const tableBody = document.querySelector(`.${targetjsonFile} tbody`);
     
@@ -93,7 +126,8 @@ tableBody.appendChild(row);
         { id: 'men-d1', targetDiv: 'div1' },
         { id: 'men-d2', targetDiv: 'div2' },
         { id: 'men-d3', targetDiv: 'div3' },
-        { id: 'men-d4', targetDiv: 'div4' }
+        { id: 'men-d4', targetDiv: 'div4' },
+        { id: 'men-d5', targetDiv: 'div5' }
     ];
 
     // Loop through buttons and apply styles
@@ -188,4 +222,5 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
+
 
