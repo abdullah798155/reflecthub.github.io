@@ -26,7 +26,7 @@ function showDiv(divId) {
     // Function to render the table
 // Function to render the verses
 function renderVerse(data) {
-    const verseContainer = document.querySelector('.verse-data');
+    const verseContainer = document.querySelector('.verse-style');
 
     // Clear existing content
     verseContainer.innerHTML = '';
@@ -34,21 +34,21 @@ function renderVerse(data) {
     // Loop through the JSON data and create an h2 element for each verse
     data.forEach((item) => {
         // Create a new h2 element
-        const verseElement = document.createElement('h2');
-        verseElement.classList.add('verse-style'); // Add the verse-style class
-        verseElement.classList.add('pop-up-animate'); // Add the verse-style class
-
+        // const verseElement = document.createElement('h2');
+        
         // Create an h4 element for the verse content
         const verseContent = document.createElement('h4');
-        verseContent.innerHTML = `
-            ${item.verse}<br>[Quran: <a href='https://quran.com/41?startingVerse=53' target="_blank">${item.quote}</a>]
+        verseContent.classList.add('pop-up-animate'); // Add the verse-style class
+        verseContent.innerHTML = `"
+            ${item.verse}"<br>[Quran: <a href='https://quran.com/${item.chapterNo}?startingVerse=${item.verseNo}' target="_blank">${item.chapterNo}:${item.verseNo}</a>]
         `;
 
         // Append the h4 element to the h2 element
-        verseElement.appendChild(verseContent);
+        // verseElement.appendChild(verseContent);
 
         // Append the h2 element to the verse container
-        verseContainer.appendChild(verseElement);
+        verseContainer.appendChild(verseContent);
+        verseContainer.appendChild(document.createElement('br'));
         verseContainer.appendChild(document.createElement('br'));
     });
 }
