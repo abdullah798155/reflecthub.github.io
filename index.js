@@ -84,12 +84,19 @@ You just need to <i>declare the faith</i>, known as the <b>Shahada</b> (<i>decla
    There is no compulsion in religion [Quran 
    <a href="https://quran.com/2?startingVerse=256" target="_blank">2:256</a>]</h5>
 </div><br><br>
+<span>
 The Shahada in Arabic is as follows:<br><br>
-<b>Arabic:</b> <span style="background-color: #d4f7d4;"><b><i>أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</i></b></span><br><br>
-
-<b>Say in Arabic:</b><span style="background-color: #d4f7d4;"> <b><i>Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadur rasulullah</i></b></span><br><br>
-<b>Translation:</b><span style="background-color: #ccf2ff;"> <b><i>I bear witness that there is no god but Allah, and I bear witness that Muhammad is the messenger of Allah.</i></b></span><br><br>
-
+<b>Arabic:</b> <span style="background-color: #d4f7d4;"><b><i>أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</i></b></span>
+</span>
+<br><br>
+<span>
+<b>Say in Arabic:</b><span style="background-color: #d4f7d4;"> <b><i>Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadur rasulullah</i></b></span>
+</span>
+<br><br>
+<span>
+<b>Translation:</b><span style="background-color: #ccf2ff;"> <b><i>I bear witness that there is no god but Allah, and I bear witness that Muhammad is the messenger of Allah.</i></b></span>
+</span>
+<br><br>
 <div style="font-size: large; font-style: italic;">
     This declaration is the core of Islamic belief and affirms that there is no deity but Allah, and Muhammad is His messenger. By stating these words with sincere belief, a person embraces Islam and begins their journey as a Muslim.
 </div>
