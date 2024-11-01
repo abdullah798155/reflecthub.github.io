@@ -48,6 +48,9 @@ Content on the website is organized into four main categories, each focusing on 
 ### 4. **Reactions** 💻
    A collection of video reactions, providing different perspectives and interpretations of the topics presented.
 
+### 5. **Verses from Quran** 📖
+   A collection of intellectual and inspiring verses from Quran.
+
 ## Contact Information
 
 For any inquiries, suggestions, or feedback, feel free to reach out:
