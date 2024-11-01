@@ -1,3 +1,17 @@
+
+@keyframes unfold {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(1.2);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
 .verse-style {
     position: relative; /* Position relative for absolute positioning of the pseudo-element */
     width: 100%; /* Full width of the container */
@@ -554,6 +568,11 @@ body {
     background-color: #92286a;
     color: #ffffff;
 }
+#div6 {
+    background-color: #7c0b6f;
+    color: #ffffff;
+}
+
 
 /* Table Styling */
 .table-wrapper {
