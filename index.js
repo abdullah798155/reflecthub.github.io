@@ -6,13 +6,15 @@ function showDiv(divId) {
         'div2': 'scientific',
         'div3':'inspirational',
         'div4':'reactions',
-        'div5':'verses'
+        'div5':'verses',
+        'div6':'faith'
         // Add other mappings for 'div3' and 'div4' if needed
     };
     document.querySelector('.menu-container').style.display = 'none';
     targetjsonFile = jsonFiles[divId];
         // Fetch the JSON data
         // console.log("target: "+targetjsonFile);
+    if(targetjsonFile != 'faith'){
         fetch('./Content/' + targetjsonFile + '.json')
             .then(response => response.json())
             .then(data => {
@@ -21,6 +23,10 @@ function showDiv(divId) {
                 if(targetjsonFile=='verses') renderVerse(data);
             })
             .catch(error => console.error('Error fetching JSON:', error));
+    }
+    else{
+        if(targetjsonFile=='faith') renderFaith();
+    }
 
 
     // Function to render the table
@@ -51,6 +57,54 @@ function renderVerse(data) {
         verseContainer.appendChild(document.createElement('br'));
         verseContainer.appendChild(document.createElement('br'));
     });
+}
+function renderFaith() {
+
+    const verseContainer = document.querySelector('.faith');
+
+    // Clear existing content
+    verseContainer.innerHTML = '';
+
+    // Loop through the JSON data and create an h2 element for each verse
+
+        // Create a new h2 element
+        // const verseElement = document.createElement('h2');
+        
+        // Create an h4 element for the verse content
+        const verseContent = document.createElement('h4');
+        verseContent.classList.add('pop-up-animate'); // Add the verse-style class
+        verseContent.innerHTML = `
+<b>Entering into Islam is very simple</b><br><br>
+You just need to <i>declare the faith</i>, known as the <b>Shahada</b> (<i>declaration of faith ☝️</i>).<br><br>
+
+<div style="font-size: large; font-style: italic;">
+   Take your declaration of faith (Shahada) only after you have realized what Islam truly is and you are ready to embrace it.<br>
+   There is no hurry, take your time to learn about Islam and its teachings. Once you are ready, you can declare your faith by reciting the Shahada.<br>
+   <h5 style="background-color:#eab8e4; display:inline">
+   There is no compulsion in religion [Quran 
+   <a href="https://quran.com/2?startingVerse=256" target="_blank">2:256</a>]</h5>
+</div><br><br>
+The Shahada in Arabic is as follows:<br><br>
+<b>Arabic:</b> <span style="background-color: #d4f7d4;"><b><i>أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</i></b></span><br><br>
+
+<b>Say in Arabic:</b><span style="background-color: #d4f7d4;"> <b><i>Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadur rasulullah</i></b></span><br><br>
+<b>Translation:</b><span style="background-color: #ccf2ff;"> <b><i>I bear witness that there is no god but Allah, and I bear witness that Muhammad is the messenger of Allah.</i></b></span><br><br>
+
+<div style="font-size: large; font-style: italic;">
+    This declaration is the core of Islamic belief and affirms that there is no deity but Allah, and Muhammad is His messenger. By stating these words with sincere belief, a person embraces Islam and begins their journey as a Muslim.
+</div>
+
+           
+        `;
+
+        // Append the h4 element to the h2 element
+        // verseElement.appendChild(verseContent);
+
+        // Append the h2 element to the verse container
+        verseContainer.appendChild(verseContent);
+        verseContainer.appendChild(document.createElement('br'));
+        verseContainer.appendChild(document.createElement('br'));
+    
 }
 
     
@@ -127,7 +181,8 @@ tableBody.appendChild(row);
         { id: 'men-d2', targetDiv: 'div2' },
         { id: 'men-d3', targetDiv: 'div3' },
         { id: 'men-d4', targetDiv: 'div4' },
-        { id: 'men-d5', targetDiv: 'div5' }
+        { id: 'men-d5', targetDiv: 'div5' },
+        { id: 'men-d6', targetDiv: 'div6'}
     ];
 
     // Loop through buttons and apply styles
@@ -222,5 +277,4 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
-
 
