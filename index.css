@@ -1,13 +1,54 @@
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px; /* Optional: add padding to create space */
+}
 
-@keyframes unfold {
-    0% {
-        transform: scaleY(0);
+.menu-icon {
+    display: block; /* Initially display the icon */
+    font-size: 24px;
+    cursor: auto; /* Change cursor to default */
+    margin-right: 10px; /* Optional: space between icon and menu links */
+}
+
+/* Media query to hide the hamburger menu on larger screens */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide hamburger menu on larger screens */
     }
-    50% {
-        transform: scaleY(1.2);
+}
+
+@keyframes suck-in {
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
     100% {
-        transform: scaleY(1);
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.menu-links {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.menu-links.show {
+    display: flex;
+    opacity: 1;
+}
+
+.menu-links.hide {
+    opacity: 0;
+    animation: suck-in 0.5s forwards; /* Apply suck-in animation */
+}
+
+/* Only show the hamburger icon on smaller screens */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
     }
 }
 
@@ -79,6 +120,7 @@ html, body {
     min-height: 100%;
     background-color: #c8ffcd;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;
 }
 
 body {
@@ -239,15 +281,7 @@ body {
 }
 
 /* Menu container styling */
-.menu-container {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #c8ffcd;
-    padding: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
+
 
 /* Content container */
 .content-container {
