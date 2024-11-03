@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuLinks = document.querySelector('.menu-links');
+
+    // Ensure the menu links are visible initially on small screens
+    if (window.innerWidth <= 768) {
+        menuLinks.style.display = 'flex'; // Show the menu links
+        menuLinks.classList.add('show');  // Add the show class to ensure it’s visible
+    }
+
+    // Attach the scroll event listener to automatically collapse the menu on scroll
+    window.addEventListener('scroll', collapseOnScroll);
+    // Attach the resize event listener
+    window.addEventListener('resize', handleResize);
+});
+
 // Function to toggle the menu links on hamburger icon click 
 function toggleMenu() {
     const menuLinks = document.querySelector('.menu-links');
@@ -47,14 +62,10 @@ function handleResize() {
         menuLinks.classList.remove('show');
     } else {
         // Hide menu links if the screen is small
-        // menuLinks.style.display = 'none';
+        menuLinks.style.display = 'flex'; // Ensure it's visible initially
     }
 }
 
-// Attach the scroll event listener to automatically collapse the menu on scroll
-window.addEventListener('scroll', collapseOnScroll);
-// Attach the resize event listener
-window.addEventListener('resize', handleResize);
 
 
 var targetjsonFile;
@@ -344,5 +355,4 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
-
 
