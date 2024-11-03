@@ -38,6 +38,24 @@ function collapseOnScroll() {
     }
 }
 
+// Function to handle window resize and reset menu links state
+function handleResize() {
+    const menuLinks = document.querySelector('.menu-links');
+    if (window.innerWidth > 768) {
+        // Ensure the menu links are visible on large screens
+        menuLinks.style.display = 'flex';
+        menuLinks.classList.remove('show');
+    } else {
+        // Hide menu links if the screen is small
+        // menuLinks.style.display = 'none';
+    }
+}
+
+// Attach the scroll event listener to automatically collapse the menu on scroll
+window.addEventListener('scroll', collapseOnScroll);
+// Attach the resize event listener
+window.addEventListener('resize', handleResize);
+
 
 var targetjsonFile;
 function showDiv(divId) {
