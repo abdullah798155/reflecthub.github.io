@@ -64,17 +64,18 @@
 </h5>
 
 </div>
-      
-    <div class="menu-container d-flex align-items-center justify-content-center">
-        <div class="btn-group btn-group-toggle pop-up-animate" data-toggle="buttons">
-            <button id='men-d1'class="btn btn-secondary rounded-pill" onclick="showDiv('div1')">Rational 🧠</button>
-            <button id='men-d2'class="btn btn-secondary rounded-pill" onclick="showDiv('div2')">Scientific 🔬</button>
-            <button id='men-d3'class="btn btn-secondary rounded-pill" onclick="showDiv('div3')">Inspirational ✨</button>
-            <button id='men-d4'class="btn btn-secondary rounded-pill" onclick="showDiv('div4')">Reactions 💻</button>
-            <button id='men-d5'class="btn btn-secondary rounded-pill" onclick="showDiv('div5')">Verses from Quran 📖</button>
-            <button id='men-d6'class="btn btn-secondary rounded-pill" onclick="showDiv('div6')">Declaration of faith ☝️</button>
-        </div>
-    </div> 
+<div class="menu-container d-flex ">
+    <div class="menu-icon pop-up-animate" onclick="toggleMenu()"><img src="./hamburger.svg"/></div>
+    <div class="btn-group btn-group-toggle pop-up-animate menu-links" data-toggle="buttons">
+        <button id='men-d1' class="btn btn-secondary rounded-pill" onclick="showDiv('div1')">Rational 🧠</button>
+        <button id='men-d2' class="btn btn-secondary rounded-pill" onclick="showDiv('div2')">Scientific 🔬</button>
+        <button id='men-d3' class="btn btn-secondary rounded-pill" onclick="showDiv('div3')">Inspirational ✨</button>
+        <button id='men-d4' class="btn btn-secondary rounded-pill" onclick="showDiv('div4')">Reactions 💻</button>
+        <button id='men-d5' class="btn btn-secondary rounded-pill" onclick="showDiv('div5')">Verses from Quran 📖</button>
+        <button id='men-d6' class="btn btn-secondary rounded-pill" onclick="showDiv('div6')">Declaration of faith ☝️</button>
+    </div>
+</div>
+
 
     <!-- Content Sections with Expanded Height -->
     <div id="content-container" class="content-container">
