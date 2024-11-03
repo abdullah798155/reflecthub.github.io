@@ -1,3 +1,44 @@
+// Function to toggle the menu links on hamburger icon click 
+function toggleMenu() {
+    const menuLinks = document.querySelector('.menu-links');
+
+    if (menuLinks.classList.contains('show')) {
+        // If the menu is currently shown, hide it
+        menuLinks.classList.remove('show');
+        menuLinks.classList.add('hide');
+
+        // Wait for the animation to finish before setting display to none
+        setTimeout(() => {
+            menuLinks.style.display = 'none';
+            menuLinks.classList.remove('hide'); // Reset for next toggle
+        }, 500); // Match this duration to the CSS animation duration
+    } else {
+        // If the menu is hidden, show it
+        menuLinks.style.display = 'flex';
+        menuLinks.classList.add('show');
+    }
+}
+
+// Function to collapse the menu links automatically on scroll for smaller screens
+function collapseOnScroll() {
+    const menuLinks = document.querySelector('.menu-links');
+
+    if (window.innerWidth <= 768) {
+        // Hide the menu links whenever the user scrolls down
+        if (menuLinks.classList.contains('show')) {
+            menuLinks.classList.remove('show');
+            menuLinks.classList.add('hide');
+
+            // Wait for the animation to finish before setting display to none
+            setTimeout(() => {
+                menuLinks.style.display = 'none';
+                menuLinks.classList.remove('hide'); // Reset for next toggle
+            }, 500); // Match this duration to the CSS animation duration
+        }
+    }
+}
+
+
 var targetjsonFile;
 function showDiv(divId) {
     // Hide the menu container
@@ -245,6 +286,7 @@ window.onload = function() {
 };
 
 document.addEventListener('DOMContentLoaded', (event) => {
+    
     // Wait for 1.3 seconds (1300 milliseconds)
     setTimeout(() => {
         // Select all elements with class names swipers and swipers1
