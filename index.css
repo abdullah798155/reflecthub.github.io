@@ -456,6 +456,23 @@ body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 2000px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 50vw; /* Responsive width for logo on smaller screens */
+        max-width: 140px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+
 @media (max-width: 1700px) {
     .navbar-brand h1 {
         font-size: 1.5rem; /* Smaller font size on smaller screens */
