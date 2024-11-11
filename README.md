@@ -34,7 +34,7 @@ The website features the following key sections:
 
 ## Categories
 
-Content on the website is organized into four main categories, each focusing on a specific theme:
+Content on the website is organized into five main categories, each focusing on a specific theme:
 
 ### 1. **Rational** 🧠
    Videos that explore logical and rational arguments, helping viewers to understand deeper truths through structured reasoning.
