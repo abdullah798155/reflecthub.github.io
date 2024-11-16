@@ -1,96 +1,273 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-        const infoBox = document.getElementById('info-box');
-        const citations = document.querySelectorAll('.citation');
-    
-        citations.forEach(citation => {
-            citation.addEventListener('mouseenter', (event) => {
-                console.log("mouse entered")
-                const infoText = event.target.getAttribute('data-info');
-                infoBox.innerHTML = infoText;
-                infoBox.style.display = 'block';
-                infoBox.style.animation = 'pop-up 0.3s ease-out forwards';
-                positionInfoBox(event);
-            });
-    
-            citation.addEventListener('mousemove', (event) => {
-                positionInfoBox(event);
-            });
-    
-            citation.addEventListener('mouseleave', () => {
-                // infoBox.style.display = 'none';
-                console.log("mouse left")
-                infoBox.style.animation = 'pop-out 0.3s ease-out forwards';
-             
-            });
-        });
-    
-        function positionInfoBox(event) {
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-            const mouseX = event.clientX;
-            const mouseY = event.clientY;
-            const infoBoxWidth = infoBox.offsetWidth;
-            const infoBoxHeight = infoBox.offsetHeight;
-    
-            let xOffset = 0;
-            let yOffset = 0;
-    
-            // Determine the section based on mouseX and mouseY
-            // Top-left
-            if (mouseX < windowWidth / 3 && mouseY < windowHeight / 3) {
-                xOffset = 10;
-                yOffset = 10;
-            }
-            // Top-center
-            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
-                xOffset = -infoBoxWidth / 2;
-                yOffset = 10;
-            }
-            // Top-right
-            else if (mouseX > 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
-                xOffset = -infoBoxWidth - 10;
-                yOffset = 10;
-            }
-            // Center-left
-            else if (mouseX < windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
-                xOffset = 10;
-                yOffset = -infoBoxHeight / 2;
-            }
-            // Center
-            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
-                 xOffset = -infoBoxWidth / 2;
-                yOffset = 10;
-            }
-            // Center-right
-            else if (mouseX > 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
-                xOffset = -infoBoxWidth - 10;
-                yOffset = -infoBoxHeight / 2;
-            }
-            // Bottom-left
-            else if (mouseX < windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
-                xOffset = 10;
-                yOffset = -infoBoxHeight - 10;
-            }
-            // Bottom-center
-            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
-                xOffset = -infoBoxWidth / 2;
-                yOffset = -infoBoxHeight - 10;
-            }
-            // Bottom-right
-            else if (mouseX > 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
-                xOffset = -infoBoxWidth - 10;
-                yOffset = -infoBoxHeight - 10;
-            }
-    
-            // Apply calculated position, ensuring infoBox stays within viewport
-            const left = Math.min(Math.max(mouseX + xOffset, 0), windowWidth - infoBoxWidth);
-            const top = Math.min(Math.max(mouseY + yOffset, 0), windowHeight - infoBoxHeight);
-    
-            infoBox.style.left = `${left}px`;
-            infoBox.style.top = `${top}px`;
-        }
+     // CSS for the modal overlay and popup
+const styles = `
+@keyframes pop-up-mob {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
 
+@keyframes pop-out-mob {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.8);
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+}
+
+.modal-overlay.visible {
+    animation: fade-in 0.3s ease-out forwards;
+}
+
+.modal-overlay.hiding {
+    animation: fade-out 0.3s ease-out forwards;
+}
+
+.modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 300px;
+    z-index: 1000;
+    opacity: 0;
+}
+
+.modal-content.showing {
+    animation: pop-up-mob 0.3s ease-out forwards;
+}
+
+.modal-content.hiding {
+    animation: pop-out-mob 0.3s ease-out forwards;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-inner-content {
+    margin-top: 10px;
+    padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+    .modal-overlay {
+        display: none !important;
+    }
+}`;
+
+// Add styles to document
+const styleSheet = document.createElement('style');
+styleSheet.textContent = styles;
+document.head.appendChild(styleSheet);
+
+// Create modal elements
+const modalOverlay = document.createElement('div');
+modalOverlay.className = 'modal-overlay';
+const modalContent = document.createElement('div');
+modalContent.className = 'modal-content';
+const closeButton = document.createElement('button');
+closeButton.className = 'close-button';
+closeButton.innerHTML = '×';
+const modalInnerContent = document.createElement('div');
+modalInnerContent.className = 'modal-inner-content';
+
+modalContent.appendChild(closeButton);
+modalContent.appendChild(modalInnerContent);
+modalOverlay.appendChild(modalContent);
+document.body.appendChild(modalOverlay);
+
+const infoBox = document.getElementById('info-box');
+const citations = document.querySelectorAll('.citation');
+
+// Helper function to check if device is mobile
+function isMobileDevice() {
+    return window.innerWidth < 768;
+}
+
+citations.forEach(citation => {
+    // Handle both click and hover events
+    citation.addEventListener('click', (event) => {
+        const infoText = event.target.getAttribute('data-info');
+        
+        if (isMobileDevice()) {
+            // Mobile behavior - show modal
+            modalInnerContent.innerHTML = infoText;
+            modalOverlay.style.display = 'block';
+            // Add animation classes after a brief delay to ensure display: block has taken effect
+            requestAnimationFrame(() => {
+                modalOverlay.classList.add('visible');
+                modalContent.classList.add('showing');
+            });
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    // Desktop hover behavior
+    citation.addEventListener('mouseenter', (event) => {
+        if (!isMobileDevice()) {
+            const infoText = event.target.getAttribute('data-info');
+            infoBox.innerHTML = infoText;
+            infoBox.style.display = 'block';
+            infoBox.style.animation = 'pop-up 0.3s ease-out forwards';
+            positionInfoBox(event);
+        }
+    });
+
+    citation.addEventListener('mousemove', (event) => {
+        if (!isMobileDevice()) {
+            positionInfoBox(event);
+        }
+    });
+
+    citation.addEventListener('mouseleave', () => {
+        if (!isMobileDevice()) {
+            infoBox.style.animation = 'pop-out 0.3s ease-out forwards';
+        }
+    });
+});
+
+// Close modal function
+function closeModal() {
+    modalOverlay.classList.add('hiding');
+    modalContent.classList.add('hiding');
+    modalContent.classList.remove('showing');
+    
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+        modalOverlay.style.display = 'none';
+        modalOverlay.classList.remove('visible', 'hiding');
+        modalContent.classList.remove('hiding');
+        document.body.style.overflow = '';
+    }, 300); // Match animation duration
+}
+
+// Close modal when clicking close button
+closeButton.addEventListener('click', closeModal);
+
+// Close modal when clicking outside
+modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+        closeModal();
+    }
+});
+
+function positionInfoBox(event) {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    const infoBoxWidth = infoBox.offsetWidth;
+    const infoBoxHeight = infoBox.offsetHeight;
+
+    let xOffset = 0;
+    let yOffset = 0;
+
+    // Determine the section based on mouseX and mouseY
+    // Top-left
+    if (mouseX < windowWidth / 3 && mouseY < windowHeight / 3) {
+        xOffset = 10;
+        yOffset = 10;
+    }
+    // Top-center
+    else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
+        xOffset = -infoBoxWidth / 2;
+        yOffset = 10;
+    }
+    // Top-right
+    else if (mouseX > 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
+        xOffset = -infoBoxWidth - 10;
+        yOffset = 10;
+    }
+    // Center-left
+    else if (mouseX < windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+        xOffset = 10;
+        yOffset = -infoBoxHeight / 2;
+    }
+    // Center
+    else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+         xOffset = -infoBoxWidth / 2;
+        yOffset = 10;
+    }
+    // Center-right
+    else if (mouseX > 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+        xOffset = -infoBoxWidth - 10;
+        yOffset = -infoBoxHeight / 2;
+    }
+    // Bottom-left
+    else if (mouseX < windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+        xOffset = 10;
+        yOffset = -infoBoxHeight - 10;
+    }
+    // Bottom-center
+    else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+        xOffset = -infoBoxWidth / 2;
+        yOffset = -infoBoxHeight - 10;
+    }
+    // Bottom-right
+    else if (mouseX > 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+        xOffset = -infoBoxWidth - 10;
+        yOffset = -infoBoxHeight - 10;
+    }
+
+    const left = Math.min(Math.max(mouseX + xOffset, 0), windowWidth - infoBoxWidth);
+    const top = Math.min(Math.max(mouseY + yOffset, 0), windowHeight - infoBoxHeight);
+
+    infoBox.style.left = `${left}px`;
+    infoBox.style.top = `${top}px`;
+}
     
     const menuLinks = document.querySelector('.menu-links');
 
@@ -394,7 +571,6 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
-
 
 
 
