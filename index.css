@@ -1,3 +1,106 @@
+.spn{
+    font-weight: bold;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+.citation {
+    color: rgb(0, 0, 0);
+    cursor:help;
+    text-decoration: underline dotted rgb(43, 107, 255);
+}
+
+.citation:hover {
+    color: rgb(0, 0, 0);
+}
+#info-box {
+    position: fixed;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #f9f9f9;
+    color: #333;
+    display: none;
+    width: 400px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0; /* Start with invisible */
+    transform: scale(0.8); /* Start with smaller size */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition for scale and opacity */
+    overflow: hidden; /* Prevent overflow */
+    word-wrap: break-word; /* Break long words into the next line if they don't fit */
+    white-space: normal; /* Allow wrapping of text */
+    height: auto; /* Ensure the box expands based on content height */
+    pointer-events: none;
+}
+/* change width of info box to 30 rem for mobile screens */
+@media (max-width: 480px) {
+    #info-box {
+        width: 16rem;
+    }
+}
+
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pop-out {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+.shimmer-swipe {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-swipe::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(36, 214, 125, 0.15); /* Light translucent green */
+    transform: rotate(45deg);
+    animation: shimmer-animation 1.5s ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 16px;
+}
+
+@keyframes shimmer-animation {
+    0% {
+        transform: translate(-150%, -150%) rotate(45deg);
+    }
+    100% {
+        transform: translate(150%, 150%) rotate(45deg);
+    }
+}
+
+
+
+
+
 .menu-container {
     display: flex;
     align-items: center;
@@ -83,7 +186,9 @@
     display: block; /* Ensure it takes full width */
     width: 100%; /* Full width of the container */
     box-sizing: border-box; /* Includes padding in the width calculation */
+  
 }
+
 
 .verse-style h4:before {
     content: '';
@@ -107,6 +212,7 @@
     background-color: white;
     border-radius: 12px;
     z-index: -1;
+    
 }
 
 
