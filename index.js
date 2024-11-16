@@ -1,4 +1,97 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
+        const infoBox = document.getElementById('info-box');
+        const citations = document.querySelectorAll('.citation');
+    
+        citations.forEach(citation => {
+            citation.addEventListener('mouseenter', (event) => {
+                console.log("mouse entered")
+                const infoText = event.target.getAttribute('data-info');
+                infoBox.innerHTML = infoText;
+                infoBox.style.display = 'block';
+                infoBox.style.animation = 'pop-up 0.3s ease-out forwards';
+                positionInfoBox(event);
+            });
+    
+            citation.addEventListener('mousemove', (event) => {
+                positionInfoBox(event);
+            });
+    
+            citation.addEventListener('mouseleave', () => {
+                // infoBox.style.display = 'none';
+                console.log("mouse left")
+                infoBox.style.animation = 'pop-out 0.3s ease-out forwards';
+             
+            });
+        });
+    
+        function positionInfoBox(event) {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const infoBoxWidth = infoBox.offsetWidth;
+            const infoBoxHeight = infoBox.offsetHeight;
+    
+            let xOffset = 0;
+            let yOffset = 0;
+    
+            // Determine the section based on mouseX and mouseY
+            // Top-left
+            if (mouseX < windowWidth / 3 && mouseY < windowHeight / 3) {
+                xOffset = 10;
+                yOffset = 10;
+            }
+            // Top-center
+            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
+                xOffset = -infoBoxWidth / 2;
+                yOffset = 10;
+            }
+            // Top-right
+            else if (mouseX > 2 * windowWidth / 3 && mouseY < windowHeight / 3) {
+                xOffset = -infoBoxWidth - 10;
+                yOffset = 10;
+            }
+            // Center-left
+            else if (mouseX < windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+                xOffset = 10;
+                yOffset = -infoBoxHeight / 2;
+            }
+            // Center
+            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+                 xOffset = -infoBoxWidth / 2;
+                yOffset = 10;
+            }
+            // Center-right
+            else if (mouseX > 2 * windowWidth / 3 && mouseY >= windowHeight / 3 && mouseY <= 2 * windowHeight / 3) {
+                xOffset = -infoBoxWidth - 10;
+                yOffset = -infoBoxHeight / 2;
+            }
+            // Bottom-left
+            else if (mouseX < windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+                xOffset = 10;
+                yOffset = -infoBoxHeight - 10;
+            }
+            // Bottom-center
+            else if (mouseX >= windowWidth / 3 && mouseX <= 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+                xOffset = -infoBoxWidth / 2;
+                yOffset = -infoBoxHeight - 10;
+            }
+            // Bottom-right
+            else if (mouseX > 2 * windowWidth / 3 && mouseY > 2 * windowHeight / 3) {
+                xOffset = -infoBoxWidth - 10;
+                yOffset = -infoBoxHeight - 10;
+            }
+    
+            // Apply calculated position, ensuring infoBox stays within viewport
+            const left = Math.min(Math.max(mouseX + xOffset, 0), windowWidth - infoBoxWidth);
+            const top = Math.min(Math.max(mouseY + yOffset, 0), windowHeight - infoBoxHeight);
+    
+            infoBox.style.left = `${left}px`;
+            infoBox.style.top = `${top}px`;
+        }
+
+    
     const menuLinks = document.querySelector('.menu-links');
 
     // Ensure the menu links are visible initially on small screens
@@ -12,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Attach the resize event listener
     window.addEventListener('resize', handleResize);
 });
+
 
 // Function to toggle the menu links on hamburger icon click 
 function toggleMenu() {
@@ -95,7 +189,7 @@ function showDiv(divId) {
             .catch(error => console.error('Error fetching JSON:', error));
     }
     else{
-        if(targetjsonFile=='faith') renderFaith();
+        // if(targetjsonFile=='faith') renderFaith();
     }
 
 
@@ -127,61 +221,6 @@ function renderVerse(data) {
         verseContainer.appendChild(document.createElement('br'));
         verseContainer.appendChild(document.createElement('br'));
     });
-}
-function renderFaith() {
-
-    const verseContainer = document.querySelector('.faith');
-
-    // Clear existing content
-    verseContainer.innerHTML = '';
-
-    // Loop through the JSON data and create an h2 element for each verse
-
-        // Create a new h2 element
-        // const verseElement = document.createElement('h2');
-        
-        // Create an h4 element for the verse content
-        const verseContent = document.createElement('h4');
-        verseContent.classList.add('pop-up-animate'); // Add the verse-style class
-        verseContent.innerHTML = `
-<b>Entering into Islam is very simple</b><br><br>
-You just need to <i>declare the faith</i>, known as the <b>Shahada</b> (<i>declaration of faith ☝️</i>).<br><br>
-
-<div style="font-size: large; font-style: italic;">
-   Take your declaration of faith (Shahada) only after you have realized what Islam truly is and you are ready to embrace it.<br>
-   There is no hurry, take your time to learn about Islam and its teachings. Once you are ready, you can declare your faith by reciting the Shahada.<br>
-   <h5 style="background-color:#eab8e4; display:inline">
-   There is no compulsion in religion [Quran 
-   <a href="https://quran.com/2?startingVerse=256" target="_blank">2:256</a>]</h5>
-</div><br><br>
-<div>
-The Shahada in Arabic is as follows:<br><br>
-<b>Arabic:</b> <span style="background-color: #d4f7d4;"><b><i>أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</i></b></span>
-</div>
-<br>
-<div>
-<b>Say in Arabic:</b><span style="background-color: #d4f7d4;"> <b><i>Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadur rasulullah</i></b></span>
-</div>
-<br>
-<div>
-<b>Translation:</b><span style="background-color: #ccf2ff;"> <b><i>I bear witness that there is no god but Allah, and I bear witness that Muhammad is the messenger of Allah.</i></b></span>
-</div>
-<br>
-<div style="font-size: large; font-style: italic;">
-    This declaration is the core of Islamic belief and affirms that there is no deity but Allah, and Muhammad is His messenger. By stating these words with sincere belief, a person embraces Islam and begins their journey as a Muslim.
-</div>
-
-           
-        `;
-
-        // Append the h4 element to the h2 element
-        // verseElement.appendChild(verseContent);
-
-        // Append the h2 element to the verse container
-        verseContainer.appendChild(verseContent);
-        verseContainer.appendChild(document.createElement('br'));
-        verseContainer.appendChild(document.createElement('br'));
-    
 }
 
     
@@ -355,4 +394,7 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
+
+
+
 
