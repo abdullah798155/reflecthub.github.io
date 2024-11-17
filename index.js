@@ -356,7 +356,7 @@ function showDiv(divId) {
         // Fetch the JSON data
         // console.log("target: "+targetjsonFile);
     if(targetjsonFile != 'faith'){
-        fetch('./Content/' + targetjsonFile + '.json')
+        fetch('https://reflectserver.github.io/Content/' + targetjsonFile + '.json')
             .then(response => response.json())
             .then(data => {
                 // Call function to render the table
