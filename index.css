@@ -1,3 +1,54 @@
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.menu-links {
+    height: auto !important; /* Dynamic height */
+    overflow: visible !important; /* Prevent clipping */
+    max-height: 40vh;
+}
+
+/* For screens smaller than 768px (tablets and smaller) */
+@media (min-width: 768px) {
+    .menu-links {
+        height: 6.5vh !important; /* CHANGE THIS WHEN YOU ARE INCREASING MENU LINKS */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+@media (max-width: 768px) {
+    .menu-links {
+        height: 20vh !important; /* Limit height to 50% of the viewport height */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+@media (max-width: 930px) {
+    .menu-links {
+        height: 20vh !important; /* Limit height to 50% of the viewport height */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-links {
+        height: 40vh !important; /* Adjust height for smaller screens */
+        overflow-x: auto !important; /* Allow horizontal scrolling if content overflows */
+        overflow-y: auto !important; /* Enable vertical scrolling */
+        width: 100% !important; /* Ensure full width of the container */
+    }
+}
+
+
+/* Make sure the parent elements don't restrict scrolling */
+.menu-container {
+    overflow: visible !important;
+}
+
+
 .spn{
     font-weight: bold;
 }
@@ -105,7 +156,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align items to the left */
-    padding: 10px; /* Optional: add padding to create space */
+    padding: 100px; /* Optional: add padding to create space */
 }
 
 .menu-icon {
@@ -565,6 +616,22 @@ body {
     flex-wrap: wrap;
 }
 
+@media (max-width: 5000px) {
+    .navbar-brand h1 {
+        font-size: 5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 100vw; /* Responsive width for logo on smaller screens */
+        max-width: 280px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 20px; /* Add padding for smaller screens */
+    }
+}
 @media (max-width: 2000px) {
     .navbar-brand h1 {
         font-size: 1.5rem; /* Smaller font size on smaller screens */
