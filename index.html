@@ -8,14 +8,18 @@
     <link rel="icon" type="image/x-icon" href="./icon2.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     
 </head>
 
-<body>
+<body style="background-color:#c8ffcd; ;">
 
     <!-- Navbar -->
 
-    <nav class="navbar" >
+    <nav class="" style="margin-bottom: 0 !important;border: none !;border-radius: 10px;margin-left:1.5%;margin-right: 1.5%; margin-top: 1%;">
         <div class="container-fluid justify-content-center  pop-up-animate1" style="background-color: #2f4f4f;border-radius: 10px;"> <!-- Center the contents -->
             <a class="navbar-brand" href="https://reflecthub.github.io/">
                 <img src="./icon5.png" alt="Logo" class="d-inline-block align-top">
@@ -57,6 +61,19 @@
             
             
         </div>
+        <style>
+            #head::before {
+              content: '';
+              position: absolute;
+              top: -23.8px; /* Moves the semi-circle above the element */
+              left: 1.5%; /* Adjusts the space from the left */
+              right: 1.5%; /* Adjusts the space from the right */
+              height: 40px; /* Keeps the height to form the semi-circle */
+              background-color: #2f4f4f; /* Semi-circle color */
+              border-radius: 50%;
+              z-index:0; /* Ensure it stays behind the text */
+            }
+          </style>
     </nav>
 
  
@@ -71,22 +88,25 @@
 
  <div style="   background-color: #c8ffcd;" >
 
-    <h5 id="head" style="
-    text-align: center;
-    font-family:cursive;
-    background-color: #c8ffcd;
-    font-weight: 600;
-    padding: 15px 20px;
-    margin-bottom: 0;
-    border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    letter-spacing: 1.2px;
-    color: #2f4f4f;
-    " class="pop-up-animate1">
-    Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!
-    <br>
-</h5>
-
+        <h5 id="head" style="
+          text-align: center;
+          font-family: Sour Gummy;
+          background-color: #c8ffcd;
+          font-weight: 600;
+          padding: 15px 20px;
+          margin-bottom: 0;
+          border-radius: 8px;
+          letter-spacing: 1.2px;
+          color: #2f4f4f;
+          position: relative;
+          overflow: hidden; /* Prevents the pseudo-element from overflowing outside */
+        " class="pop-up-animate1">
+          Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!
+        </h5>
+        
+       
+      
+  
 
 
 <div style="display: flex; justify-content: center; align-items: center; height: 3.5vh;">
