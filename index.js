@@ -376,7 +376,7 @@ function renderVerse(data) {
     const verseContainer = document.querySelector('.verse-style');
 
     // Clear existing content
-    verseContainer.innerHTML = '';
+    // verseContainer.innerHTML = '';
 
     // Loop through the JSON data and create an h2 element for each verse
     data.forEach((item) => {
@@ -488,6 +488,8 @@ tableBody.appendChild(row);
         btnElement.style.color = 'black';
         btnElement.style.position = 'relative';
         btnElement.style.overflow = 'hidden';
+        btnElement.style.outline = 'none';
+
         
         // Remove any existing swipe effect
         const existingHighlight = btnElement.querySelector('.swipe-highlight');
@@ -509,7 +511,7 @@ tableBody.appendChild(row);
             swipeHighlight.style.height = '100%';
             //onhover effect to swipehighlight
             btnElement.classList.remove('pop-up-animate1');
-            void btnElement.offsetWidth;
+            // void btnElement.offsetWidth;
             btnElement.classList.add('pop-up-animate1');
             swipeHighlight.style.backgroundColor = 'rgba(46, 170, 5, 0.5)';
             swipeHighlight.style.transition = 'left 0.4s ease';
@@ -571,6 +573,4 @@ window.onclick = function(event) {
         panelpopup.style.display = "none";
     }
 }
-
-
 
