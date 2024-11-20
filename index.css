@@ -490,12 +490,12 @@ body {
 
 /* Footer styling */
 .footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #2f4f4f;
     color: #FFFFFF;
     width: 100%;
     box-sizing: border-box;
     padding: 15px 20px;
-    margin-top: auto; /* Push footer to bottom */
+    margin-top: auto;
 }
 
 /* Responsive adjustments */
@@ -1118,6 +1118,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000; /* Below the panel icon and quick link */
+
 }
 
 .popup-content {
@@ -1129,6 +1130,9 @@ body {
     max-width: 500px; /* Maximum width */
     max-height: fit-content !important; /* Adjust height based on content */
     animation: popUp 0.5s ease forwards;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    
 }
 
 /* to change margin based on device width */
