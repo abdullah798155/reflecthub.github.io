@@ -66,6 +66,8 @@ const styles = `
     width: 300px;
     z-index: 1000;
     opacity: 0;
+     max-height: 70%;
+    overflow-y: auto;
 }
 
 .modal-content.showing {
