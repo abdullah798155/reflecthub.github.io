@@ -446,7 +446,6 @@ tableBody.appendChild(row);
    
    // Show the selected div
    const selectedDiv = document.getElementById(divId);
-   console.log(selectedDiv);
    selectedDiv.style.display = 'block';
 
    // Find the table in the selected div
