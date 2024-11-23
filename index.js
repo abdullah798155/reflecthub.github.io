@@ -280,7 +280,7 @@ function positionInfoBox(event) {
    }
 
    // Attach the scroll event listener to automatically collapse the menu on scroll
-   window.addEventListener('scroll', collapseOnScroll);
+   // window.addEventListener('scroll', collapseOnScroll);
    // Attach the resize event listener
    window.addEventListener('resize', handleResize);
 });
