@@ -429,7 +429,7 @@ function showDiv(divId) {
    // Function to render the table
 // Function to render the verses
 function renderVerse(data) {
-   const verseContainer = document.querySelector('.verse-style');
+   const verseContainer = document.querySelector('.verse-container');
 
    // Clear existing content
    verseContainer.innerHTML = '';
