@@ -432,7 +432,7 @@ function renderVerse(data) {
    const verseContainer = document.querySelector('.verse-style');
 
    // Clear existing content
-   // verseContainer.innerHTML = '';
+   verseContainer.innerHTML = '';
 
    // Loop through the JSON data and create an h2 element for each verse
    data.forEach((item) => {
