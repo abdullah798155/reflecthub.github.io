@@ -280,7 +280,7 @@ function positionInfoBox(event) {
    }
 
    // Attach the scroll event listener to automatically collapse the menu on scroll
-   // window.addEventListener('scroll', collapseOnScroll);
+//    window.addEventListener('scroll', collapseOnScroll);
    // Attach the resize event listener
    window.addEventListener('resize', handleResize);
 });
@@ -356,16 +356,74 @@ function showDiv(divId) {
    targetjsonFile = jsonFiles[divId];
        // Fetch the JSON data
        // console.log("target: "+targetjsonFile);
-   if(targetjsonFile=='rational' || targetjsonFile=='scientific' || targetjsonFile=='inspirational' || targetjsonFile=='reactions' || targetjsonFile=='verses'){
-       fetch('https://reflectserver.github.io/Content/' + targetjsonFile + '.json')
-           .then(response => response.json())
-           .then(data => {
-               // Call function to render the table
-               if(targetjsonFile=='rational' || targetjsonFile=='scientific' || targetjsonFile=='inspirational' || targetjsonFile=='reactions') renderTable(data);
-               if(targetjsonFile=='verses') renderVerse(data);
-           })
-           .catch(error => console.error('Error fetching JSON:', error));
-   }
+       if (targetjsonFile === 'rational' || targetjsonFile === 'scientific' || targetjsonFile === 'inspirational' || targetjsonFile === 'reactions' || targetjsonFile === 'verses') {
+        // Show loading spinner before fetching data
+        showLoadingSpinner();
+    
+        fetch('https://reflectserver.github.io/Content/' + targetjsonFile + '.json')
+            .then(response => response.json())
+            .then(data => {
+                // Call function to render the table
+                if (targetjsonFile === 'rational' || targetjsonFile === 'scientific' || targetjsonFile === 'inspirational' || targetjsonFile === 'reactions') {
+                    renderTable(data);
+                }
+                if (targetjsonFile === 'verses') {
+                    renderVerse(data);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching JSON:', error);
+        // Clear the content of #content-container
+        setTimeout(() => {
+            // Get all the content-div elements
+            const contentContainers = document.querySelectorAll('.content-div');
+
+            // Loop through each .content-div and clear its content
+            contentContainers.forEach(contentContainer => {
+                contentContainer.innerHTML = '';  // Clear existing content
+
+                // Display the error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.innerHTML = `<b>Server did not respond.<b><br> Please try again later. <br> <br><br> The following errors where caught: <br>\n${error}`;
+                errorMessage.style.color = 'red';
+                errorMessage.style.textAlign = 'center';
+                errorMessage.style.marginTop = '20px';
+                contentContainer.appendChild(errorMessage);
+            });
+        }, 1000); // Delay of 5 seconds
+    
+            });
+    }
+    
+    // Add keyframes for spinner animation in JavaScript
+    const style = document.createElement('style');
+    style.textContent = `
+       @keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: rotate(90deg);
+        opacity: 1;
+    }
+    50% { 
+        transform: rotate(180deg);
+        opacity: 0.8;
+    }
+    75% { 
+        transform: rotate(270deg);
+        opacity: 1;
+    }
+    100% { 
+        transform: rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+    `;
+    document.head.appendChild(style);
 
 
    // Function to render the table
@@ -396,46 +454,85 @@ function renderVerse(data) {
        verseContainer.appendChild(document.createElement('br'));
        verseContainer.appendChild(document.createElement('br'));
    });
+   hideLoadingSpinner();
 }
 
    
    
-   function renderTable(data) {
-       const tableBody = document.querySelector(`.${targetjsonFile} tbody`);
-   
-       // Clear any existing content
-       tableBody.innerHTML = '';
-   
-       // Loop through the JSON data and create rows
-       data.forEach((item, index) => {
-           const row = document.createElement('tr');
-row.innerHTML = `
-   <td>${item.id}</td>
-   <td>
-       <a href="${item.channelLink}" target="_blank">
-           <img src="${item.channelImage}" style="height: 20px; width: 20px;">
-           ${item.channelName}
-       </a>
-   </td>
-   <td>
-       <a href="${item.link}" target="_blank">${item.title}</a>
-       <br>
-         <a href="${item.link}" target="_blank">
-       <img src="${item.thumbnail}" 
-            alt="Dummy row (Ignore this)" 
-            style="height: 100px; width: 200px;" 
-            loading="lazy">
-            </a>
-   </td>
-   <td class="responsive-description">${item.description}</td>
-   <td><a href="${item.link}" target="_blank">Visit</a></td>
-`;
+function showLoadingSpinner() {
+    const tableContainers = document.querySelectorAll(`.content-div`); // Select all divs with class 'content-div'
 
-// Append the row to the table body
-tableBody.appendChild(row);
+for (let div of tableContainers) {
+    // Create a new spinner for each div
+    const spinner = document.createElement('div');
+    spinner.className = 'loading-spinner';
+    spinner.style.cssText = `
+        position: absolute; /* Spinner is relative to each div */
+        top: 60%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for perfect centering */
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(0, 0, 0, 0.1);
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    `;
 
-       });
-   }
+    // Ensure the parent div has relative positioning
+    div.style.position = 'relative';
+
+    // Append the spinner to the current div
+    div.appendChild(spinner);
+}
+
+}
+
+function hideLoadingSpinner() {
+    const spinners = document.querySelectorAll('.loading-spinner'); // Select all spinners
+    spinners.forEach(spinner => spinner.remove()); // Remove each spinner
+}
+
+function renderTable(data) {
+    const tableBody = document.querySelector(`.${targetjsonFile} tbody`);
+
+    // Clear any existing content
+    tableBody.innerHTML = '';
+
+    // Simulate a delay to test the loading spinner
+
+        // Loop through the JSON data and create rows
+        data.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.id}</td>
+                <td>
+                    <a href="${item.channelLink}" target="_blank">
+                        <img src="${item.channelImage}" style="height: 20px; width: 20px;">
+                        ${item.channelName}
+                    </a>
+                </td>
+                <td>
+                    <a href="${item.link}" target="_blank">${item.title}</a>
+                    <br>
+                    <a href="${item.link}" target="_blank">
+                        <img src="${item.thumbnail}" 
+                            alt="Dummy row (Ignore this)" 
+                            style="height: 100px; width: 200px;" 
+                            loading="lazy">
+                    </a>
+                </td>
+                <td class="responsive-description">${item.description}</td>
+                <td><a href="${item.link}" target="_blank">Visit</a></td>
+            `;
+
+            // Append the row to the table body
+            tableBody.appendChild(row);
+        });
+
+        // Hide the spinner after rendering the table
+        hideLoadingSpinner();
+}
    
    
    // Hide all content divs
