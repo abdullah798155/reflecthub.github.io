@@ -380,17 +380,102 @@ function showDiv(divId) {
 
             // Loop through each .content-div and clear its content
             contentContainers.forEach(contentContainer => {
-                contentContainer.innerHTML = '';  // Clear existing content
-
+                contentContainer.innerHTML = ''; // Clear existing content
+            
                 // Display the error message
                 const errorMessage = document.createElement('div');
                 errorMessage.className = 'error-message';
-                errorMessage.innerHTML = `<b>Server did not respond.<b><br> Please try again later. <br> <br><br> The following errors where caught: <br>\n${error}`;
-                errorMessage.style.color = 'red';
+                errorMessage.innerHTML = `
+                    <div class="error-icon">🚨</div>
+                    <h2>Oops! Something went wrong. 😔</h2>
+                    <p>Server did not respond. Please try again later.</p>
+                    <p class="error-details">The following errors were caught:</p>
+                    <pre class="error-text">${error}</pre>
+                `;
+                errorMessage.style.color = '#D8000C';
+                errorMessage.style.backgroundColor = '#FFF6F6';
                 errorMessage.style.textAlign = 'center';
-                errorMessage.style.marginTop = '20px';
+                errorMessage.style.margin = '20px auto';
+                errorMessage.style.padding = '20px';
+                errorMessage.style.border = '1px solid #D8000C';
+                errorMessage.style.borderRadius = '10px';
+                errorMessage.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+                errorMessage.style.fontFamily = 'Arial, sans-serif';
+                errorMessage.style.width = '90%';
+                errorMessage.style.maxWidth = '600px';
+                errorMessage.style.animation = 'fadeIn 0.5s ease-in-out';
+            
                 contentContainer.appendChild(errorMessage);
             });
+            
+            // CSS styles for modern aesthetics
+            const style = document.createElement('style');
+            style.innerHTML = `
+                .error-message .error-icon {
+                    font-size: 2.5rem;
+                    margin-bottom: 10px;
+                    animation: shake 0.5s ease-in-out;
+                }
+            
+                .error-message h2 {
+                    margin: 0;
+                    font-size: 1.8rem;
+                    color: #D8000C;
+                }
+            
+                .error-message p {
+                    margin: 10px 0;
+                    font-size: 1rem;
+                    color: #4F4F4F;
+                }
+            
+                .error-message .error-details {
+                    font-weight: bold;
+                    margin-top: 15px;
+                }
+            
+                .error-message .error-text {
+                    background-color: #F9F2F4;
+                    color: #900;
+                    padding: 10px;
+                    border: 1px solid #D8000C;
+                    border-radius: 5px;
+                    font-family: monospace;
+                    font-size: 0.9rem;
+                    white-space: pre-wrap;
+                    text-align: left;
+                    margin: 10px auto;
+                    overflow: auto;
+                }
+            
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            
+                @keyframes shake {
+                    0%, 100% {
+                        transform: translateX(0);
+                    }
+                    25% {
+                        transform: translateX(-5px);
+                    }
+                    50% {
+                        transform: translateX(5px);
+                    }
+                    75% {
+                        transform: translateX(-5px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
         }, 1000); // Delay of 5 seconds
     
             });
