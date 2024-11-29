@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     for (const file of jsonFiles) {
         try {
-            const response = await fetch('../Content/' + file);
+            const response = await fetch('https://reflectserver.github.io/Content/' + file);
             const data = await response.json();
     
             // Check if it's the verses.json file based on a unique key
