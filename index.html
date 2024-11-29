@@ -212,7 +212,27 @@
         <button id='men-d6' class="btn btn-secondary rounded-pill" onclick="showDiv('div6')">Declaration of faith ☝️</button>
         <button id='men-d7' class="btn btn-secondary rounded-pill" onclick="showDiv('div7')">Topics to Ponder 🤔</button>
     </div>
+  </div>
+  <div class="search-container">
+    <button id="search-button" class="search-btn">
+      <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/magnifying-glass.svg?v=2&token=a463935e93" style="display: inline-block;height: 15px; width: 15px;">  
+      <span class="search-icon"> Search</span>
+      <span class="ctrl-k">ctrl+k</span>
+  </button>
+  
+  
 </div>
+
+<!-- Hidden search bar that appears with Ctrl+K -->
+<div id="search-wrapper">
+    <div class="blur-background"></div>
+    <div style="position: relative; width: 100%; padding: 20px;" class="pop-up-animate">
+        <input type="text" id="search-bar" placeholder="Search by description, channel name, title, video ID..." >
+        <div id="results"></div>
+        <div id="results1"></div>
+    </div>
+</div>
+
 
 
     <!-- Content Sections with Expanded Height -->
@@ -358,19 +378,19 @@
 
         </div>
         <div id="div5" class="content-div table-wrapper pop-up-animate verse-style verses">
-            <div style="position: relative; width: 100%; height: auto;margin-bottom: 2%">
-                <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;color: rgb(140, 227, 230);" 
-            class="citation" 
-            data-info="
-                  <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Verses from Quran</div>
-                  <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                    <i>A collection of verses from Quran emphasizing on reflecting upon the creations.</i>
-                  </div>">
-                 Verses from Quran 📖
-            </span>
-                   
-                </div>
-             <div class="verse-container"></div>
+          <div style="position: relative; width: 100%; height: auto;margin-bottom: 2%">
+            <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;color: rgb(140, 227, 230);" 
+        class="citation" 
+        data-info="
+              <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Verses from Quran</div>
+              <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
+                <i>A collection of verses from Quran emphasizing on reflecting upon the creations.</i>
+              </div>">
+             Verses from Quran 📖
+        </span>
+               
+            </div>
+            <div class="verse-container"></div>
         </div>
         <div id="div6" class="content-div table-wrapper pop-up-animate verse-style faith">
          <div style="background-color: #ffffff; color:black; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; border: 15px solid rgb(46, 236, 198); border-radius: 45px; line-height: 1.5;
@@ -1017,10 +1037,17 @@
                 <p style="margin: 0; font-size: 14px;">Reddit</p>
             </a>
         </div>
+        <div style="display: flex; justify-content: center; align-items:center;">
+        </div>
         </div>
   </div>
-  <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <p style="color: white;font-size: 1.3rem;"> <img src="./Logos/locate.svg" style="height: 20px; width: 20px;"> Hyderabad , IN</p>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+       <p style="cursor:no-drop;"><u>English</u> | <u></u></p>
+       <p><u>Arabic</u> | <u></u></p>
+       <p><u>Urdu</u></p>
+</div>
 </div>
         
 </div>
@@ -1045,6 +1072,7 @@
     
     
     <script src="index.js"></script>
+    <script src="search.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
