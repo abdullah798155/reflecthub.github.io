@@ -1,3 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(53, 51, 51);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.search-btn .ctrl-k {
+    font-size: 0.9rem;
+    color: #6d6969;
+    margin-left: 220px; /* Space between "Search" and "ctrl+k" */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.blur-background {
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply blur to the background behind the element */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+#search-bar {
+    position: absolute; /* Position relative to its container */
+    top: -200px; /* Adjust this value to move it higher or lower */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    width: 50%; /* Adjust the width as needed */
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 25px; /* Makes the borders rounded */
+    border: 1px solid #ccc; /* Border color */
+    outline: none; /* Removes default outline */
+    display: block; /* Ensures centering works */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a sleek look */
+    /* opacity */
+    opacity:0.8;
+}
+
+#results {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown below the input */
+    width: 50%; /* Match the input width */
+    background-color: white;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the dropdown */
+}
+#results1 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown below the input */
+    width: 50%; /* Match the input width */
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    text-align:center;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the dropdown */
+}
+
+.result-item {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.result-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
 button:focus {
     outline: none;
     box-shadow: none;
