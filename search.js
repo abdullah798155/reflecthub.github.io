@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const searchButton = document.getElementById('search-button');
     const countElement = document.createElement('div');
     const jsonFiles = [
-        'rational.json', 
-        'inspirational.json', 
-        'scientific.json', 
-        'reactions.json', 
+        'rational.json',
+        'inspirational.json',
+        'scientific.json',
+        'reactions.json',
         'verses.json' // New JSON file for verses
     ];
     
@@ -21,24 +21,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch('https://reflectserver.github.io/Content/' + file);
             const data = await response.json();
     
-            // Check if it's the verses.json file based on a unique key
+            // Check if it's the verses.json file based on the filename
             if (file === 'verses.json') {
                 allVerses = allVerses.concat(data);
             } else {
-                allVideos = allVideos.concat(data);
+                // Extract only the required fields from non-verses JSON files
+                const filteredData = data.map(video => ({
+                    id: video.id,
+                    title: video.title,
+                    description: video.description,
+                    channelName: video.channelName,
+                    link:video.link
+                }));
+                allVideos = allVideos.concat(filteredData);
             }
         } catch (error) {
             console.error(`Error loading ${file}:`, error);
         }
     }
-   
-    
     
 
     // Function to highlight matching terms in the title
     function highlightMatch(text, query) {
         const regex = new RegExp(`(${query})`, 'gi');
-        return text.replace(regex, '<span style="font-weight:bold;color:#007bff;">$1</span>');
+        return text.replace(regex, '<span style="font-weight:bold;color:black;background-color:rgba(110, 253, 78, 0.5);">$1</span>');
     }
 
     searchBar.addEventListener('input', () => {
@@ -130,7 +136,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     resultsContainer.appendChild(resultItem);
                 });
                resultsContainer1.appendChild(countElement);
-               console.log(resultsContainer1);
             } else {
                 // Display error message
                 const errorMessage = document.createElement('div');
