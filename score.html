@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Circular Score Tracker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .score-tracker {
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+        #backgroundCircle {
+            fill: none;
+            stroke: #e0e0e0;
+            stroke-width: 20;
+        }
+        #progressCircle {
+            fill: none;
+            stroke-width: 20;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            transition: stroke 0.5s ease;
+        }
+        #scoreText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 36px;
+            font-weight: bold;
+        }
+        #slider {
+            width: 250px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Desktop best practices</h3>
+        <div class="score-tracker" >
+            <svg width="250" height="250" >
+                <circle id="backgroundCircle" cx="125" cy="125" r="105" />
+                <circle id="progressCircle" cx="125" cy="125" r="105"/>
+            </svg>
+            <div id="scoreText">0</div>
+        </div>
+        <!-- <input type="range" id="slider" min="0" max="100" value="0"> -->
+    </div>
+
+    <script>
+        const progressCircle = document.getElementById('progressCircle');
+        const scoreText = document.getElementById('scoreText');
+        const slider = document.getElementById('slider');
+
+        function updateScore(score) {
+            // Calculate circle circumference
+            const radius = 105;
+            const circumference = 2 * Math.PI * radius;
+
+            // Update progress circle
+            const progress = circumference * (1 - score / 100);
+            progressCircle.style.strokeDasharray = `${circumference}`;
+            progressCircle.style.strokeDashoffset = progress;
+
+            // Set color based on score
+            if (score <= 33) {
+                progressCircle.style.stroke = '#ff4136'; // Red
+                progressCircle.style.backgroundColor = '#ffcccc'; // Light red
+            } else if (score <= 66) {
+                progressCircle.style.stroke = '#ffdc00'; // Yellow
+                progressCircle.style.backgroundColor = '#ffffcc'; // Light yellow
+            } else {
+                progressCircle.style.stroke = '#2ecc40'; // Green
+                progressCircle.style.backgroundColor = '#ccffcc'; // Light green
+            }
+
+            // Update score text
+            scoreText.textContent = Math.round(score);
+        }
+
+        // Initial setup
+        updateScore(93);
+
+        // Slider event listener
+        slider.addEventListener('input', (e) => {
+            updateScore(e.target.value);
+        });
+    </script>
+</body>
+</html>

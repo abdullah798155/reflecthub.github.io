@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Quantum Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-glow: rgba(74, 222, 128, 0.6);
+            --secondary-glow: rgba(96, 165, 250, 0.6);
+            --background-dark: #0a192f;
+            --text-primary: #e6f1ff;
+            --accent-color: #64ffda;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-color) transparent;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--background-dark) 0%, #1a2b3c 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            perspective: 1000px;
+        }
+
+        .quantum-container {
+            width: 100%;
+            max-width: 1200px;
+            background: rgba(17, 34, 64, 0.8);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(100, 255, 218, 0.2);
+            box-shadow: 
+                0 25px 50px rgba(0,0,0,0.3), 
+                0 0 20px var(--primary-glow),
+                0 0 40px var(--secondary-glow);
+            overflow: hidden;
+            transform: rotateX(15deg) rotateY(-2deg) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .performance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(90deg, rgba(17, 34, 64, 0.9) 0%, rgba(26, 43, 60, 0.7) 100%);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .performance-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .performance-header h1 i {
+            color: var(--accent-color);
+            animation: pulse 2s infinite alternate;
+        }
+
+        .expandable-container {
+            margin: 1rem 0;
+            background: rgba(26, 43, 60, 0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .expandable-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            background: rgba(17, 34, 64, 0.7);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .expandable-header:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        .expandable-header span {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .expandable-header .arrow {
+            transition: transform 0.3s ease;
+            color: var(--accent-color);
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: rgba(26, 43, 60, 0.5);
+            opacity: 0;
+        }
+
+        .expandable-content.expanded {
+            max-height: 1000px; /* Increased for full table visibility */
+            opacity: 1;
+            padding: 1rem;
+            overflow-y: auto; /* Added scrolling */
+            max-height: 500px; /* Fixed max height */
+        }
+
+        .table-wrapper {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(17, 34, 64, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            transition: background 0.3s ease;
+            white-space: nowrap;
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            z-index: 10;
+        }
+
+        tr:hover {
+            background: rgba(100, 255, 218, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        .table-wrapper::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: rgba(17, 34, 64, 0.3);
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 5px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .performance-iframe {
+            width: 100%;
+            height:350px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .quantum-container {
+                transform: none;
+                width: 95%;
+            }
+
+            .performance-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <button class="back-button">
+        <a href='./index.html'>
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </button>
+    <button class="back-button">
+        <a href='./drop.html'>
+            <i class="fas "></i> Basic UI
+        </a>
+    </button>
+    </div>
+
+    <style>
+        .back-button {
+            background: var(--accent-color);
+            border: none;
+            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            color: var(--background-dark);
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-button a {
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-button:hover {
+            background: rgba(100, 255, 218, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .back-button i {
+            animation: pulse 2s infinite alternate;
+        }
+    </style>
+    <div class="quantum-container">
+        <div class="performance-header">
+            <h1>
+                <i class="fas fa-chart-line"></i>
+                Performance Dashboard
+            </h1>
+            <div>
+                <a href="#" style="color: var(--accent-color); text-decoration: none;">
+                    <i class="fas fa-download"></i> Export Report
+                </a>
+            </div>
+        </div>
+
+        <iframe src="./score.html" class="performance-iframe"></iframe>
+
+ 
+        <div class="expandable-container">
+            <div class="expandable-header" onclick="toggleContent(this)">
+                <span>🟩 Website performance -- <span  style="background-color: #d4f1d2; color:rgb(0, 0, 0);border:1px solid rgb(71, 137, 83); border-radius:5px;font-weight: bold;">Reflecthub</span></span>
+                <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+            </div>
+            <div class="expandable-content">
+                <iframe src="https://reflecthub.github.io" style="background-color: white;border:none;width:100% !important;height:500px !important;"></iframe>
+            </div>
+            </div>
+    <div class="expandable-container">
+        <div class="expandable-header" onclick="toggleContent(this)">
+            <span>🔎 Insights -- pagespeed.web.dev <sup style="color:white;font-weight: bold;"> @Google inc</sup></span>
+            <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+        </div>
+        <div class="expandable-content">
+           <p> <b>Google PageSpeed Insights is a tool that empowers you to make your website faster. It evaluates your website's performance and provides suggestions to improve it. </b></p>
+             <a href="https://pagespeed.web.dev/analysis/https-reflecthub-github-io/2nqko721uv?form_factor=desktop" target="_blank" style="color: blue;display: flex; justify-content: center; align-items: center;">Perflogs</a>
+        </div>
+        </div>
+        <div class="expandable-container">
+            <div class="expandable-header" onclick="toggleContent(this)">
+                <span>
+                    <i class="fas fa-microchip"></i>
+                    JavaScript Execution Time — 0.1s
+                </span>
+                <span class="arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </span>
+            </div>
+            <div class="expandable-content">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3 style="color: var(--accent-color);">Performance Insights</h3>
+                    <a href="https://pagespeed.web.dev" target="_blank" style="color: var(--accent-color); text-decoration: none;">
+                        <i class="fas fa-external-link-alt"></i> Performance Logs
+                    </a>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Resource</th>
+                                <th>Total CPU Time</th>
+                                <th>Script Evaluation</th>
+                                <th>Script Parse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GitHub Utility 1st Party</td>
+                                <td>2,184 ms</td>
+                                <td>45 ms</td>
+                                <td>2 ms</td>
+                            </tr>
+                            <tr>
+                                <td>https://reflecthub.github.io</td>
+                                <td>2,112 ms</td>
+                                <td>13 ms</td>
+                                <td>0 ms</td>
+                            </tr>
+                            <tr>
+                                <td>/index.js (reflecthub.github.io)</td>
+                                <td>71 ms</td>
+                                <td>33 ms</td>
+                                <td>1 ms</td>
+                            </tr>
+                            <tr>
+                                <td>Unattributable</td>
+                                <td>243 ms</td>
+                                <td>9 ms</td>
+                                <td>0 ms</td>
+                            </tr>
+                            <tr>
+                                <td>jQuery CDN cdn</td>
+                                <td>54 ms</td>
+                                <td>47 ms</td>
+                                <td>5 ms</td>
+                            </tr>
+                            <tr>
+                                <td>/jquery-3.5.1.slim.min.js (code.jquery.com)</td>
+                                <td>54 ms</td>
+                                <td>47 ms</td>
+                                <td>5 ms</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(header) {
+            const content = header.nextElementSibling;
+            content.classList.toggle('expanded');
+            
+            const arrow = header.querySelector('.arrow i');
+            arrow.classList.toggle('fa-chevron-down');
+            arrow.classList.toggle('fa-chevron-up');
+        }
+    </script>
+</body>
+</html>

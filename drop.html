@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Expandable Content</title>
+    <style>
+        .method {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 320px;
+            border: 1px solid #ccc;
+        }
+        table {
+            margin-top:10px;
+            border-collapse: collapse;
+            width: 100%;
+            color:black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .expandable-container {
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+            margin-bottom: 10px;
+            color:grey;
+        }
+        .expandable-header {
+            height:20px;
+            border-bottom: 1px solid black;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            color:black;
+        }
+        
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.15s ease-out ,padding 0.15s ease-out;;
+            padding: 0 10px;
+            opacity: 0;
+            border-bottom: 1px solid black;
+        }
+        .expandable-content.expanded {
+            max-height: 1000px; /* Adjust this value based on your content's max potential height */
+            opacity: 1;
+            padding: 10px;
+        }
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+        .expanded .arrow {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <style>
+      .back-button{
+        width: auto;
+        height:50px;
+        padding: 10px 20px;
+        background-color: #f4f4f4;
+        font-size: 1.2rem;
+      }
+    </style>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <button class="back-button">
+        <a href='./index.html'>
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </button>
+    <button class="back-button">
+        <a href='./future.html'>
+            <i class="fas fa-arrow-left"></i> Switch to Advance UI
+        </a>
+    </button>
+    </div>
+
+    <iframe src="./score.html" style="background-color: white;border:none;"></iframe>
+   
+
+    <div class="expandable-container">
+    <div class="expandable-header" onclick="toggleContent(this)">
+        <span>🟩 Website performance -- <span  style="background-color: #d4f1d2; color:rgb(0, 0, 0);border:1px solid rgb(71, 137, 83); border-radius:5px;font-weight: bold;">Reflecthub</span></span>
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <div class="expandable-content">
+        <iframe src="https://reflecthub.github.io" style="background-color: white;border:none;"></iframe>
+    </div>
+    </div>
+
+    <div class="expandable-container">
+    <div class="expandable-header" onclick="toggleContent(this)">
+        <span>🔎 Insights -- pagespeed.web.dev <sup style="color:rgb(0, 0, 0);font-weight: bold;"> @Google inc</sup></span>
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <div class="expandable-content">
+       <p> <b>Google PageSpeed Insights is a tool that empowers you to make your website faster. It evaluates your website's performance and provides suggestions to improve it. </b></p>
+         <a href="https://pagespeed.web.dev/analysis/https-reflecthub-github-io/2nqko721uv?form_factor=desktop" target="_blank" style="color: blue;display: flex; justify-content: center; align-items: center;">Perflogs</a>
+    </div>
+    </div>
+    <div class="expandable-container">
+        <div class="expandable-header" onclick="toggleContent(this)">
+            <span>🟨 JavaScript execution time  -- 0.1s</span>
+            <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+        </div>
+        <div class="expandable-content">
+            <p><b>Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. Learn how to reduce Javascript execution time.<span style="border:0.1px solid black;border-radius:5px;padding:2px;font-size:smaller">TBT </span></b>
+            </p>
+            <a href="https://pagespeed.web.dev/analysis/https-reflecthub-github-io/2nqko721uv?form_factor=desktop" target="_blank" style="color: blue;display: flex; justify-content: center; align-items: center;">Perflogs</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Total CPU Time</th>
+                        <th>Script Evaluation</th>
+                        <th>Script Parse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GitHub utility 1st party</td>
+                        <td>2,184 ms</td>
+                        <td>45 ms</td>
+                        <td>2 ms</td>
+                    </tr>
+                    <tr>
+                        <td>https://reflecthub.github.io</td>
+                        <td>2,112 ms</td>
+                        <td>13 ms</td>
+                        <td>0 ms</td>
+                    </tr>
+                    <tr>
+                        <td>/index.js (reflecthub.github.io)</td>
+                        <td>71 ms</td>
+                        <td>33 ms</td>
+                        <td>1 ms</td>
+                    </tr>
+                    <tr>
+                        <td>Unattributable</td>
+                        <td>243 ms</td>
+                        <td>9 ms</td>
+                        <td>0 ms</td>
+                    </tr>
+                    <tr>
+                        <td>jQuery CDN cdn</td>
+                        <td>54 ms</td>
+                        <td>47 ms</td>
+                        <td>5 ms</td>
+                    </tr>
+                    <tr>
+                        <td>/jquery-3.5.1.slim.min.js (code.jquery.com)</td>
+                        <td>54 ms</td>
+                        <td>47 ms</td>
+                        <td>5 ms</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+
+        <!--A fixed footnote on bottom right saying Developed and controlled by Abdullah-->
+        <div style="position: fixed; bottom: 0; right: 0; padding: 10px; background-color: #f0f0f0; color: #333; font-size: 12px;">
+            Developed and controlled by Abdullah
+        </div>
+
+<script>
+    function toggleContent(header) {
+        const content = header.nextElementSibling; // Get the next sibling (expandable-content)
+        const arrow = header.querySelector('.arrow'); // Get the arrow element
+
+        // Toggle expanded class
+        content.classList.toggle('expanded');
+        header.querySelector('.arrow').classList.toggle('expanded');
+    }
+</script>
+
+</body>
+</html>
