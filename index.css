@@ -87,18 +87,20 @@ body {
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Rounded corners for the dropdown */
+;
 }
 #results1 {
     position: absolute;
     top: 200px;
     left: 50%;
     transform: translateX(-50%); /* Centers the dropdown below the input */
-    width: 50%; /* Match the input width */
+    /* width: 50%; Match the input width */
+    max-width: fit-content;
     background-color: rgba(0, 0, 0, 0);
     color:white;
     text-align:center;
     max-height: 300px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Rounded corners for the dropdown */
