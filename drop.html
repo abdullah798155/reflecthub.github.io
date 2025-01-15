@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smooth Expandable Content</title>
+    <title>Basic UI</title>
     <style>
         .method {
             margin-bottom: 30px;
@@ -79,27 +79,42 @@
 </head>
 <body>
     <style>
-      .back-button{
-        width: auto;
-        height:50px;
-        padding: 10px 20px;
-        background-color: #f4f4f4;
-        font-size: 1.2rem;
-      }
-    </style>
+        .button-container {
+          perspective: 1000px; /* Enable 3D perspective */
+        }
+      
+        .back-button {
+          width: auto;
+          height: 80px;
+          padding: 10px 20px;
+          background-color: #f4f4f4;
+          font-size: 1.2rem;
+          border: none;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+          transition: transform 0.2s, box-shadow 0.2s, padding 0.2s;
+          cursor: pointer;
+          border : 1px solid black;
+        }
+      
+        .back-button:active {
+          transform: translateY(5px) scale(0.95); /* Push down and shrink slightly */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow for depth effect */
+          padding: 10px 18px; /* Slightly reduce padding to simulate pressing */
+        }
+      </style>
+      
     <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-        <button class="back-button">
-        <a href='./index.html'>
-            <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-    </button>
-    <button class="back-button">
-        <a href='./future.html'>
-            <i class="fas fa-arrow-left"></i> Switch to Advance UI
-        </a>
-    </button>
-    </div>
 
+        <a href='./index.html' style="text-decoration: none;">
+            <button class="back-button"> <i class="fas fa-arrow-left"></i> Back to Home </button>
+        </a>
+        <h1> PERFLOGS 🛠️ </h1> </spam>
+        <a href='./future.html'  style="text-decoration: none;">
+            <button class="back-button">  <i class="fas fa-arrow-left"></i> Switch to <br> Advance UI </button>
+        </a>
+ 
+    </div>
+    <h5 style="text-align: center;">For low end devices</h5>
     <iframe src="./score.html" style="background-color: white;border:none;"></iframe>
    
 
