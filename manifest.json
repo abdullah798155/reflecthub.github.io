@@ -1,0 +1,22 @@
+{
+    "name": "ReflectHub",
+    "short_name": "ReflectHub",
+    "description": "Read Quran and watch these videos sincerely by reflecting upon them deeply, so that you may find truth and accept it!",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#c8ffcd",
+    "icons": [
+      {
+        "src": "icon2.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icon2.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
