@@ -1,6 +1,6 @@
 # ReflectHub License
 
-Copyright (c) [2024] [Mohammed Abdullah]
+Copyright (c) [2025] [Mohammed Abdullah]
 
 This software is released under the following terms:
 
