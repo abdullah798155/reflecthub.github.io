@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-919CJ19C8Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-919CJ19C8Q');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="ReflectHub">
@@ -18,81 +9,89 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/reflecthub/reflecthub.github.io/main/Homepage.png">
     <meta property="og:url" content="https://reflecthub.github.io">
     <meta property="og:type" content="website">
-    <link rel="manifest" href="/manifest.json">
     <title>Reflect !</title>
-    <link rel="icon" type="image/x-icon" href="./icon2.png">
+    <link rel="icon" type="image/x-icon" href="image.png">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 
     
 </head>
 
-<body style="background-color:#c8ffcd; ;">
+<body style="background-color:#c8ffcd;">
 
     <!-- Navbar -->
    
+    <nav style="margin: 1% 1.5% 0 1.5%; border-radius: 10px; background-color: #2f4f4f; padding: 10px; display: flex; align-items: center; justify-content: space-between;" id="navbar-mobile">
     
-    <nav class="" style="margin-bottom: 0 !important;border: none !;border-radius: 10px;margin-left:1.5%;margin-right: 1.5%; margin-top: 1%;">
-        <div class="container-fluid justify-content-center  pop-up-animate1" style="background-color: #2f4f4f;border-radius: 10px;"> <!-- Center the contents -->
-            <a class="navbar-brand" href="https://reflecthub.github.io/">
-                <img src="./icon5.png" alt="Logo" class="d-inline-block align-top">
-            </a>
-            <h1 id="typing-effect" class="swipers responsive-description1" style="
-                    font-weight: bold;
-                    color:rgb(108, 231, 209) ;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    /* -webkit-text-fill-color: transparent; */
-                    -webkit-text-stroke: 0.57px black;
-                    text-align: center;
-                    max-width: fit-content;
-                ">
-                Reflect Hub
-            </h1>
-               
-            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 10px;">
-                <div class="panel-icon pop-up-animate1" id="panelIcon">
-                  <h6>Contact & Suggest me</h6>
-                </div>
-                <span class="citation" data-info="
-                    <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Translate</div>
-                    <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                        <span>Click here to translate to any language 🌐<br><br>
-                            <i> -Default is set to Arabic (العربية)</i>
-                            <br><br>
-                            <b><i>Powered by Google Translate</i></b>
-                    </span>
-                    </div>">
-                  <a href="https://reflecthub-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en-US&_x_tr_pto=wapp" style="cursor: help;">
-                    <div style="display: inline-flex; justify-content: center; align-items: center; width: 50px;">
-                        <img src="./Logos/Translate.png" style="height: 80%; width: 80%; margin-top: 0.56rem;">
-                      </div>
-                      
-                  </a>
-                </span>
-            </div>
-            
-            
+      <!-- Left Side: Hamburger & Logo -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <!-- Hamburger Menu -->
+          <div class="hamburger-menu" style="cursor: pointer; font-size: 34px; color: white; padding: 2px; background-color: rgb(67, 133, 133); border-radius: 5px;">
+              ☰
+          </div>
+  
+          <!-- Logo -->
+          
+          <!-- Title -->
         </div>
-        <style>
-            #head::before {
-              content: '';
-              position: absolute;
-              top: -23.8px; /* Moves the semi-circle above the element */
-              left: 1.5%; /* Adjusts the space from the left */
-              right: 1.5%; /* Adjusts the space from the right */
-              height: 40px; /* Keeps the height to form the semi-circle */
-              background-color: #2f4f4f; /* Semi-circle color */
-              border-radius: 50%;
-              z-index:0; /* Ensure it stays behind the text */
-            }
-          </style>
-    </nav>
-
- 
+        <a href="https://reflecthub.github.io/" style="text-decoration: none; display: flex; align-items: center;">
+          <img src="./icon5.png" alt="Logo" style="height: 50px; width: auto;">
+          <h3 style=" 
+              font-weight: bold;
+              color: rgb(108, 231, 209);
+              text-shadow: 1px 1px 2px black;
+              margin: 0;
+              font-size: 2rem;
+              font-family: 'Quicksand', sans-serif;
+          " id="title">
+              Reflect Hub
+          </h3>
+      </a>
+      
+        
+      <!-- Right Side: Contact & Translation -->
+      <div style="display: flex; align-items: center; gap: 15px;">
+          <div class="panel-icon pop-up-animate1" id="panelIcon" style="
+              background: rgba(255, 255, 255, 0.2);
+              padding: 8px 12px;
+              border-radius: 5px;
+              text-shadow: 
+              0 0 3px #96fff6, 
+              0 0 6px #96fff6, 
+              0 0 9px #96fff6, 
+              0 0 12px rgba(150, 255, 246, 0.7);
+              font-size: 11px;
+              color: white;
+              font-family: 'Quicksand', sans-serif;
+              cursor: pointer;">
+              Contact & Suggest me
+          </div>
+        
+          <!-- Citation Info Box -->
+          <span class="citation" data-info="
+              <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;font-family: 'Quicksand', sans-serif;'>Translate</div>
+              <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
+                  <span>Click here to translate to any language 🌐<br><br>
+                      <i> -Default is set to Arabic (العربية)</i>
+                      <br><br>
+                      <b><i>Powered by Google Translate</i></b>
+                  </span>
+              </div>">
+              <a href="https://reflecthub-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en-US&_x_tr_pto=wapp" style="cursor: help;">
+                  <img src="./Logos/Translate.png" style="height: 40px; width: auto;">
+              </a>
+          </span>
+      </div>
+  
+  </nav>
+  
+    
     
       
     
@@ -102,19 +101,21 @@
 
 
 
- <div style="   background-color: #c8ffcd;" >
+ <div style="   background-color: #c8ffcd; margin-top: 1;" id="readnoti">
 
         <h5 id="head" style="
           text-align: center;
-          font-family: Sour Gummy;
+          margin-top: 0;
+          font-family: 'Quicksand', sans-serif;
           background-color: #c8ffcd;
-          font-weight: 600;
+          font-weight: 800;
           padding: 15px 20px;
           margin-bottom: 0;
           border-radius: 8px;
           letter-spacing: 1.2px;
           color: #2f4f4f;
           position: relative;
+          font-size: 1.3rem;
           overflow: hidden; /* Prevents the pseudo-element from overflowing outside */
         " class="pop-up-animate1">
           Read Quran <sup> <span style="display: inline-flex; justify-content: center; align-items: center; text-align: center; flex-direction: row;" 
@@ -123,7 +124,7 @@
                   <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Why Quran?</div>
                   <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
                     <i>The Quran is the only book on earth which has been in its original form since its origin and has <b>never</b>  been corrupted and gone through any editing process.<br><br>
-                        <span style='background-color:#eab8e4; display:inline'>It is certainly We Who have revealed the Reminder, and it is certainly We Who will preserve it [From corruption].<br>[Quran 15:9]</span><br><br>
+                        <span style='background-color:#eab8e4; display:inline;'>It is certainly We Who have revealed the Reminder, and it is certainly We Who will preserve it [From corruption].<br>[Quran 15:9]</span><br><br>
                         If all the books in the world were to disappear from face of earth, then Quran is the only book which can be bought back to its original form, cover to cover, word by word <br>[Because millions of people have memorized it cover to cover].<br><br>
                         Quran also contains various Scientific and Historical facts which were unknown at the time of its revelation (You will get to know them by watching below videos).<br>
                     </i>
@@ -143,7 +144,7 @@
       <a href="https://www.quran.com" target="_blank" style="text-decoration: none;">
         <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;
           box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;"
+          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif;font-weight: 800;"
           onmousedown="this.style.transform='scale(0.95)';" 
           onmouseup="this.style.transform='scale(1)';" 
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
@@ -155,12 +156,24 @@
       <a href="https://www.miracles-of-quran.com/index.html" target="_blank" style="text-decoration: none;">
         <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-top: 5px; margin-left: 10px;
           box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;"
+          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif; font-weight: 800;"
           onmousedown="this.style.transform='scale(0.95)';" 
           onmouseup="this.style.transform='scale(1)';" 
           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
           onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 100px rgba(0, 172, 255, 1)';">
           Scientific Miracles of Quran
+        </button>
+      </a>
+      
+      <a href="https://quranreflect.com/" target="_blank" style="text-decoration: none;">
+        <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-top: 5px; margin-left: 10px;
+          box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
+          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif; font-weight: 800;"
+          onmousedown="this.style.transform='scale(0.95)';" 
+          onmouseup="this.style.transform='scale(1)';" 
+          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
+          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 100px rgba(0, 172, 255, 1)';">
+          QuranReflect
         </button>
       </a>
       
@@ -197,7 +210,7 @@
   
 
 
-        <div style="display: flex; justify-content: center; align-items: center; height: 3.5vh;" class="pop-up-animate1">
+        <div style="display: flex; justify-content: center; align-items: center; height: 3.5vh;" class="pop-up-animate1" id="mobile-warn">
           <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
                 class="citation" 
                 data-info="
@@ -209,25 +222,14 @@
           </span>
       </div>
 
-
+<br>
 </div>
-<div class="menu-container d-flex ">
-    <div class="menu-icon pop-up-animate" onclick="toggleMenu()"><img src="./hamburger.svg"/></div>
-    <div class="btn-group btn-group-toggle pop-up-animate menu-links" data-toggle="buttons">
-        <button id='men-d1' class="btn btn-secondary rounded-pill" onclick="showDiv('div1')">Rational 🧠</button>
-        <button id='men-d2' class="btn btn-secondary rounded-pill" onclick="showDiv('div2')">Scientific 🔬</button>
-        <button id='men-d3' class="btn btn-secondary rounded-pill" onclick="showDiv('div3')">Inspirational ✨</button>
-        <button id='men-d4' class="btn btn-secondary rounded-pill" onclick="showDiv('div4')">Reactions 💻</button>
-        <button id='men-d5' class="btn btn-secondary rounded-pill" onclick="showDiv('div5')">Verses from Quran 📖</button>
-        <button id='men-d6' class="btn btn-secondary rounded-pill" onclick="showDiv('div6')">Declaration of faith ☝️</button>
-        <button id='men-d7' class="btn btn-secondary rounded-pill" onclick="showDiv('div7')">Topics to Ponder 🤔</button>
-    </div>
-  </div>
+
   <div class="search-container">
     <button id="search-button" class="search-btn">
       <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/magnifying-glass.svg?v=2&token=a463935e93" style="display: inline-block;height: 15px; width: 15px;">  
       <span class="search-icon"> Search</span>
-      <span class="ctrl-k">ctrl+k</span>
+      <span class="ctrl-k">ctrl + k</span>
   </button>
   
   
@@ -236,783 +238,77 @@
 <!-- Hidden search bar that appears with Ctrl+K -->
 <div id="search-wrapper">
     <div class="blur-background"></div>
-    <div style="position: relative; width: 100%; padding: 20px;" class="pop-up-animate">
+    <div style="position: relative; width: 100%; padding: 20px;font-family: 'Quicksand', sans-serif;" class="pop-up-animate">
         <input type="text" id="search-bar" placeholder="Search by description, channel name, title, video ID..." >
         <div id="results"></div>
         <div id="results1"></div>
     </div>
 </div>
+<!-- Hamburger Icon for mobile -->
 
-
-
-    <!-- Content Sections with Expanded Height -->
-    <div id="content-container" class="content-container">
-        <div id="div1" class="content-div table-wrapper ">
-            <table class="custom-table rational">
-
-                <thead>
-                    
-                    <div style="position: relative; width: 100%; height: auto;">
-                    <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
-                    class="citation" 
-                    data-info="
-                          <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Rational</div>
-                          <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                            <i> Videos that explore logical and rational arguments, helping viewers to understand deeper truths through structured reasoning.</i>
-                          </div>">
-                     Rational 🧠
-                    </span>
-                        <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row; position: absolute; right: 0;" 
-                                        class="citation" 
-                                        data-info="&lt;div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'&gt;For Mobile users&lt;/div&gt;&lt;div style='display:flex; justify-content:center; align-items:center; text-align: center;'&gt;&lt;i&gt;Scrolling ↔️ across the table left and right is enabled&lt;/i&gt;&lt;/div&gt;">
-                                         [📱?]
-                        </span>
-                    </div>
-                    
-                    <tr>
-                        <th>S.No</th>
-                        <th>Channel</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
-
-        </div>
-        <div id="div2" class="content-div table-wrapper ">
-            <table class="custom-table scientific">
-
-                <thead>
-                   
-                    <div style="position: relative; width: 100%; height: auto;">
-                        <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
-                    class="citation" 
-                    data-info="
-                          <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Science</div>
-                          <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                            <i>Content related to scientific explanations and evidence, emphasizing the intersection of science and belief.</i>
-                          </div>">
-                     Scientific🔬
-                    </span>
-                            <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row; position: absolute; right: 0;" 
-                                            class="citation" 
-                                            data-info="&lt;div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'&gt;For Mobile users&lt;/div&gt;&lt;div style='display:flex; justify-content:center; align-items:center; text-align: center;'&gt;&lt;i&gt;Scrolling ↔️ across the table left and right is enabled&lt;/i&gt;&lt;/div&gt;">
-                                             [📱?]
-                            </span>
-                        </div>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Channel</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
-
-        </div>
-        <div id="div3" class="content-div table-wrapper ">
-            <table class="custom-table inspirational">
-
-                <thead>
-                    <div style="position: relative; width: 100%; height: auto;">
-                        <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
-                    class="citation" 
-                    data-info="
-                          <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Inspirational</div>
-                          <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                            <i>Content that inspires viewers to reflect on their lives and the world around them, encouraging positive change and growth.</i>
-                          </div>">
-                          Inspirational ✨
-                    </span>
-                            <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row; position: absolute; right: 0;" 
-                                            class="citation" 
-                                            data-info="&lt;div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'&gt;For Mobile users&lt;/div&gt;&lt;div style='display:flex; justify-content:center; align-items:center; text-align: center;'&gt;&lt;i&gt;Scrolling ↔️ across the table left and right is enabled&lt;/i&gt;&lt;/div&gt;">
-                                             [📱?]
-                            </span>
-                        </div>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Channel</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
-
-        </div>
-        <div id="div4" class="content-div table-wrapper">
-            <table class="custom-table reactions">
-                <thead>
-                    
-                    <div style="position: relative; width: 100%; height: auto;">
-                        <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
-                    class="citation" 
-                    data-info="
-                          <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Reactions</div>
-                          <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                            <i>A collection of video reactions of individuals as they watch and reflect on various topics, providing insight into different perspectives.</i>
-                          </div>">
-                          Reactions 💻
-                    </span>
-                            <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row; position: absolute; right: 0;" 
-                                            class="citation" 
-                                            data-info="&lt;div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'&gt;For Mobile users&lt;/div&gt;&lt;div style='display:flex; justify-content:center; align-items:center; text-align: center;'&gt;&lt;i&gt;Scrolling ↔️ across the table left and right is enabled&lt;/i&gt;&lt;/div&gt;">
-                                             [📱?]
-                            </span>
-                        </div>
-                    
-                    <tr>
-                        <th>S.No</th>
-                        <th>Channel</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Link</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   
-                </tbody>
-            </table>
-
-        </div>
-        <div id="div5" class="content-div table-wrapper pop-up-animate verse-style verses">
-          <div style="position: relative; width: 100%; height: auto;margin-bottom: 2%">
-            <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;color: rgb(140, 227, 230);" 
-        class="citation" 
-        data-info="
-              <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Verses from Quran</div>
-              <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                <i>A collection of verses from Quran emphasizing on reflecting upon the creations.</i>
-              </div>">
-             Verses from Quran 📖
-        </span>
-               
-            </div>
-            <div class="verse-container"></div>
-        </div>
-        <div id="div6" class="content-div table-wrapper pop-up-animate verse-style faith">
-         <div style="background-color: #ffffff; color:black; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; border: 15px solid rgb(46, 236, 198); border-radius: 45px; line-height: 1.5;
-         letter-spacing: 0.6px;
-         text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
-         margin: 0;">
-            <h3 >        
-                <b>Entering into Islam is very simple</b><br><br>
-                You just need to <i>declare the faith</i>, known as the <b>Shahada</b> (<i>declaration of faith ☝️</i>)<br>
-                <span class="citation" data-info="
-                <div style='font-weight:bold; display:flex; justify-content:center; text-align: center; text-decoration: underline;'>Attention</div>
-                <div style='display:flex; justify-content:center; text-align: center;'>
-                  <i>Take your declaration of faith (Shahada) only after you have realized what Islam truly is and you are ready to embrace it.<br><br>
-                  There is no hurry, take your time to learn about Islam and its teachings. Once you are ready, you can declare your faith by reciting the Shahada.</i>
-                </div>">
-                  [i]
-                </span>
-                
-                
-                <div style="font-size: large; font-style: italic;">
-                  <br>
-                   
-                   <h5 style="background-color:#eab8e4; display:inline">
-                   There is no compulsion in religion<br> [Quran 
-                   <a href="https://quran.com/2?startingVerse=256" target="_blank">2:256</a>]</h5>
-                </div><br><br>
-                <div>
-                The Shahada in Arabic is as follows:<br><br>
-                <b>Arabic:</b> <span style="background-color: #d4f7d4;"><b><i>أشهد أن لا إله إلا الله وأشهد أن محمداً رسول الله</i></b></span>
-                </div>
-                <br>
-                <div>
-                <b>Say in Arabic:</b><span style="background-color: #d4f7d4;"> <b><i>Ash-hadu an la ilaha illallah, wa ash-hadu anna Muhammadur rasulullah</i></b></span>
-                </div>
-                <br>
-                <div>
-                <b>Translation:</b><span style="background-color: #ccf2ff;"> <b><i>I bear witness that there is no god but Allah, and I bear witness that Muhammad is the messenger of Allah.</i></b></span>
-                </div>
-                <br>
-                <span class="citation" data-info="
-                <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Onboarding</div>
-                <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                  <i>This declaration is the core of Islamic belief and affirms that there is no deity but Allah, and Muhammad is His messenger.<br><br> By stating these words with sincere belief, a person embraces Islam and begins their journey as a Muslim.</i>
-                </div>">
-                  [OnBoarding]
-                </span>
-                
-               <!-- <span style="font-size: 16px;"><i>  This declaration is the core of Islamic belief and affirms that there is no deity but Allah, and Muhammad is His messenger. By stating these words with sincere belief, a person embraces Islam and begins their journey as a Muslim.</i> </span> -->
-                
-             </h3>
-                
-        </div>
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="sidebar-content">
+        <!--to close-->
+        <span class="close-side" style="font-size: xx-large;cursor: pointer;">X</span><br>
+        
+        <h2 style="color: aliceblue; font-family: 'Quicksand'; border-bottom: 2px solid rgba(93, 182, 196, 0.7);padding: 5px;">Content</h2>
+    
+        <ul>
+            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('rational', this)">Rational 🧠</a></li>
+            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('scientific', this)">Scientific 🔬</a></li>
+            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('inspirational', this)">Inspirational ✨</a></li>
+            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('reactions', this)">Reactions 💻</a></li>
+            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVerses('verses', this)">Verses from Quran 📖</a></li>
+            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('faith', this)">Declaration of faith ☝️</a></li>
+            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('ponder', this)">Why Afterlife 🌍?</a></li>
+            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('blog', this)">Science in Quran 🌌</a></li>
+           
+        </ul>
     </div>
-    <div id="div7" class="content-div table-wrapper pop-up-animate verse-style faith" style="display: flex; justify-content: center; align-items: center;">
-        <?xml version="1.0" encoding="UTF-8"?>
-<!-- Do not edit this file with editors other than draw.io -->
-        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-        <div id="responsive-svg-container" >
-         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="740px" height="764px" viewBox="-0.5 -0.5 740 764" content="&lt;mxfile host=&quot;app.diagrams.net&quot; agent=&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36&quot; version=&quot;24.8.9&quot;&gt;&#10;  &lt;diagram name=&quot;Page-1&quot; id=&quot;8-aDURVAkAx0ODPZd4yA&quot;&gt;&#10;    &lt;mxGraphModel dx=&quot;1235&quot; dy=&quot;1714&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; tooltips=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; fold=&quot;1&quot; page=&quot;1&quot; pageScale=&quot;1&quot; pageWidth=&quot;850&quot; pageHeight=&quot;1100&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&#10;      &lt;root&gt;&#10;        &lt;mxCell id=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-3&quot; value=&quot;&quot; style=&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=90;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;389.38&quot; y=&quot;-20.000000000000004&quot; width=&quot;55&quot; height=&quot;218.75&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-4&quot; value=&quot;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-weight: bold; font-size: 15px;&amp;quot;&amp;gt;Muslim&amp;amp;nbsp;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;[Submits his will to God]&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;250&quot; y=&quot;110&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-6&quot; value=&quot;&amp;lt;b&amp;gt;&amp;lt;font style=&amp;quot;font-size: 15px;&amp;quot;&amp;gt;Human Being&amp;lt;br&amp;gt;🤵&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;356.88&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-8&quot; value=&quot;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-weight: bold; font-size: 15px;&amp;quot;&amp;gt;Athiest&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt;&amp;lt;i style=&amp;quot;&amp;quot;&amp;gt;/Non-Muslim&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;460&quot; y=&quot;110&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-11&quot; value=&quot;&amp;lt;b&amp;gt;Believes in Hereafter&amp;lt;br&amp;gt;✅&amp;lt;/b&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;170&quot; y=&quot;110&quot; width=&quot;60&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-12&quot; value=&quot;&amp;lt;b&amp;gt;Does not believe in Hereafter&amp;lt;br&amp;gt;❌&amp;lt;/b&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;590&quot; y=&quot;100&quot; width=&quot;110&quot; height=&quot;90&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-14&quot; value=&quot;&quot; style=&quot;endArrow=classic;html=1;rounded=0;&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#10;            &lt;mxPoint x=&quot;309.88&quot; y=&quot;170&quot; as=&quot;sourcePoint&quot; /&gt;&#10;            &lt;mxPoint x=&quot;309.5&quot; y=&quot;270&quot; as=&quot;targetPoint&quot; /&gt;&#10;          &lt;/mxGeometry&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-15&quot; value=&quot;&amp;lt;font style=&amp;quot;font-size: 16px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Dies 🪦&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;&quot; connectable=&quot;0&quot; vertex=&quot;1&quot; parent=&quot;XzCmzyegnEFURFCZ5URi-14&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-17&quot; value=&quot;&quot; style=&quot;endArrow=classic;html=1;rounded=0;&quot; edge=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot;&gt;&#10;            &lt;mxPoint x=&quot;519.88&quot; y=&quot;170&quot; as=&quot;sourcePoint&quot; /&gt;&#10;            &lt;mxPoint x=&quot;519.5&quot; y=&quot;270&quot; as=&quot;targetPoint&quot; /&gt;&#10;          &lt;/mxGeometry&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-18&quot; value=&quot;&amp;lt;font style=&amp;quot;font-size: 16px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Dies 🪦&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;&quot; connectable=&quot;0&quot; vertex=&quot;1&quot; parent=&quot;XzCmzyegnEFURFCZ5URi-17&quot;&gt;&#10;          &lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-22&quot; value=&quot;&amp;lt;font style=&amp;quot;font-size: 15px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Finds out Hereafter does not exists&amp;lt;br&amp;gt;❌&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;341.88&quot; y=&quot;320&quot; width=&quot;150&quot; height=&quot;70&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-30&quot; value=&quot;&quot; style=&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=south;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;240&quot; y=&quot;250&quot; width=&quot;140&quot; height=&quot;70&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-36&quot; value=&quot;&quot; style=&quot;strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;direction=south;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;450&quot; y=&quot;250&quot; width=&quot;140&quot; height=&quot;70&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-37&quot; value=&quot;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;font-size: 14px; background-color: initial;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;Both are Equal&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;i&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;b style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;🟡Muslim : 0&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;i&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;🟡Non-Muslim:0&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;332.94&quot; y=&quot;390&quot; width=&quot;167.88&quot; height=&quot;80&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-38&quot; value=&quot;&amp;lt;font style=&amp;quot;font-size: 15px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Finds Hereafter exists&amp;lt;br&amp;gt;😁&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;170&quot; y=&quot;320&quot; width=&quot;150&quot; height=&quot;70&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-39&quot; value=&quot;&amp;lt;font style=&amp;quot;font-size: 15px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;Finds Hereafter&amp;amp;nbsp; exists&amp;lt;br&amp;gt;😨&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&quot; style=&quot;rounded=1;whiteSpace=wrap;html=1;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;527.88&quot; y=&quot;320&quot; width=&quot;150&quot; height=&quot;70&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-41&quot; value=&quot;&amp;lt;b&amp;gt;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;i style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;font-size: 11px;&amp;quot;&amp;gt;&amp;lt;u&amp;gt;Advantageous&amp;lt;/u&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;br&amp;gt;&amp;lt;span style=&amp;quot;font-size: 17px;&amp;quot;&amp;gt;🟢Muslim : 100&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;170&quot; y=&quot;390&quot; width=&quot;150&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-42&quot; value=&quot;&amp;lt;b style=&amp;quot;text-wrap-mode: nowrap;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;i style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt;&amp;lt;u&amp;gt;Disadvantageous&amp;lt;/u&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;br&amp;gt;&amp;lt;span style=&amp;quot;font-size: 17px;&amp;quot;&amp;gt;🔴Non-Muslim: -100&amp;lt;/span&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;520&quot; y=&quot;400&quot; width=&quot;180&quot; height=&quot;30&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-49&quot; value=&quot;&amp;lt;h1 style=&amp;quot;margin-top: 0px;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;font-size: 21px;&amp;quot;&amp;gt;Total Score🟰&amp;lt;/font&amp;gt;&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;i style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt;Muslim : 100+0= &amp;lt;/span&amp;gt;&amp;lt;font style=&amp;quot;font-size: 17px;&amp;quot;&amp;gt;100&amp;lt;/font&amp;gt;&amp;lt;span style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt; (✅)&amp;lt;/span&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;font style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;div style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;b style=&amp;quot;background-color: initial;&amp;quot;&amp;gt;&amp;lt;i style=&amp;quot;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt;Athiest : 0 - 100 = &amp;lt;/span&amp;gt;&amp;lt;font style=&amp;quot;font-size: 17px;&amp;quot;&amp;gt;-100&amp;lt;/font&amp;gt;&amp;lt;span style=&amp;quot;font-size: 13px;&amp;quot;&amp;gt; (❌)&amp;lt;/span&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&quot; style=&quot;text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;341.88&quot; y=&quot;510&quot; width=&quot;180&quot; height=&quot;120&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;        &lt;mxCell id=&quot;XzCmzyegnEFURFCZ5URi-51&quot; value=&quot;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 16px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;This world is full of injustice!&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;What will happen to an innocent human being who was killed and the killer was never caught?&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;What will happen to a human being who spent his life in poverty and misery and died without getting any justice?&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;i&amp;gt;What will happen to a human being who spent his life in luxury and happiness and died without any accountability?&amp;lt;/i&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;&amp;lt;br&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div&amp;gt;&amp;lt;font style=&amp;quot;font-size: 14px;&amp;quot;&amp;gt;The answer to these questions can only be found in the &amp;lt;/font&amp;gt;&amp;lt;font style=&amp;quot;font-size: 16px;&amp;quot;&amp;gt;&amp;lt;b&amp;gt;&amp;lt;i&amp;gt;concept of Hereafter.&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/div&amp;gt;&quot; style=&quot;text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;&quot; vertex=&quot;1&quot; parent=&quot;1&quot;&gt;&#10;          &lt;mxGeometry x=&quot;55&quot; y=&quot;-90&quot; width=&quot;740&quot; height=&quot;40&quot; as=&quot;geometry&quot; /&gt;&#10;        &lt;/mxCell&gt;&#10;      &lt;/root&gt;&#10;    &lt;/mxGraphModel&gt;&#10;  &lt;/diagram&gt;&#10;&lt;/mxfile&gt;&#10;">
-  <defs />
-  <g>
-    <g data-cell-id="0">
-      <g data-cell-id="1">
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-3">
-          <g>
-            <rect x="334.38" y="111" width="55" height="218.75" fill="none" stroke="none" transform="rotate(90,361.88,220.37)" pointer-events="all" />
-            <path d="M 389.38 111 L 361.88 111 L 361.88 329.75 L 389.38 329.75" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,361.88,220.37)" pointer-events="all" />
-            <path d="M 334.38 220.37 L 361.88 220.37" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,361.88,220.37)" pointer-events="all" />
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-4">
-          <g>
-            <rect x="195" y="241" width="120" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 271px; margin-left: 196px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <font >
-                          <span style="font-weight: bold; font-size: 15px;">Muslim </span>
-                          <br />
-                          <font >
-                            <i>[Submits his will to God]</i>
-                          </font>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="255" y="275" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Muslim...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-6">
-          <g>
-            <rect x="301.88" y="131" width="120" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 161px; margin-left: 303px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <b>
-                          <font style="font-size: 15px;">Human Being <br />🤵 </font>
-                        </b>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="362" y="165" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Human Being...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-8">
-          <g>
-            <rect x="405" y="241" width="120" height="60" rx="9" ry="9" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 271px; margin-left: 406px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <font >
-                          <span style="font-weight: bold; font-size: 15px;">Athiest</span>
-                          <br />
-                          <font style="font-size: 13px;">
-                            <i >/Non-Muslim</i>
-                          </font>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="465" y="275" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Athiest...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-11">
-          <g>
-            <rect x="115" y="241" width="60" height="60" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 271px; margin-left: 116px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <b>Believes in Hereafter <br />✅ </b>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="145" y="275" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Believes i...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-12">
-          <g>
-            <rect x="535" y="231" width="110" height="90" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 276px; margin-left: 536px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <b>Does not believe in Hereafter <br />❌ </b>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="590" y="280" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Does not believe i...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-14">
-          <g>
-            <path d="M 254.88 301 L 254.52 394.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke" />
-            <path d="M 254.5 399.88 L 251.03 392.87 L 254.52 394.63 L 258.03 392.9 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all" />
-          </g>
-          <g data-cell-id="XzCmzyegnEFURFCZ5URi-15">
-            <g>
-              <g transform="translate(-0.5 -0.5)">
-                <switch>
-                  <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 352px; margin-left: 255px;">
-                      <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                        <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
-                          <font style="font-size: 16px;">
-                            <b>Dies 🪦</b>
-                          </font>
-                        </div>
-                      </div>
-                    </div>
-                  </foreignObject>
-                  <text x="255" y="355" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle">Dies 🪦</text>
-                </switch>
-              </g>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-17">
-          <g>
-            <path d="M 464.88 301 L 464.52 394.63" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke" />
-            <path d="M 464.5 399.88 L 461.03 392.87 L 464.52 394.63 L 468.03 392.9 Z" fill="rgb(0, 0, 0)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all" />
-          </g>
-          <g data-cell-id="XzCmzyegnEFURFCZ5URi-18">
-            <g>
-              <g transform="translate(-0.5 -0.5)">
-                <switch>
-                  <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 352px; margin-left: 465px;">
-                      <div data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                        <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; background-color: rgb(255, 255, 255); white-space: nowrap;">
-                          <font style="font-size: 16px;">
-                            <b>Dies 🪦</b>
-                          </font>
-                        </div>
-                      </div>
-                    </div>
-                  </foreignObject>
-                  <text x="465" y="355" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="11px" text-anchor="middle">Dies 🪦</text>
-                </switch>
-              </g>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-22">
-          <g>
-            <rect x="286.88" y="451" width="150" height="70" rx="10.5" ry="10.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 486px; margin-left: 288px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <font style="font-size: 15px;">
-                          <b>Finds out Hereafter does not exists <br />❌ </b>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="362" y="490" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Finds out Hereafter does...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-30">
-          <g>
-            <rect x="185" y="381" width="140" height="70" fill="none" stroke="none" transform="rotate(90,255,416)" pointer-events="all" />
-            <path d="M 290 346 L 255 346 L 255 486 L 290 486" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,255,416)" pointer-events="all" />
-            <path d="M 220 416 L 255 416" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,255,416)" pointer-events="all" />
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-36">
-          <g>
-            <rect x="395" y="381" width="140" height="70" fill="none" stroke="none" transform="rotate(90,465,416)" pointer-events="all" />
-            <path d="M 500 346 L 465 346 L 465 486 L 500 486" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,465,416)" pointer-events="all" />
-            <path d="M 430 416 L 465 416" fill="none" stroke="rgb(0, 0, 0)" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,465,416)" pointer-events="all" />
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-37">
-          <g>
-            <rect x="277.94" y="521" width="167.88" height="80" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 166px; height: 1px; padding-top: 561px; margin-left: 279px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <div >
-                          <b style="font-size: 14px; background-color: initial;">
-                            <i>Both are Equal</i>
-                          </b>
-                        </div>
-                        <font >
-                          <div >
-                            <span style="font-size: 14px;">
-                              <b>
-                                <i>
-                                  <br />
-                                </i>
-                              </b>
-                            </span>
-                          </div>
-                          <b style="font-size: 14px;">
-                            <div >
-                              <b style="background-color: initial;">
-                                <i>🟡Muslim : 0</i>
-                              </b>
-                            </div>
-                            <i>
-                              <div >
-                                <b style="background-color: initial;">
-                                  <i>🟡Non-Muslim:0</i>
-                                </b>
-                              </div>
-                            </i>
-                          </b>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="362" y="565" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Both are Equal🟡Muslim : 0🟡Non-...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-38">
-          <g>
-            <rect x="115" y="451" width="150" height="70" rx="10.5" ry="10.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 486px; margin-left: 116px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <font style="font-size: 15px;">
-                          <b>Finds Hereafter exists <br />😁 </b>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="190" y="490" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Finds Hereafter exists...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-39">
-          <g>
-            <rect x="472.88" y="451" width="150" height="70" rx="10.5" ry="10.5" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 486px; margin-left: 474px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <font style="font-size: 15px;">
-                          <b>Finds Hereafter  exists <br />😨 </b>
-                        </font>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="548" y="490" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Finds Hereafter  exists...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-41">
-          <g>
-            <rect x="115" y="521" width="150" height="60" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 551px; margin-left: 190px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: nowrap;">
-                        <b>
-                          <font >
-                            <i >
-                              <font style="font-size: 11px;">
-                                <u>Advantageous</u>
-                              </font>
-                              <br />
-                              <span style="font-size: 17px;">🟢Muslim : 100</span>
-                              <br />
-                              <br />
-                            </i>
-                          </font>
-                        </b>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="190" y="555" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Advantageous...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-42">
-          <g>
-            <rect x="465" y="531" width="180" height="30" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 546px; margin-left: 466px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <b style="text-wrap-mode: nowrap;">
-                          <font >
-                            <i >
-                              <font style="font-size: 13px;">
-                                <u>Disadvantageous</u>
-                              </font>
-                              <br />
-                              <span style="font-size: 17px;">🔴Non-Muslim: -100</span>
-                            </i>
-                          </font>
-                        </b>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="555" y="550" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">Disadvantageous...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-49">
-          <g>
-            <rect x="286.88" y="641" width="180" height="120" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 178px; height: 1px; padding-top: 648px; margin-left: 289px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; max-height: 116px; overflow: hidden;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <h1 style="margin-top: 0px;">
-                          <font style="font-size: 21px;">Total Score🟰</font>
-                        </h1>
-                        <p></p>
-                        <div >
-                          <b style="background-color: initial;">
-                            <i >
-                              <span style="font-size: 13px;">Muslim : 100+0= </span>
-                              <font style="font-size: 17px;">100</font>
-                              <span style="font-size: 13px;"> (✅)</span>
-                            </i>
-                          </b>
-                        </div>
-                        <font >
-                          <div >
-                            <b style="background-color: initial;">
-                              <i >
-                                <span style="font-size: 13px;">Athiest : 0 - 100 = </span>
-                                <font style="font-size: 17px;">-100</font>
-                                <span style="font-size: 13px;"> (❌)</span>
-                              </i>
-                            </b>
-                          </div>
-                        </font>
-                        <p></p>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="289" y="660" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px">Total Score🟰...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-        <g data-cell-id="XzCmzyegnEFURFCZ5URi-51">
-          <g>
-            <rect x="0" y="41" width="740" height="40" fill="none" stroke="none" pointer-events="all" />
-          </g>
-          <g>
-            <g transform="translate(-0.5 -0.5)">
-              <switch>
-                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
-                  <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 738px; height: 1px; padding-top: 61px; margin-left: 1px;">
-                    <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: center;">
-                      <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
-                        <div>
-                          <font style="font-size: 16px;">
-                            <b>This world is full of injustice!</b>
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">
-                            <br />
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">
-                            <i>What will happen to an innocent human being who was killed and the killer was never caught?</i>
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">
-                            <i>What will happen to a human being who spent his life in poverty and misery and died without getting any justice?</i>
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">
-                            <i>What will happen to a human being who spent his life in luxury and happiness and died without any accountability?</i>
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">
-                            <br />
-                          </font>
-                        </div>
-                        <div>
-                          <font style="font-size: 14px;">The answer to these questions can only be found in the </font>
-                          <font style="font-size: 16px;">
-                            <b>
-                              <i>concept of Hereafter.</i>
-                            </b>
-                          </font>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </foreignObject>
-                <text x="370" y="65" fill="rgb(0, 0, 0)" font-family="&quot;Helvetica&quot;" font-size="12px" text-anchor="middle">This world is full of injustice!...</text>
-              </switch>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-  </g>
-  <switch>
-    <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" />
-    <a transform="translate(0,-5)" xlink:href="https://www.drawio.com/doc/faq/svg-export-text-problems" target="_blank">
-      <text text-anchor="middle" font-size="10px" x="50%" y="100%">Text is not SVG - cannot display</text>
-    </a>
-  </switch>
-</svg>
-        </div>
-        <style>
-             #responsive-svg-container {
-                background-color: #ffffff; color:black; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; border: 15px solid rgb(46, 236, 198); border-radius: 45px;
-         text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
-         margin: 0;
-            /* width: 100%; */
-            
-            max-width: fit-content; /* Limit container width */
-            height: auto; /* Let height adjust to content */
-            display: flex; /* Flexbox for alignment */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            margin: 0 auto; /* Center the container itself on the page */
-        }
+</div>
 
-        /* Make SVG responsive */
-        svg {
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-        }
-    
-            /* For screens smaller than 1200px */
-            @media (max-width: 1200px) {
-                #responsive-svg-container {
-                    max-width: 80%; /* Adjust for medium screens */
-                }
-            }
-    
-            /* For screens smaller than 768px (tablets) */
-            @media (max-width: 768px) {
-                #responsive-svg-container {
-                    max-width: 90%; /* Adjust for smaller screens */
-                }
-            }
-    
-            /* For screens smaller than 480px (mobile devices) */
-            @media (max-width: 480px) {
-                #responsive-svg-container {
-                    max-width: 100%; /* Full width for extra-small screens */
-                }
-            }
-        </style>
-       </div>
- </div>
+<div class="tabs" id="tabs">
+    <button href="#videoContainer" class="tab-btn active" onclick="loadVideos('rational', this)">Rational 🧠</button>
+    <button href="#videoContainer" class="tab-btn" onclick="loadVideos('scientific', this)">Scientific 🔬</button>
+    <button href="#videoContainer" class="tab-btn" onclick="loadVideos('inspirational', this)">Inspirational ✨</button>
+    <button href="#videoContainer" class="tab-btn" onclick="loadVideos('reactions', this)">Reactions 💻</button>
+    <button href="#videoContainer" class="tab-btn" onclick="loadVerses('verses', this)">Verses from Quran 📖</button>
+    <button href="#" class="tab-btn" onclick="DynamicLoader('faith', this)">Declaration of faith ☝️</button>
+    <button href="#" class="tab-btn" onclick="DynamicLoader('ponder', this)">Why Afterlife 🌍?</button>
+ 
+</div>
+
+<!-- Overlay (for closing the sidebar when clicked outside) -->
+<div class="overlay"></div>
+
+<div class="loading" id="loading">
+    <div class="spinner"></div>
+    Loading videos...
+</div>
+
+
+  
+  <h2 id="dynamicContent"></h2>
+    <div class="container" id="videoContainer">
+      <!-- Videos will be inserted here -->
+  </div>
 
     
     
-<div class="footer">
+<div class="footer footer-anchors" style="font-family: 'Quicksand', sans-serif !important; font-weight: 500;">
   
  
-  <div class="footer1" style="margin-top: 40px;">
+  <div class="footer1">
         <div style="display: flex; flex-direction: column;">
-          <h4><b>📞 Contact</b></h4>
-          <p>📩<a href="mailto:reflect.intel@gmail.com">reflect.intel@gmail.com</a></p>
-          <p>💬<a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank">Feedback</a></p>
-          <p >🔎<a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank">Bug report</a></p>
-          <p><a href="" target="_blank"><img src='./Logos/discord.png' style="height:20px; width: 20px;"> blaze_0101</a></p>
-          <p><a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank"> <img src='./Logos/github.svg' style="height:20px; width: 20px;"> Github</a></p>
-          <h4><b>🔗 Other Links</b></h4>
-          <p>📖<a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155">QuranReflect</a></p>
+          <h2>📞 Contact</h2>
+          <p>📩<a href="mailto:reflect.intel@gmail.com" style="text-decoration: none;padding: 5px; border-radius: 5px;">reflect.intel@gmail.com</a></p>
+          <p>💬<a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;">Feedback</a></p>
+          <p >🔎<a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;">Bug report</a></p>
+          <p><a href="" target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;"><img src='./Logos/discord.png' style="height:20px; width: 20px;"> blaze_0101</a></p>
+          <p><a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;"> <img src='./Logos/github.svg' style="height:20px; width: 20px;"> Github</a></p>
+          <h2>🔗 Other Links</h2>
+          <p>📖<a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155" style="text-decoration: none;padding: 5px; border-radius: 5px;">QuranReflect</a></p>
         </div>
         <div style="display: flex; flex-direction: column;">
          
@@ -1073,23 +369,32 @@
 </div>
         
 <div class="popup" id="popup">
-    <div class="popup-content" style="box-shadow:0 0 25px rgba(36, 214, 125, 1); border-color:#3ae91f ; background-color: #dff2ec;" >
+    <div class="popup-content" style="background-color: #5b6d6dc2;
+backdrop-filter: blur(7px);font-family: 'Quicksand', sans-serif;font-weight: 600;color: white;" >
         <span class="close" id="closePopup">&times;</span>
-        <h2 class="typing-effect">About Me</h2>
-        <p>Hello! <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">I am Mohammed Abdullah</a></p>
+        <div style="text-align: center;">
+          <h2 style="
+              border-bottom: 2px solid rgba(93, 182, 196, 0.7); 
+              display: inline-block; 
+              margin: auto;">
+              About Me
+          </h2>
+      </div><br>
+      
+        <p>Hello!<a href="https://www.instagram.com/md_abdullah_0101/" target="_blank" style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">I am Mohammed Abdullah</a></p>
         <p class="swipers2">I am compiling a list of islamic videos which rational people may reflect upon and might accept the truth.</p><br>
         <p>Contact me below to suggest me some videos</p>
         <div >
-        <p>Email : <a href="mailto:reflect.intel@gmail.com">reflect.intel@gmail.com</a></p>
-        <p >Leave a <a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank">Feedback</a></p>
-        <p >Report a <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank">Bug</a></p>
-        <p >Discord: blaze_0101</p>
-        <a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank">Github <img src='./Logos/github.svg' style="height:20px; width: 20px;"></a><br><br>
+        <p>Email : <a href="mailto:reflect.intel@gmail.com"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">reflect.intel@gmail.com</a></p>
+        <p >Leave a <a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank" style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">Feedback</a></p>
+        <p >Report a <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank"   style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">Bug</a></p>
+        <p >Discord: <a href="#"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">blaze_0101</a></p>
         <span>Other Links:</span>
-        <a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155">QuranReflect</a>
+        <a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">QuranReflect</a>
 
-        <div>
-    </div>
+        </div>
+  </div>
+  </div>
     
  
     
@@ -1098,7 +403,7 @@
     <script src="./search.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 </body>
 
 </html>
