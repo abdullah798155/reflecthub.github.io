@@ -13,7 +13,7 @@ const ASSETS_TO_CACHE = [
   "/image.png",
   "/icon5.png",
   "/score.html",
-  "/Search test/search.js"
+  "/search.js"
 ];
 
 // Files that should **never** be cached (always request fresh from the server)
