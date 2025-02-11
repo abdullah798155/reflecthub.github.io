@@ -4,8 +4,8 @@
     "description": "Read Quran and watch these videos sincerely by reflecting upon them deeply, so that you may find truth and accept it!",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#c8ffcd",
+    "background_color": "#c8ffcd",
+    "theme_color": "#2f4f4f",
     "icons": [
       {
         "src": "icon2.png",
