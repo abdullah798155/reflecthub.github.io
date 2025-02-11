@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v3"; // Update this version to force a cache refresh
+const CACHE_NAME = "abdullah-pwa-cache-v4"; // Update this version to force a cache refresh
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -43,6 +43,11 @@ self.addEventListener("install", (event) => {
 self.addEventListener("fetch", (event) => {
   const requestUrl = event.request.url;
   const requestPath = new URL(requestUrl).pathname;
+
+  // **Fix: Ignore non-GET requests (POST, PUT, DELETE, etc.)**
+  if (event.request.method !== "GET") {
+    return;
+  }
 
   // Always fetch NO_CACHE_FILES fresh from the network
   if (NO_CACHE_FILES.includes(requestPath) || NO_CACHE_FILES.includes(requestUrl)) {
