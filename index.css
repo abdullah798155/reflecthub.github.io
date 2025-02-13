@@ -1431,6 +1431,15 @@ display: none; /* Hide tabs on small screens */
     display: inline-block !important;
     max-width: 90% !important;
 }
+.blog-violet{
+    font-size: 1.1rem !important;
+    margin-top: 10px !important;
+    padding: 10px !important; 
+    background-color: #dfcdf8 !important; 
+    border-radius: 8px !important;
+    display: inline-block !important;
+    max-width: 90% !important;
+}
 @media (max-width:480px ){
        .mirror{
         font-size: 20px !important;
