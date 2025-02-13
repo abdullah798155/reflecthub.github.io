@@ -1383,7 +1383,7 @@ async function DynamicLoader(payload, clickedButton) {
           <div class="blog-container ">
               <div class="flex-card pop-out pop-up-animate1">
                    <h2 class="flex-header">Astonishing Linguistics in Quran</h2>
-                    <p class="flex-text blog-green">
+                    <p class="flex-text blog-blue">
                     <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
                     "It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
                     [Quran chapter 36,verse 40]
@@ -1395,7 +1395,7 @@ async function DynamicLoader(payload, clickedButton) {
                     <p class="flex-text">
                     Below is a graphical-textual representation:
                     </p>
-                    <p class="flex-text blog-blue">
+                    <p class="flex-text blog-violet">
                     <span style='font-size:25px;'> كُلٌّ فِي فَلَكٍ</span><br>
                     
                      <span style='font-size:30px;'>▼</span><br>
@@ -1406,13 +1406,8 @@ async function DynamicLoader(payload, clickedButton) {
 
                        The root فلك (falak) means "orbit" and itself has a rounded phonetic quality, symbolizing circular motion.
                   </p>
-                   
-
         </div>
-    
-          
-          
-          
+
           `
         }
     
