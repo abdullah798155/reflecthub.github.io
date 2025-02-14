@@ -63,7 +63,7 @@ body {
     top: -200px; /* Adjust this value to move it higher or lower */
     left: 50%;
     transform: translateX(-50%); /* Centers it horizontally */
-    width: 50%; /* Adjust the width as needed */
+    width: 60%; /* Adjust the width as needed */
     height: 60px;
     padding: 10px 15px;
     font-size: 16px;
@@ -82,7 +82,7 @@ body {
     top: -120px;
     left: 50%;
     transform: translateX(-50%); /* Centers the dropdown below the input */
-    width: 50%; /* Match the input width */
+    width: 60%; /* Match the input width */
     background-color: white;
     max-height: 300px;
     overflow-y: auto;
@@ -96,7 +96,6 @@ body {
     top: 200px;
     left: 50%;
     transform: translateX(-50%); /* Centers the dropdown below the input */
-    /* width: 50%; Match the input width */
     max-width: fit-content;
     background-color: rgba(0, 0, 0, 0);
     color:white;
@@ -106,6 +105,30 @@ body {
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px; /* Rounded corners for the dropdown */
+}
+@media (max-width: 1000px) {
+    #results {
+        width: 75%; /* Adjust the width for smaller screens */
+    }
+    #search-bar{
+        width: 75%; /* Adjust the width for smaller screens */
+    }
+}
+@media (max-width: 768px) {
+    #results {
+        width: 75%; /* Adjust the width for smaller screens */
+    }
+    #search-bar{
+        width: 75%; /* Adjust the width for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    #results {
+        width: 95%; /* Adjust the width for smaller screens */
+    }
+    #search-bar{
+        width: 95%; /* Adjust the width for smaller screens */
+    }
 }
 
 .result-item {
@@ -254,7 +277,7 @@ body {
         opacity: 0;
     }
     60% {
-        transform: scale(1.038);
+        transform: scale(1.098);
         opacity: 1;
     }
     100% {
