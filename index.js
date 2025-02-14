@@ -1382,7 +1382,7 @@ async function DynamicLoader(payload, clickedButton) {
           videoContainer.innerHTML=`
           <div class="blog-container ">
               <div class="flex-card pop-out pop-up-animate1">
-                   <h2 class="flex-header">Astonishing Linguistics in Quran</h2>
+                   <h2 class="flex-header">1. Astonishing Linguistics in Quran</h2>
                     <p class="flex-text blog-blue">
                     <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
                     "It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
@@ -1406,6 +1406,45 @@ async function DynamicLoader(payload, clickedButton) {
 
                        The root فلك (falak) means "orbit" and itself has a rounded phonetic quality, symbolizing circular motion.
                   </p>
+            </div>
+            <div class="flex-card pop-out pop-up-animate1">
+        <h2 class="flex-header">2. Ring Composition in Surah Al-Baqarah</h2>
+        <p class="flex-text blog-blue">
+            Surah Al-Baqarah, the Quran's longest chapter, exemplifies this ring composition. Despite covering a wide array of topics, from legal injunctions to narratives of past prophets, it is meticulously organized into a symmetrical framework.
+        </p>
+        <p class="flex-text">▶️<a href="https://www.youtube.com/watch?v=b5Y5gMc_XZo" target="_blank">Click for video explanation on youtube [via @mercifulServant]</a></p>
+        <p class="flex-text blog-gray">
+            The Quran's intricate structure has long fascinated scholars and believers alike. One of its most remarkable features is the ring composition, a literary form where themes and ideas are presented in a symmetrical pattern, leading to a central concept. This structure not only enhances the aesthetic appeal of the text but also underscores its profound coherence.
+        </p>
+        <p class="flex-text">
+            Below is a sequential(Ring) representation:
+        </p><br>
+        <p class="flex-text ">
+            <span style='font-size:25px;text-decoration:underline;'>Structure of Surah Al-Baqarah</span><br><br>
+         
+            <span style='font-size:18px;' class="mirror">
+                <span class="blog-violet">A. Faith vs. Unbelief (Verses 1–20)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-blue">B. Allah’s Creation and Knowledge (Verses 21–39)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-green">C. Deliverance of Law to the Children of Israel (Verses 40–103)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-pink">D. Abraham's Test (Verses 104–141)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-gray">E. Change in the direction of prayer (Verses 142–152)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-pink">D'. Muslims Will Be Tested (Verses 153–177)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-green">C'. Deliverance of Law to Muslims (Verses 178–253)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                <span class="blog-blue">B'. Allah’s Creation and Knowledge (Verses 254–284)<br></span><br>
+                 <span style='font-size:30px;'>▼</span><br>
+                 <span class="blog-violet">A'. Faith vs. Unbelief (Verses 285–286)</span><br>
+            </span>
+            <br>
+            This arrangement forms a chiastic structure, emphasizing the interconnectedness of the themes discussed.
+        </p>
+    </div>
         </div>
 
           `
