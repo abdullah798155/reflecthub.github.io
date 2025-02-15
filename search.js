@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     title: video.title,
                     description: video.description,
                     channelName: video.channelName,
-                    link:video.link
+                    link:video.link,
+                    thumbnail: video.thumbnail
                 }));
                 allVideos = allVideos.concat(filteredData);
             }
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     resultItem.href = video.link;
                     resultItem.target = "_blank";
                     resultItem.innerHTML = highlightMatch(video.title, query) +
-                        `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><span style='color:blue;'>@${video.channelName}</span></b>`;
+                        `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><span style='color:blue;'>@${video.channelName}</span><br><img src="${video.thumbnail}" style="width: 180px; height: 100px; margin-top: 10px;border-radius:10px;"></b>`;
 
                     
                         resultsContainer.appendChild(resultItem);
