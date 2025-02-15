@@ -1402,6 +1402,8 @@ async function DynamicLoader(payload, clickedButton) {
                     <span style='font-size:30px;' class="mirror">
                   ك → ل → ف → ي → ف → ل → ك
                     </span> 
+                    </p>
+                    <p class="flex-text">
                        <br>The words are circular in sound, mimicking the idea of rotation.<br>
 
                        The root فلك (falak) means "orbit" and itself has a rounded phonetic quality, symbolizing circular motion.
