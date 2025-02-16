@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>ReflectHub - Think Rationally! <span style="vertical-align: middle;"><img src="./icon4.png" alt="Reflecthub" width="60" height="60"></span></h1>
+    <h1>ReflectHub - Think Rationally!</h1>
 </div>
 
 
