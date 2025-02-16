@@ -364,6 +364,8 @@ async function loadVideos(jsonFile, clickedButton) {
         // dynamicContent.style.display = `block`;
         dynamicContent.style.display = "block";
         dynamicContent.innerHTML = `${jsonFile.charAt(0).toUpperCase() + jsonFile.slice(1)} videos`;
+        //to change title of page
+        document.title = `ReflectHub - ${jsonFile.charAt(0).toUpperCase() + jsonFile.slice(1)}`;
     
     
 
@@ -591,6 +593,7 @@ async function loadVerses(jsonFile, clickedButton) {
         const dynamicContent = document.getElementById('dynamicContent');
         dynamicContent.style.display = "block";
         dynamicContent.innerHTML = `${jsonFile.charAt(0).toUpperCase() + jsonFile.slice(1)} from the Quran`;
+        document.title = `ReflectHub - ${jsonFile.charAt(0).toUpperCase() + jsonFile.slice(1)}`;
 
   
         // Check if the file name display element exists; if not, create it
@@ -645,6 +648,7 @@ async function DynamicLoader(payload, clickedButton) {
 
         const videoContainer = document.getElementById('videoContainer');
         const loadingElement = document.getElementById('loading');
+        document.title = `ReflectHub - ${payload.charAt(0).toUpperCase() + payload.slice(1)}`;
         
 
         // Clear previous content and show loading
@@ -652,7 +656,7 @@ async function DynamicLoader(payload, clickedButton) {
         loadingElement.style.display = "block";
 
         // Insert faith content
-        if(payload==="faith"){
+        if(payload==="Faith"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
           dynamicContent.innerHTML = `Declaring the faith`;
@@ -737,7 +741,7 @@ async function DynamicLoader(payload, clickedButton) {
         </div>
     `;
         }
-        else if(payload==="ponder"){
+        else if(payload==="Afterlife"){
           const dynamicContent = document.getElementById('dynamicContent');
               dynamicContent.style.display = "block";
               dynamicContent.innerHTML = `Why afterlife matters?`;
@@ -1284,7 +1288,7 @@ async function DynamicLoader(payload, clickedButton) {
                 }
             </style>
           </div>`}
-        else if(payload==="Quran-sci"){
+        else if(payload==="Quran science"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
           dynamicContent.innerHTML = `Estimated reading time: 5 minutes`;
@@ -1375,7 +1379,7 @@ async function DynamicLoader(payload, clickedButton) {
 
         `
         }
-        else if(payload==="Blog-test"){
+        else if(payload==="Blog"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
           dynamicContent.innerHTML = `Blog`;
