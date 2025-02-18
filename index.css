@@ -308,11 +308,11 @@ body {
         opacity: 0;
     }
     60% {
-        transform: scale(1.038);
+        transform: scale(1.016);
         opacity: 1;
     }
     100% {
-        transform: scale(1.001);
+        transform: scale(1);
     }
 }
 @keyframes popUp2 {
