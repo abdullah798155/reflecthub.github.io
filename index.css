@@ -181,6 +181,8 @@ body {
     white-space: normal; /* Allow wrapping of text */
     max-height: auto; /* Ensure the box expands based on content height */
     pointer-events: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 610;
 }
 /* change width of info box to 30 rem for mobile screens */
 @media (max-width: 480px) {
@@ -446,7 +448,10 @@ body {
         font-size: 0.65rem !important; /* Smaller font size on smaller screens */
     }
 }
-
+.footer1 h2{
+    border-bottom: 2px solid rgba(69, 118, 125, 0.7);
+    padding: 12px;
+}
 .footer a:hover {
     color: #ffffff; /* White on hover */
 }
