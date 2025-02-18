@@ -1,0 +1,1339 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(53, 51, 51);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 400px;
+    cursor: pointer;
+}
+
+.search-btn .ctrl-k {
+    font-size: 0.9rem;
+    color: #6d6969;
+    margin-left: 220px; /* Space between "Search" and "ctrl+k" */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.blur-background {
+    position: fixed; /* Fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply blur to the background behind the element */
+    z-index: -1; /* Ensure it's behind the content */
+}
+
+#search-bar {
+    position: absolute; /* Position relative to its container */
+    top: -200px; /* Adjust this value to move it higher or lower */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it horizontally */
+    width: 50%; /* Adjust the width as needed */
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-radius: 25px; /* Makes the borders rounded */
+    border: 1px solid #ccc; /* Border color */
+    outline: none; /* Removes default outline */
+    display: block; /* Ensures centering works */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a sleek look */
+    /* opacity */
+    opacity:0.8;
+}
+
+#results {
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown below the input */
+    width: 50%; /* Match the input width */
+    background-color: white;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the dropdown */
+;
+}
+#results1 {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown below the input */
+    /* width: 50%; Match the input width */
+    max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    color:white;
+    text-align:center;
+    max-height: 300px;
+    /* overflow-y: auto; */
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Rounded corners for the dropdown */
+}
+
+.result-item {
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+
+.result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.result-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.menu-links {
+    height: auto !important; /* Dynamic height */
+    overflow: visible !important; /* Prevent clipping */
+    max-height: 20vh;
+}
+
+/* For screens smaller than 768px (tablets and smaller) */
+@media (min-width: 768px) {
+    .menu-links {
+        height: 6.5vh !important; /* CHANGE THIS WHEN YOU ARE INCREASING MENU LINKS */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+@media (max-width: 768px) {
+    .menu-links {
+        height: 20vh !important; /* Limit height to 50% of the viewport height */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+@media (max-width: 930px) {
+    .menu-links {
+        height: 40vh !important; /* Limit height to 50% of the viewport height */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+@media (max-width: 1144px) {
+    .menu-links {
+        height: 10vh !important; /* Limit height to 50% of the viewport height */
+        overflow-y: scroll !important; /* Add vertical scroll if needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-links {
+        height: 40vh !important;
+        /* overflow-x: auto !important; Allow horizontal scrolling if content overflows */
+        overflow-y: scroll !important;
+        width: 100% !important; 
+    }
+}
+
+
+/* Make sure the parent elements don't restrict scrolling */
+.menu-container {
+    overflow: visible !important;
+}
+
+
+.spn{
+    font-weight: bold;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px;
+    font-size: 1.2em;
+}
+
+.citation {
+    color: rgb(0, 0, 0);
+    cursor:help;
+    text-decoration: underline dotted rgb(43, 107, 255);
+}
+
+.citation:hover {
+    color: rgb(0, 0, 0);
+}
+#info-box {
+    position: fixed;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #f9f9f9;
+    color: #333;
+    display: none;
+    max-width: 40%;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100000;
+    opacity: 0; /* Start with invisible */
+    transform: scale(0.8); /* Start with smaller size */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth transition for scale and opacity */
+    overflow: hidden; /* Prevent overflow */
+    word-wrap: break-word; /* Break long words into the next line if they don't fit */
+    white-space: normal; /* Allow wrapping of text */
+    max-height: auto; /* Ensure the box expands based on content height */
+    pointer-events: none;
+}
+/* change width of info box to 30 rem for mobile screens */
+@media (max-width: 480px) {
+    #info-box {
+        width: 16rem;
+    }
+}
+
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pop-out {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+.shimmer-swipe {
+    position: relative;
+    overflow: hidden;
+}
+
+.shimmer-swipe::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(36, 214, 125, 0.15); /* Light translucent green */
+    transform: rotate(45deg);
+    animation: shimmer-animation 1.5s ease-in-out;
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 16px;
+}
+
+@keyframes shimmer-animation {
+    0% {
+        transform: translate(-150%, -150%) rotate(45deg);
+    }
+    100% {
+        transform: translate(150%, 150%) rotate(45deg);
+    }
+}
+
+
+
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 100px; /* Optional: add padding to create space */
+}
+
+.menu-icon {
+    display: block; /* Initially display the icon */
+    font-size: 24px;
+    cursor: auto; /* Change cursor to default */
+    margin-right: 10px; /* Optional: space between icon and menu links */
+}
+
+/* Media query to hide the hamburger menu on larger screens */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+}
+
+@keyframes suck-in {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.menu-links {
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.menu-links.show {
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+
+.menu-links.hide {
+    opacity: 0;
+    animation: suck-in 0.5s forwards; /* Apply suck-in animation */
+}
+
+/* Only show the hamburger icon on smaller screens */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none;
+    }
+}
+
+
+.verse-style {
+    position: relative; /* Position relative for absolute positioning of the pseudo-element */
+    width: 100%; /* Full width of the container */
+    padding: 20px; /* Maintain padding for aesthetics */
+    text-align: center;
+    margin: 10px 0; /* Vertical spacing between elements */
+    
+    /* background: rgba(255, 255, 255, 0.85); Light background behind text */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow from the pseudo-element */
+}
+/* Content inside the verse-style */
+.verse-style h4 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Georgia', serif;
+    /* font-weight: 600; */
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #37474f;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    display: block; /* Ensure it takes full width */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+  
+}
+
+
+.verse-style h4:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #24d67d, #04acd6);
+    z-index: -1;
+    border-radius: 16px;
+}
+
+.verse-style h4:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border-radius: 12px;
+    z-index: -1;
+    
+}
+
+
+html, body {
+    overflow-y: auto !important;
+    height: 100%;
+}
+
+  
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #c8ffcd;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.responsive-description {
+    font-size: 16px;
+    white-space: normal;     /* Allow wrapping on large screens */
+    overflow: visible;       /* Show full text on large screens */
+    max-width: 100%;         /* No max width constraint on large screens */
+}
+
+/* Medium screens */
+@media (max-width: 1000px) {
+    .responsive-description {
+        font-size: 14px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .responsive-description {
+        font-size: 14px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 200px;
+    }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .responsive-description {
+        font-size: 12px;
+        white-space: nowrap;      /* Prevent text wrapping */
+        overflow: hidden;         /* Hide overflowed text */
+        text-overflow: ellipsis;  /* Show ellipsis when text overflows */
+        max-width: 150px;
+    }
+}
+.responsive-description1 {
+    font-size: clamp(1.8rem, 6vw, 4rem) !important; /* Dynamically resize with limits */
+    white-space: normal;                 /* Allow text wrapping if needed */
+    max-width: 100%;                     /* Full width of the container */
+    line-height: 1.2;                    /* Tighten line height */
+    margin: 0;                           /* Remove extra margins */
+}
+
+/* Further adjustments for smaller screens */
+@media (max-width: 991px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 5vw, 7rem) !important;
+    }
+}
+@media (max-width: 768px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 5vw, 7rem) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-description1 {
+        font-size: clamp(2.5rem, 8vw, 5rem) !important;
+    }
+}
+
+
+
+/* Keyframes for the pop-up animation */
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.038);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* @keyframes popOut {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    30%{
+        transform: scale(1.5);
+        opacity: 0;
+
+    }
+    60% {
+        transform: scale(1.038);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+} */
+@keyframes popUp1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.038);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.001);
+    }
+}
+@keyframes popUp2 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.001);
+    }
+}
+/* Add this class to apply the animation */
+.pop-up-animate {
+    animation: popUp 1s ease;
+    transform-origin: top center; 
+}
+.pop-up-animate1 {
+    animation: popUp1 1s ease;
+}
+.pop-up-animate2 {
+    animation: popUp2 1s ease;
+}
+.pop-out-animate {
+    animation: popOut 1s ease;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #c8ffcd;
+    color: #6fd34e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 10; */
+    width: 100%;
+    height: 80px;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* Menu container styling */
+
+
+/* Content container */
+.content-container {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 80px;
+    background-color: #c8ffcd;
+}
+
+/* Content divs */
+.content-div {
+    display: none;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow-x: auto; /* Allow horizontal scroll for table if needed */
+}
+
+/* Table styling */
+.custom-table {
+    width: 100%;
+    min-width: 800px; /* Minimum width to prevent squishing */
+    margin: 20px 0;
+    background-color: #f9f9fb;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table cell responsiveness */
+.custom-table th, 
+.custom-table td {
+    padding: 14px 16px;
+    word-wrap: break-word;
+    min-width: 100px; /* Minimum width for cells */
+}
+
+/* Footer styling */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 10px;
+    }
+
+    .content-div {
+        padding: 1rem;
+    }
+
+    .menu-container {
+        padding: 10px;
+    }
+
+    .custom-table {
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+    .footer1 {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .content-container {
+        margin-top: 60px;
+    }
+
+    #typing-effect {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .btn-group-toggle {
+        flex-direction: column;
+    }
+
+    .btn-group-toggle .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #c8ffcd;
+}
+
+/* Ensure content doesn't overflow horizontally */
+.container-fluid {
+    max-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%; /* Ensure the html and body take full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Use minimum height instead of fixed height */
+    overflow-y: auto; /* Allow body to scroll */
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark translucent background */
+    color: #FFFFFF;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    padding: 15px 20px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+    width: 100%; /* Ensures it spans across the page */
+}
+.footer1 {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.footer a {
+    color: rgb(191, 186, 186); /* Light blue accent color */
+    text-decoration: underline;
+    font-size: 16px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffffff; /* White on hover */
+}
+/* Navbar styling */
+.navbar {
+    background-color: #c8ffcd;
+    color: #6fd34e;
+    position: fixed; /* Change to fixed */
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+}
+
+/* Flex properties for container */
+.container-fluid {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make it take full height of the navbar */
+    flex-wrap: wrap;
+}
+
+@media (max-width: 5000px) {
+    .navbar-brand h1 {
+        font-size: 5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 100vw; /* Responsive width for logo on smaller screens */
+        max-width: 280px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 20px; /* Add padding for smaller screens */
+    }
+}
+@media (max-width: 2000px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 50vw; /* Responsive width for logo on smaller screens */
+        max-width: 140px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+
+@media (max-width: 1700px) {
+    .navbar-brand h1 {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 50vw; /* Responsive width for logo on smaller screens */
+        max-width: 140px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-brand h1 {
+        font-size: 0.4rem; /* Smaller font size on smaller screens */
+    }
+
+    .navbar-brand img {
+        width: 15vw; /* Responsive width for logo on smaller screens */
+        max-width: 70px; 
+    }
+
+    /* Adjust navbar height and padding */
+    .navbar {
+        height: auto; /* Allow navbar height to adjust */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand h1 {
+        font-size: 0.2rem; /* Further smaller font size */
+    }
+
+    .navbar-brand img {
+        width: 25vw; /* Logo size for mobile */
+        max-width: 50px; 
+    }
+
+    /* Further adjustments */
+    .navbar {
+        padding: 5px; /* Add padding for mobile */
+    }
+}
+
+.menu-container {
+    position: sticky;
+    top: 0; /* Change to 0 to stick to very top */
+    z-index: 999; /* Just below navbar */
+    background-color: #c8ffcd;
+    padding: 25px 25px;
+    width:100%;
+}
+.btn-group-toggle {
+    width: 100%; /* Full width for better distribution */
+    display: flex; /* Use flexbox for buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap to next line if needed */
+    justify-content: center; /* Center buttons */
+    overflow: hidden;
+    
+}
+
+.btn-secondary {
+    background-color: #007BFF; /* Bootstrap Primary Blue */
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    padding: 12px 20px; /* Increased padding for better spacing */
+    margin: 5px; /* Margin between buttons for spacing */
+    flex: 1 1 150px; /* Allow buttons to grow and shrink, with a minimum width */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 20px) {
+    .btn-group-toggle {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center buttons */
+    }
+
+    .btn-secondary {
+        width: 90%; /* Make buttons wider on small screens */
+        margin: 5px 0; /* Margin between stacked buttons */
+    }
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    width: 100vw;
+    height: auto; /* Remove fixed height */
+    margin: 0;
+    background-color: #c8ffcd;
+    overflow: visible; /* Change from auto to visible */
+}
+
+/* Modify the content-div styling */
+.content-div {
+    display: none;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.25rem;
+    width: 100%;
+    height: auto;
+    color: #333333;
+    margin: 0 auto;
+    overflow: visible; /* Change from auto to visible */
+    max-height: none; /* Remove max-height constraint */
+}
+
+/* Colors for each content div */
+#div1 {
+    background-color: #21dcb4;
+    color: #333333;
+    /* background-image: url('./cosmos.jpg');
+    background-size:cover; 
+    background-repeat: no-repeat; 
+    background-position: center; */
+}
+#div2 {
+    background-color: #FF7043;
+    color: #ffffff;
+}
+#div3 {
+    background-color: #29B6F6;
+    color: #ffffff;
+}
+#div4 {
+    background-color: #AB47BC;
+    color: #ffffff;
+}
+#div5 {
+    background-color: #92286a;
+    color: #ffffff;
+}
+#div6 {
+    background-color: #7c0b6f;
+    color: #ffffff;
+}
+#div7 {
+    background-color: #7c0b6f;
+    color: #ffffff;
+}
+
+
+/* Table Styling */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #f9f9fb;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Base table styles */
+.custom-table {
+    width: 100%;
+    min-width: 600px; /* Minimum width to prevent squishing */
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 1.1rem;
+    text-align: left;
+    background-color: #f9f9fb;
+}
+
+/* Table Header */
+.custom-table th {
+    background-color: #e0f7fa;
+    font-weight: bold;
+    padding: 14px 16px;
+    color: #00796b;
+    border-bottom: 2px solid #b2dfdb;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+/* Table Cells */
+.custom-table th, 
+.custom-table td {
+    padding: 14px 16px;
+    color: #333333;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Table Images */
+.custom-table img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Links */
+.custom-table a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.custom-table a:hover {
+    text-decoration: underline;
+}
+
+/* Hover Effect */
+.custom-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #e0f2f1;
+}
+
+/* Rounded corners */
+.custom-table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.custom-table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-wrapper {
+        margin: 15px 0;
+        border-radius: 8px;
+    }
+
+    .custom-table {
+        font-size: 1rem;
+    }
+
+    .custom-table th, 
+    .custom-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-wrapper {
+        margin: 10px 0;
+        border-radius: 6px;
+    }
+
+    .custom-table {
+        font-size: 0.9rem;
+    }
+
+    .custom-table th, 
+    .custom-table td {
+        padding: 8px;
+    }
+}
+#typing-effect {
+    font-family: 'Courier New', monospace;
+    color: #009900;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    font-size: 60px;
+    font-weight: bold;
+    border-right: 2px solid rgb(26, 243, 48); /* Blinking cursor */
+    width: 15em;
+    animation: typing 2.2s steps(50, end), blinkCursor 0.5s step-end infinite;
+}
+.typing-effect {
+    font-family: 'Courier New', monospace;
+    color: #009900;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-weight: bold;
+    border-right: 2px solid rgb(26, 243, 48); /* Blinking cursor */
+    width: 8em;
+    animation: typing 2.3s steps(40, end), blinkCursor 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 50%; /* Expand to full width of the container */
+    }
+}
+
+@keyframes blinkCursor {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(37, 245, 62);
+    }
+}
+
+  .swipers {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    color: #3fc1f9; /* Text color */
+    font-size: 2rem; /* Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    transition: left 0s 5s; /* Delay the start of the animation */
+    /* background-image: url('./green.png'); */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
+}
+
+.swipers.start::before {
+    animation: swipe 1s linear infinite; /* Swipe animation */
+}
+@keyframes swipe {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* Move to off-screen right */
+    }
+}
+  .swipers2 {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    /* color: #3fc1f9; Text color */
+    /* font-size: 2rem; Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers2::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    background: rgba(110, 253, 78, 0.5); /* Green dim light with opacity */
+    transition: left 0s 5s; /* Delay the start of the animation */
+    /* background-image: url('./green.png'); */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
+}
+
+.swipers2.start::before {
+    animation: swipe 1s linear infinite; /* Swipe animation */
+}
+@keyframes swipe {
+    0% {
+        left: -100%; /* Start off-screen to the left */
+    }
+    100% {
+        left: 100%; /* Move to off-screen right */
+    }
+}
+.swipers1 {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    overflow: hidden; /* Hide any overflow */
+    /* color: #3fc1f9; Text color */
+    /* font-size: 2rem; Increased font size for h1 */
+    margin: 0; /* Remove default margin */
+}
+
+.swipers1::before {
+    content: '';
+    position: absolute; /* Position absolutely to cover the text */
+    top: 0;
+    left: -100%; /* Start off-screen to the left */
+    width: 35%; /* Full width */
+    height: 100%; /* Full height of the h1 */
+    /* background: rgba(255, 255, 255, 0.5); Green dim light with opacity */
+    background-image: url('./green.png');
+    background-size:cover; /* Ensure the image scales correctly */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the pseudo-element */
+    /* background: linear-gradient(to right, transparent, #73ff71, transparent); */
+    transition: left 0s 5s; /* Delay the start of the animation */
+}
+
+.swipers1.start::before {
+    animation: swipe1 2s linear infinite; /* 1s for swipe + 2s for pause = 3s total */
+}
+
+@keyframes swipe1 {
+    0% { left: 0%; }
+    33.33% { left: 65%; }  /* Swipe happens in first 1s */
+    100% { left: 0%; }    /* Stays for remaining 2s */
+}
+
+
+.ground {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+}
+
+/* Panel Icon Styles */
+.panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00bcd4; /* Light blue background */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px; /* rounded panel */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.panel-icon:hover {
+    background-color: #0097a7; /* darker blue on hover */
+    transform: scale(1.05); /* slight zoom on hover */
+}
+/* Quick Link Styles */
+.quick-link {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* position: fixed;
+    bottom: 20px;
+    left: 20px; */
+    background-color: #2d2d2d;; /* Green */
+    /* border-radius: 50%; */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1001; /* Above other elements */
+}
+.norm {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* position: fixed;
+    bottom: 20px;
+    left: 20px; */
+    background-color: #2d2d2d;; /* Green */
+    /* border-radius: 50%; */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1001; /* Above other elements */
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Below the panel icon and quick link */
+
+}
+
+.popup-content {
+    background-color: white;
+    border-radius: 8px;
+    margin: 10% auto; 
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+    max-height: fit-content !important; /* Adjust height based on content */
+    animation: popUp 0.5s ease forwards;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    
+}
+
+/* to change margin based on device width */
+@media (max-width: 1000px) {
+    .popup-content {
+        margin: auto; /* Adjust margin for smaller screens */
+    }
+}
+
+
+@keyframes popupAnimation {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button Styles */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .panel-icon,
+    .quick-link {
+        padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size */
+        bottom: 15px; /* Adjust bottom position */
+        right: 15px; /* Adjust right position for panel icon */
+        left: auto; /* Reset left position for quick link */
+    }
+
+    .quick-link {
+        left: 15px; /* Adjust left position for quick link */
+    }
+
+    .popup-content {
+        width: 90%; /* Increase width on smaller screens */
+        margin: 10% auto; /* Adjust margin for smaller screens */
+    }
+
+    .close {
+        font-size: 24px; /* Smaller close button */
+    }
+}
