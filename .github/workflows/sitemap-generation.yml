@@ -17,6 +17,7 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://reflecthub.github.io/
+          exclude-paths: legacy/
 
       - name: Commit and Push Sitemap
         run: |
