@@ -436,9 +436,22 @@ body {
     margin-bottom: 0;
     transition: color 0.3s ease;
 }
+@media (max-width: 380px) {
+    #footer-bottom a{
+        font-size: 0.85rem !important; /* Smaller font size on smaller screens */
+    }
+}
+@media (max-width: 330px) {
+    #footer-bottom a{
+        font-size: 0.65rem !important; /* Smaller font size on smaller screens */
+    }
+}
 
 .footer a:hover {
     color: #ffffff; /* White on hover */
+}
+.footer h2{
+    margin:0;
 }
 /* Navbar styling */
 
