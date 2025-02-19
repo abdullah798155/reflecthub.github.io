@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v29"; // Update this version to force a cache refresh
+const CACHE_NAME = "abdullah-pwa-cache-v30"; // Update this version to force a cache refresh
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -9,20 +9,23 @@ const ASSETS_TO_CACHE = [
   "/Logos/reddit.png",
   "/Logos/twitter.png",
   "/legacy/hamburger.svg",
-  "/legacy/legacy.html",
-  "/legacy/legacy.css",
-  "/legacy/legacy.js",
+  "/response/response.html",
+  "/response/response.js",
+  "/response/response.css",
   "/drop.html",
   "/future.html",
   "/image.png",
   "/icon5.png",
   "/score.html",
   "/qr-code.svg"
-
+  
 ];
 
 // Files that should **never** be cached (always request fresh from the server)
 const NO_CACHE_FILES = [
+  "/legacy/legacy.html",
+  "/legacy/legacy.css",
+  "/legacy/legacy.js",
   "/index.html",
   "/index.css",
   "/index.js",
