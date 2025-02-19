@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Status Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="response.css">
+
+  
+</head>
+<!-- Rest of the HTML remains the same -->
+<body>
+    <div id="notification" style="display: none;"></div>
+    <div class="container">
+        <h1>📡 Reflecthub server status</h1>
+        <button id="checkBtn" class="btn">Check Network</button>
+        <div id="attemptCounter" class="attempt-counter">Test attempt: 0/10</div>
+
+        <div class="content">
+            <div class="left">
+                <div class="metrics">
+                    <div class="metric">
+                        <span>Average Ping:</span>
+                        <span id="ping">--</span> ms
+                    </div>
+                    <div class="metric">
+                        <span>Average Latency:</span>
+                        <span id="latency">--</span> ms
+                    </div>
+                 
+                </div>
+                <div id="status">System Ready</div>
+            </div>
+
+            <div class="right">
+                <div class="chart-container">
+                    <canvas id="pingChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="latencyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="response.js"></script>
+</body>
+</html>
