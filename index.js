@@ -412,8 +412,29 @@ async function loadVideos(jsonFile, clickedButton) {
         }, 50);
     
     } catch (error) {
-        console.error('Error loading videos:', error);
-        document.getElementById('loading').innerText = "Failed to load videos.";
+        console.error('Error loading videos:', error); 
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'error-message';
+        errorMessage.innerHTML = `
+            <div class="error-icon">🚨</div>
+            <h2>Oops ! Server did not respond </h2>
+            <p>Please try after sometime or explore other sections</p>
+            <p style="background-color:white; color:red; display:inline-block;">${error}</p>
+        `;
+        errorMessage.style.color = '#D8000C';
+        errorMessage.style.backgroundColor = '#FFF6F6';
+        errorMessage.style.textAlign = 'center';
+        errorMessage.style.margin = '20px auto';
+        errorMessage.style.padding = '20px';
+        errorMessage.style.border = '1px solid #D8000C';
+        errorMessage.style.borderRadius = '10px';
+        errorMessage.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        errorMessage.style.fontFamily = 'Arial, sans-serif';
+        errorMessage.style.width = '90%';
+        errorMessage.style.maxWidth = '600px';
+        errorMessage.style.animation = 'fadeIn 0.5s ease-in-out';
+        document.getElementById('loading').innerHTML="";
+        document.getElementById('loading').appendChild(errorMessage);
     }
     
     
@@ -461,7 +482,7 @@ sidebarCateg.forEach(function (categ) {
 
 // Load default "Rational" videos on page load
 loadVideos('rational', document.querySelector('.sidebar ul li a'));
-});
+})
 
 const chapters={
     "1": "Al-Fatihah - The Opening",
@@ -1551,3 +1572,60 @@ document.querySelectorAll('button[href^="#"]').forEach(anchor => {
 });
 
 //detecting the scroll
+(function() {
+  // Get the notification div
+  const notification = document.getElementById("notification");
+  notification.style.width = "100%";
+  notification.style.padding = "10px";
+  notification.style.textAlign = "center";
+  notification.style.fontSize = "16px";
+  notification.style.fontFamily = "Arial, sans-serif";
+  notification.style.zIndex = "1000";
+  notification.style.position = "fixed";
+  notification.style.top = "0";
+  notification.style.left = "0";
+  notification.style.fontFamily="'Quicksand', sans-serif;";
+  notification.style.transition = "transform 0.3s ease-in-out";
+  notification.style.display = "none"; // Initially hidden
+
+  function showNotification(message, color) {
+      notification.textContent = message;
+      notification.style.backgroundColor = color;
+      notification.style.color = "#fff";
+      notification.style.display = "block";
+      notification.style.transform = "translateY(0)"; // Slide down
+      document.body.style.transition = "margin-top 0.3s ease-in-out";
+      document.body.style.marginTop = "40px"; // Move page down
+
+      if (message === "Back online") {
+          setTimeout(() => {
+              hideNotification();
+          }, 3000);
+      }
+  }
+
+  function hideNotification() {
+      notification.style.transform = "translateY(-100%)"; // Slide up
+      setTimeout(() => {
+          notification.style.display = "none";
+          document.body.style.marginTop = "0"; // Move page back up
+      }, 300);
+  }
+
+  function updateConnectionStatus() {
+      if (navigator.onLine) {
+          showNotification("Back online", "green");
+      } else {
+          showNotification("No internet connection", "red");
+      }
+  }
+
+  // Listen for online/offline events
+  window.addEventListener("online", updateConnectionStatus);
+  window.addEventListener("offline", updateConnectionStatus);
+
+  // Initial check
+  if (!navigator.onLine) {
+      showNotification("No internet connection", "red");
+  }
+})();
