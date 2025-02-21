@@ -1410,7 +1410,7 @@ async function DynamicLoader(payload, clickedButton) {
     <h2 class="flex-header">1. The Opening - Al-Fatiha</h2>
     <p class="flex-text blog-gray">
         Al-Fatiha, also known as "The Opening," is the first chapter of the Quran.<br> It holds immense significance in Islam as it is recited in every unit of the five daily prayers.<br>Considered the essence of the Quran, it serves as a supplication, a declaration of monotheism, and a guide for seeking Allah’s mercy and guidance.<br> Muslims recite it as a means of connecting with their Creator, seeking help and expressing gratitude.
-    </p>
+    </p><br>
     <p class="flex-text blog-blue">
         <span style='font-size:30px;'>
         بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
