@@ -1406,12 +1406,87 @@ async function DynamicLoader(payload, clickedButton) {
           dynamicContent.innerHTML = `Blog`;
           videoContainer.innerHTML=`
           <div class="blog-container ">
+          <div class="flex-card pop-out pop-up-animate1">
+    <h2 class="flex-header">1. The Opening - Al-Fatiha</h2>
+    <p class="flex-text blog-gray">
+        Al-Fatiha, also known as "The Opening," is the first chapter of the Quran.<br> It holds immense significance in Islam as it is recited in every unit of the five daily prayers.<br>Considered the essence of the Quran, it serves as a supplication, a declaration of monotheism, and a guide for seeking Allah’s mercy and guidance.<br> Muslims recite it as a means of connecting with their Creator, seeking help and expressing gratitude.
+    </p>
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ<br>
+        الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ<br>
+        الرَّحْمَٰنِ الرَّحِيمِ<br>
+        مَٰلِكِ يَوْمِ الدِّينِ<br>
+        إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br>
+        اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ<br>
+        صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ<br>
+        </span>
+    </p><br>
+    <span style='font-size:30px;'>▼</span><br>
+    <p class="flex-text blog-violet">
+       <b> <span style='font-size:23px;'>
+        1. In the Name of Allah—the Most Compassionate, Most Merciful.<br>
+        2. All praise is for Allah—Lord of all worlds.<br>
+        3. the Most Compassionate, Most Merciful.<br>
+        4. Master of the Day of Judgment.<br>
+        5. You ˹alone˺ we worship and You ˹alone˺ we ask for help.<br>
+        6. Guide us along the Straight Path,<br>
+        7. the Path of those You have blessed—not those You are displeased with, or those who are astray<br>
+        </span></b>
+    </p>
+    <p class="flex-text blog-gray">
+        The depth and beauty of Al-Fatiha lie in its comprehensive message. It acknowledges the Lordship of Allah, expresses devotion, and seeks divine guidance. This chapter forms the core of every Muslim’s spiritual connection with Allah and is a powerful reminder of faith, dependence, and righteousness.
+    </p>
+</div>
+<div class="flex-card pop-out pop-up-animate1">
+    <h2 class="flex-header">2. The Oneness of God - Tawheed</h2>
+
+    <p class="flex-text blog-violet">
+         Tawheed, or the oneness of God, is the central and most fundamental belief in Islam.<br>
+        Logical reasoning supports the oneness of God. If there were two or more gods, conflicts of will and authority would arise. <b>For instance, if one god wished to create and another wished to destroy, the universe would be in chaos. A true God must have absolute sovereignty, and if there were multiple, none would be truly supreme (failing to fulfill the criteria of god).</b>
+    </p>
+    <p class="flex-text blog-gray">
+        This principle can be understood through everyday examples.
+         <br><span style='font-size:30px;'>▼</span><br>
+         A country cannot have <b>two kings</b> ruling simultaneously without resulting in confusion and instability.
+         <br><span style='font-size:30px;'>▼</span><br>
+          Similarly, a car cannot have <b>two drivers</b> trying to steer it in different directions at the same time—it would inevitably crash. 
+          <br><span style='font-size:30px;'>▼</span><br>
+          Just as unity in leadership is necessary for harmony, the oneness of God ensures order and balance in creation.
+    </p>
+    <br><p class="flex-text">References in Quran :</p>
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        لَوْ كَانَ فِيهِمَا آلِهَةٌ إِلَّا اللَّهُ لَفَسَدَتَا فَسُبْحَٰنَ اللَّهِ رَبِّ ٱلْعَرْشِ عَمَّا يَصِفُونَ<br>
+        </span><br> <b>
+         <span style='font-size:20px;'>
+        "Had there been gods besides Allah in the heavens and the earth, both realms would have been corrupted. Exalted is Allah, Lord of the Throne, above what they describe."<br>
+        [Quran 21:22]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        وَمَا كَانَ مَعَهُۥ مِنْ إِلَٰهٍ إِذًۭا لَّذَهَبَ كُلُّ إِلَٰهٍۢ بِمَا خَلَقَ وَلَعَلَا بَعْضُهُمْ عَلَىٰ بَعْضٍۢ سُبْحَٰنَ ٱللَّهِ عَمَّا يَصِفُونَ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "Nor is there any god with Him. Otherwise, each god would have taken away what he created, and some would have tried to dominate others. Glory be to Allah above what they describe."<br>
+        [Quran 23:91]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-gray">
+        Tawheed is not just a theological doctrine but a way of life. It dictates that all worship, obedience, and reliance should be directed solely to Allah. The Quran repeatedly emphasizes His oneness and perfection, inviting humanity to reflect and acknowledge His supreme authority.
+    </p>
+</div>
+
+
               <div class="flex-card pop-out pop-up-animate1">
-                   <h2 class="flex-header">1. Astonishing Linguistics in Quran</h2>
+                   <h2 class="flex-header">3. Astonishing Linguistics in Quran</h2>
                     <p class="flex-text blog-blue">
                     <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
-                    "It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
-                    [Quran chapter 36,verse 40]
+                    <b>"It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
+                    [Quran chapter 36,verse 40]</b>
                     </p>
                    <p class="flex-text blog-gray"  >
                        This verse beautifully illustrates the precision and balance in Allah’s creation. It highlights the perfect order in the cosmos, where celestial bodies follow their designated paths without collision or disruption—each fulfilling its role in harmony.<br>
@@ -1435,16 +1510,16 @@ async function DynamicLoader(payload, clickedButton) {
                   </p>
             </div>
             <div class="flex-card pop-out pop-up-animate1">
-        <h2 class="flex-header">2. Ring Composition in Surah Al-Baqarah</h2>
+        <h2 class="flex-header">4. Ring Composition in Chapter-2 of Quran</h2>
         <p class="flex-text blog-blue">
-            Surah Al-Baqarah, the Quran's longest chapter, exemplifies this ring composition. Despite covering a wide array of topics, from legal injunctions to narratives of past prophets, it is meticulously organized into a symmetrical framework.
+            Chapter-2 Surah Al-Baqarah, the Quran's longest chapter, exemplifies this ring composition. Despite covering a wide array of topics, from legal injunctions to narratives of past prophets, it is meticulously organized into a symmetrical framework.
         </p>
         <p class="flex-text">▶️<a href="https://www.youtube.com/watch?v=b5Y5gMc_XZo" target="_blank">Click for video explanation on youtube [via @mercifulServant]</a></p>
         <p class="flex-text blog-gray">
             The Quran's intricate structure has long fascinated scholars and believers alike. One of its most remarkable features is the ring composition, a literary form where themes and ideas are presented in a symmetrical pattern, leading to a central concept. This structure not only enhances the aesthetic appeal of the text but also underscores its profound coherence.
         </p>
         <p class="flex-text">
-            Below is a sequential(Ring) representation:
+            Below is a sequential (Ring) representation:
         </p><br>
         <p class="flex-text ">
             <span style='font-size:25px;text-decoration:underline;'>Structure of Surah Al-Baqarah</span><br><br>
@@ -1473,6 +1548,7 @@ async function DynamicLoader(payload, clickedButton) {
         </p>
     </div>
         </div>
+
 
           `
         }
