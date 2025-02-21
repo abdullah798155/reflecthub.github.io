@@ -1320,7 +1320,7 @@ display: none; /* Hide tabs on small screens */
     margin-bottom: 15px; /* Space between cards */
     background: #ffffff;
     border-radius: 14px;
-    padding: 12px 15px;
+    padding: 4px;
     text-align: center;
     transition: all 0.4s ease-in-out;
     transform: scale(0.9);
@@ -1350,6 +1350,7 @@ display: none; /* Hide tabs on small screens */
     
 }
 .flex-header{
+
     color: #37474f;
     line-height: 1.5;
     font-family: 'Quicksand', sans-serif;
@@ -1428,7 +1429,7 @@ display: none; /* Hide tabs on small screens */
 .blog-container {
     columns: 1 250px;  /* Create columns with min-width 250px */
     column-gap: 15px;
-    padding: 10px;
+    padding: 1px;
     max-width: 2500px;
     margin: 0 auto;
     
