@@ -658,6 +658,100 @@ async function loadVerses(jsonFile, clickedButton) {
         document.getElementById('loading').innerText = "Failed to load verses.";
     }
 }
+function copy(divId) {
+  let contentDiv = document.getElementById(divId);
+  if (!contentDiv) {
+      alert("Content not found!");
+      return;
+  }
+
+  let extractedText = contentDiv.innerText.replace(/\n\n/g, "\n");
+  extractedText += "\n\nFor more content visit https://reflecthub.github.io";
+
+  let copyBtn = document.querySelector(`#${divId} .copyBtn`);
+
+
+
+  if (!copyBtn) {
+      console.error("Copy button not found!");
+      return;
+  }
+  
+
+  navigator.clipboard.writeText(extractedText).then(() => {
+      // Remove existing animation classes to restart transition
+      copyBtn.classList.remove("fade-in-copy", "fade-out-copy");
+      void copyBtn.offsetWidth; // **Force reflow to restart animation**
+
+      // Step 1: Fade out
+      copyBtn.classList.add("fade-out-copy");
+
+      setTimeout(() => {
+          // Step 2: Change text and fade-in smoothly
+          //change innerHtml based on device width
+          if (window.innerWidth < 768) {
+              copyBtn.innerHTML = `<i class="fa-solid fa-check fa-lg" style="color: #4f9c9b;"></i>`;
+          } else {
+          copyBtn.innerHTML = `Copied <i class="fa-solid fa-check fa-lg" style="color: #4f9c9b;"></i>`;
+          }
+          copyBtn.classList.remove("fade-out-copy");
+          copyBtn.classList.add("fade-in-copy");
+
+          setTimeout(() => {
+              // Step 3: Fade out before switching back
+              copyBtn.classList.remove("fade-in-copy");
+              void copyBtn.offsetWidth; // **Force reflow again**
+              copyBtn.classList.add("fade-out-copy");
+
+              setTimeout(() => {
+                  // Step 4: Reset to clipboard icon & fade in again
+                  copyBtn.innerHTML = `<i class="fa-regular fa-clone"></i>`;
+                  copyBtn.classList.remove("fade-out-copy");
+                  copyBtn.classList.add("fade-in-copy");
+              }, 300);
+          }, 2000);
+      }, 300);
+  }).catch(err => console.error("Failed to copy:", err));
+}
+
+
+function share(divId) {
+  let shareBtn = document.querySelector(`#${divId} .shareBtn`);
+  
+  if (!shareBtn) {
+      console.error("Share button not found!");
+      return;
+  }
+
+  // Apply animation class
+  shareBtn.classList.add("animate");
+
+  // Remove animation class after it completes (100ms)
+  setTimeout(() => {
+      shareBtn.classList.remove("animate");
+  }, 100);
+
+  // Your sharing logic here
+  let contentDiv = document.getElementById(divId);
+  if (!contentDiv) {
+      alert("Content not found!");
+      return;
+  }
+
+  let extractedText = contentDiv.innerText.replace(/\n\n/g, "\n");
+  extractedText += "\n\nFor more content visit https://reflecthub.github.io";
+
+  if (navigator.share) {
+      navigator.share({
+          title: "Check this out!",
+          text: extractedText,
+      }).catch(err => console.error("Error sharing:", err));
+  } else {
+      navigator.clipboard.writeText(extractedText)
+          .then(() => alert("Copied to clipboard!"))
+          .catch(err => console.error("Failed to copy:", err));
+  }
+}
 
 async function DynamicLoader(payload, clickedButton) {
     try {
@@ -1406,8 +1500,11 @@ async function DynamicLoader(payload, clickedButton) {
           dynamicContent.innerHTML = `Blog`;
           videoContainer.innerHTML=`
           <div class="blog-container ">
-          <div class="flex-card pop-out pop-up-animate1">
-    <h2 class="flex-header">1. The Opening - Al-Fatiha</h2>
+          <div class="flex-card pop-out pop-up-animate1" id="opening">
+          <h2 class="flex-header">1. The Opening - Al-Fatiha  </h2>
+         
+     <button class="shareBtn " onclick="share('opening')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
+     <button class="copyBtn" onclick="copy('opening')"><i class="fa-regular fa-clone"></i></button>
     <p class="flex-text blog-gray">
         Al-Fatiha, also known as "The Opening," is the first chapter of the Quran.<br> It holds immense significance in Islam as it is recited in every unit of the five daily prayers.<br>Considered the essence of the Quran, it serves as a supplication, a declaration of monotheism, and a guide for seeking Allah’s mercy and guidance.<br> Muslims recite it as a means of connecting with their Creator, seeking help and expressing gratitude.
     </p><br>
@@ -1438,9 +1535,14 @@ async function DynamicLoader(payload, clickedButton) {
         The depth and beauty of Al-Fatiha lie in its comprehensive message. It acknowledges the Lordship of Allah, expresses devotion, and seeks divine guidance. This chapter forms the core of every Muslim’s spiritual connection with Allah and is a powerful reminder of faith, dependence, and righteousness.
     </p>
 </div>
-<div class="flex-card pop-out pop-up-animate1">
-    <h2 class="flex-header">2. The Oneness of God - Tawheed</h2>
 
+
+
+
+<div class="flex-card pop-out pop-up-animate1" id="oneness">
+    <h2 class="flex-header">2. The Oneness of God - Tawheed</h2>
+      <button class="shareBtn " onclick="share('oneness')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
+     <button class="copyBtn" onclick="copy('oneness')"><i class="fa-regular fa-clone"></i></button>
     <p class="flex-text blog-violet">
          Tawheed, or the oneness of God, is the central and most fundamental belief in Islam.<br>
         Logical reasoning supports the oneness of God. If there were two or more gods, conflicts of will and authority would arise. <b>For instance, if one god wished to create and another wished to destroy, the universe would be in chaos. A true God must have absolute sovereignty, and if there were multiple, none would be truly supreme (failing to fulfill the criteria of god).</b>
@@ -1481,8 +1583,12 @@ async function DynamicLoader(payload, clickedButton) {
 </div>
 
 
-              <div class="flex-card pop-out pop-up-animate1">
+
+
+              <div class="flex-card pop-out pop-up-animate1" id="linguistics">
                    <h2 class="flex-header">3. Astonishing Linguistics in Quran</h2>
+                    <button class="shareBtn " onclick="share('linguistics')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
+     <button class="copyBtn" onclick="copy('linguistics')"><i class="fa-regular fa-clone"></i></button>
                     <p class="flex-text blog-blue">
                     <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
                     <b>"It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
@@ -1509,8 +1615,15 @@ async function DynamicLoader(payload, clickedButton) {
                        The root فلك (falak) means "orbit" and itself has a rounded phonetic quality, symbolizing circular motion.
                   </p>
             </div>
-            <div class="flex-card pop-out pop-up-animate1">
+
+
+
+
+
+            <div class="flex-card pop-out pop-up-animate1" id="ring">
         <h2 class="flex-header">4. Ring Composition in Chapter-2 of Quran</h2>
+         <button class="shareBtn " onclick="share('ring')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
+     <button class="copyBtn" onclick="copy('ring')"><i class="fa-regular fa-clone"></i></button>
         <p class="flex-text blog-blue">
             Chapter-2 Surah Al-Baqarah, the Quran's longest chapter, exemplifies this ring composition. Despite covering a wide array of topics, from legal injunctions to narratives of past prophets, it is meticulously organized into a symmetrical framework.
         </p>
