@@ -1486,9 +1486,7 @@ display: none; /* Hide tabs on small screens */
 
 
 .shareBtn {
-    position: absolute;
-    top: 10px;  /* Distance from the top */
-    right: 10px; /* Distance from the right */
+
     border: none;
     padding: 6px 10px;
     font-size: 26px;
@@ -1514,9 +1512,7 @@ display: none; /* Hide tabs on small screens */
 }
 
 .copyBtn {
-    position: absolute;
-    top: 10px;  /* Distance from the top */
-    left: 10px; /* Distance from the right */
+
     border: none;
     padding: 6px;
     font-size:26px;
@@ -1535,14 +1531,7 @@ display: none; /* Hide tabs on small screens */
           font-size: 19px !important;
          }
 }
-@media (max-width:350px ){
-       .shareBtn{
-        display: none;
-       }
-            .copyBtn{
-            display: none;
-            }
-}
+
 .copyBtn {
     transition: all 0.3s ease-in-out;
     font-family: 'Quicksand', sans-serif;
