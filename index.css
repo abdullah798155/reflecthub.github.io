@@ -1355,7 +1355,7 @@ display: none; /* Hide tabs on small screens */
     color: #37474f;
     line-height: 1.5;
     font-family: 'Quicksand', sans-serif;
-    padding-bottom: 10px;
+    padding: 4px;
     font-weight: 500;
     white-space: normal;
     word-wrap: break-word;
