@@ -689,7 +689,7 @@ function copy(divId) {
       setTimeout(() => {
           // Step 2: Change text and fade-in smoothly
           //change innerHtml based on device width
-          if (window.innerWidth < 768) {
+          if (window.innerWidth < 480) {
               copyBtn.innerHTML = `<i class="fa-solid fa-check fa-lg" style="color: #4f9c9b;"></i>`;
           } else {
           copyBtn.innerHTML = `Copied <i class="fa-solid fa-check fa-lg" style="color: #4f9c9b;"></i>`;
