@@ -1501,10 +1501,18 @@ async function DynamicLoader(payload, clickedButton) {
           videoContainer.innerHTML=`
           <div class="blog-container ">
           <div class="flex-card pop-out pop-up-animate1" id="opening">
-          <h2 class="flex-header">1. The Opening - Al-Fatiha  </h2>
-         
-     <button class="shareBtn " onclick="share('opening')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
-     <button class="copyBtn" onclick="copy('opening')"><i class="fa-regular fa-clone"></i></button>
+                  <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                      <button class="copyBtn" onclick="copy('opening')">
+                          <i class="fa-regular fa-clone"></i>
+                      </button>
+                      
+                      <h2 class="flex-header">1. The Opening - Al-Fatiha</h2>
+                      
+                      <button class="shareBtn" onclick="share('opening')">
+                          <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+                      </button>
+                  </div>
+
     <p class="flex-text blog-gray">
         Al-Fatiha, also known as "The Opening," is the first chapter of the Quran.<br> It holds immense significance in Islam as it is recited in every unit of the five daily prayers.<br>Considered the essence of the Quran, it serves as a supplication, a declaration of monotheism, and a guide for seeking Allah’s mercy and guidance.<br> Muslims recite it as a means of connecting with their Creator, seeking help and expressing gratitude.
     </p><br>
@@ -1540,9 +1548,18 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="oneness">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <button class="copyBtn" onclick="copy('oneness')">
+        <i class="fa-regular fa-clone"></i>
+    </button>
+    
     <h2 class="flex-header">2. The Oneness of God - Tawheed</h2>
-      <button class="shareBtn " onclick="share('oneness')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
-     <button class="copyBtn" onclick="copy('oneness')"><i class="fa-regular fa-clone"></i></button>
+    
+    <button class="shareBtn" onclick="share('oneness')">
+        <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+    </button>
+</div>
+
     <p class="flex-text blog-violet">
          Tawheed, or the oneness of God, is the central and most fundamental belief in Islam.<br>
         Logical reasoning supports the oneness of God. If there were two or more gods, conflicts of will and authority would arise. <b>For instance, if one god wished to create and another wished to destroy, the universe would be in chaos. A true God must have absolute sovereignty, and if there were multiple, none would be truly supreme (failing to fulfill the criteria of god).</b>
@@ -1586,9 +1603,18 @@ async function DynamicLoader(payload, clickedButton) {
 
 
               <div class="flex-card pop-out pop-up-animate1" id="linguistics">
-                   <h2 class="flex-header">3. Astonishing Linguistics in Quran</h2>
-                    <button class="shareBtn " onclick="share('linguistics')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
-     <button class="copyBtn" onclick="copy('linguistics')"><i class="fa-regular fa-clone"></i></button>
+                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <button class="copyBtn" onclick="copy('linguistics')">
+        <i class="fa-regular fa-clone"></i>
+    </button>
+    
+    <h2 class="flex-header">3. Astonishing Linguistics in Quran</h2>
+    
+    <button class="shareBtn" onclick="share('linguistics')">
+        <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+    </button>
+</div>
+
                     <p class="flex-text blog-blue">
                     <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
                     <b>"It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
@@ -1621,9 +1647,18 @@ async function DynamicLoader(payload, clickedButton) {
 
 
             <div class="flex-card pop-out pop-up-animate1" id="ring">
-        <h2 class="flex-header">4. Ring Composition in Chapter-2 of Quran</h2>
-         <button class="shareBtn " onclick="share('ring')"><i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i></button>
-     <button class="copyBtn" onclick="copy('ring')"><i class="fa-regular fa-clone"></i></button>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <button class="copyBtn" onclick="copy('ring')">
+        <i class="fa-regular fa-clone"></i>
+    </button>
+    
+    <h2 class="flex-header">4. Ring Composition in Chapter-2 of Quran</h2>
+    
+    <button class="shareBtn" onclick="share('ring')">
+        <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+    </button>
+</div>
+
         <p class="flex-text blog-blue">
             Chapter-2 Surah Al-Baqarah, the Quran's longest chapter, exemplifies this ring composition. Despite covering a wide array of topics, from legal injunctions to narratives of past prophets, it is meticulously organized into a symmetrical framework.
         </p>
