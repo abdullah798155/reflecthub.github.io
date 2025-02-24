@@ -1632,7 +1632,8 @@ async function DynamicLoader(payload, clickedButton) {
                     
                      <span style='font-size:30px;'>▼</span><br>
                     <span style='font-size:30px;' class="mirror">
-                  ك → ل → ف → ي → ف → ل → ك
+                  ك → ل → ف → &nbsp;ي&nbsp; ← ف ← ل ← ك
+
                     </span> 
                     </p>
                     <p class="flex-text">
