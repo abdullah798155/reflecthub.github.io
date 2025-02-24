@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v31"; // Update this version to force a cache refresh
+const CACHE_NAME = "abdullah-pwa-cache-v32"; // Update this version to force a cache refresh
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -12,6 +12,9 @@ const ASSETS_TO_CACHE = [
   "/response/response.html",
   "/response/response.js",
   "/response/response.css",
+  "/Contact/contact.html",
+  "/Contact/contact.js",
+  "/Contact/contact.css",
   "/drop.html",
   "/future.html",
   "/image.png",
@@ -31,7 +34,7 @@ const NO_CACHE_FILES = [
   "/index.js",
   "/privacy.html",
   "/terms.html",
-   "/search.js",
+  "/search.js",
   "https://reflectserver.github.io/Content/verses.json",
   "https://reflectserver.github.io/Content/rational.json",
   "https://reflectserver.github.io/Content/scientific.json",
