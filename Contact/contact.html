@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflectHub - Share Your Thoughts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css"> 
+
+</head>
+<body>
+
+    <!-- Green Bubbles -->
+    <div class="bubble">💬</div>
+    <div class="bubble">😀</div>
+    <div class="bubble">👍</div>
+    <div class="bubble">📞</div>
+    <div class="bubble">✨</div>
+    <div class="bubble">❤️</div>
+    
+    <a href="../"><button>Go back &larr;</button></a>
+    <div class="container pop-up-animate1">
+        <div class="logo">ReflectHub 
+            <span class="citation" data-info="<div style='font-weight:bold;display:flex;justify-content:center; text-align:centre;'>‼️</div> <div style='display:flex;justify-content:center; text-align:centre;'>Upon submit , you will be redirected to your ongoing active mailing service provider , please proceed from there.</div> ">[?]</span>
+       </div>
+        
+
+        
+        <div id="info-box"></div>
+        <h4 class="subtext">Please feel free to share your opinions or views</h4>
+        <h2>Send Email</h2>
+        <input type="text" id="subject" placeholder="Topic" required>
+        <textarea id="message" placeholder="Enter your message"></textarea>
+        <input type="text" id="contact" placeholder="Your Contact (Optional)">
+        <button onclick="sendEmail()">Send Email</button>
+    </div>
+    <script src="contact.js"></script>
+
+</body>
+</html>
