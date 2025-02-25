@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v32"; // Update this version to force a cache refresh
+const CACHE_NAME = "abdullah-pwa-cache-v33"; // Update this version to force a cache refresh
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -9,12 +9,14 @@ const ASSETS_TO_CACHE = [
   "/Logos/reddit.png",
   "/Logos/twitter.png",
   "/legacy/hamburger.svg",
-  "/response/response.html",
+  "/response/index.html",
   "/response/response.js",
   "/response/response.css",
-  "/Contact/contact.html",
+  "/Contact/index.html",
   "/Contact/contact.js",
   "/Contact/contact.css",
+  "/privacy/index.html",
+  "/terms/index.html",
   "/drop.html",
   "/future.html",
   "/image.png",
@@ -26,14 +28,12 @@ const ASSETS_TO_CACHE = [
 
 // Files that should **never** be cached (always request fresh from the server)
 const NO_CACHE_FILES = [
-  "/legacy/legacy.html",
+  "/legacy/index.html",
   "/legacy/legacy.css",
   "/legacy/legacy.js",
   "/index.html",
   "/index.css",
   "/index.js",
-  "/privacy.html",
-  "/terms.html",
   "/search.js",
   "https://reflectserver.github.io/Content/verses.json",
   "https://reflectserver.github.io/Content/rational.json",
