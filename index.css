@@ -415,7 +415,7 @@ body {
     padding: 15px;
     font-family: Arial, sans-serif;
     /* box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2); subtle shadow for depth */
-    width: 98%; /* Ensures it spans across the page */
+    width: 100%; /* Ensures it spans across the page */
 }
 .footer1 {
    
