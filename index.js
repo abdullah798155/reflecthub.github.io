@@ -1867,6 +1867,7 @@ document.getElementById("readnoti").addEventListener("click", function () {
     }
     lastClickTime = now;
     clickCount++;
+    
 
     if (clickCount >= 5 && !debugEnabled) {
         enableDebug();
@@ -1888,6 +1889,16 @@ function enableDebug() {
     `;
     document.head.appendChild(style);
     console.log("🔴 Debugging styles ENABLED!");
+    alert(
+      "+━━━━━━━━━━━━━━━━━━━━━━━━━━━━+\n" +
+      "|🔧  DEBUG MODE ENABLED  🛠️ |\n" +
+      "+━━━━━━━━━━━━━━━━━━━━━━━━━━━━+\n\n" +
+     
+      "⚠️ To DISABLE:\n" +
+      "👉 Click the same element **twice**.\n\n" 
+  );
+  
+  
 }
 
 function disableDebug() {
