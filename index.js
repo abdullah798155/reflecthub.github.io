@@ -676,7 +676,7 @@ function copy(divId) {
   }
 
   let extractedText = contentDiv.innerText.replace(/\n\n/g, "\n");
-  extractedText += "\n\nFor more content visit https://reflecthub.github.io/#blogs";
+  extractedText += "\n\nFor more content visit https://reflecthub.github.io#blogs";
 
   let copyBtn = document.querySelector(`#${divId} .copyBtn`);
 
@@ -749,7 +749,7 @@ function share(divId) {
   }
 
   let extractedText = contentDiv.innerText.replace(/\n\n/g, "\n");
-  extractedText += "\n\nFor more content visit https://reflecthub.github.io/#blogs";
+  extractedText += "\n\nFor more content visit https://reflecthub.github.io#blogs";
 
   if (navigator.share) {
       navigator.share({
