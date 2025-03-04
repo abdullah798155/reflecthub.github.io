@@ -1854,3 +1854,46 @@ document.querySelectorAll('button[href^="#"]').forEach(anchor => {
       showNotification("No internet connection", "red");
   }
 })();
+let clickCount = 0;
+let lastClickTime = 0;
+let debugEnabled = false;
+
+document.getElementById("readnoti").addEventListener("click", function () {
+    let now = Date.now();
+    
+    // Reset count if time between clicks is too long (more than 1 second)
+    if (now - lastClickTime > 1000) {
+        clickCount = 0;
+    }
+    lastClickTime = now;
+    clickCount++;
+
+    if (clickCount >= 5 && !debugEnabled) {
+        enableDebug();
+        debugEnabled = true;
+        clickCount = 0; // Reset after enabling
+    } else if (clickCount >= 2 && debugEnabled) {
+        disableDebug();
+        debugEnabled = false;
+        clickCount = 0; // Reset after disabling
+    }
+});
+
+function enableDebug() {
+    let style = document.createElement("style");
+    style.id = "debugStyles";
+    style.innerHTML = `
+        * { outline: 2px dashed red !important; }
+        *:hover { outline: 3px dashed blue !important; }
+    `;
+    document.head.appendChild(style);
+    console.log("🔴 Debugging styles ENABLED!");
+}
+
+function disableDebug() {
+    let style = document.getElementById("debugStyles");
+    if (style) {
+        style.remove();
+        console.log("⚫ Debugging styles DISABLED!");
+    }
+}
