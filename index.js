@@ -444,7 +444,17 @@ async function loadVideos(jsonFile, clickedButton) {
 
 // Load default "Rational" videos on page load
 document.addEventListener('DOMContentLoaded', () => {
-    loadVideos('rational', document.querySelector('.tab-btn'));
+  window.onload = function() {
+    if (window.location.hash) {
+        let section = window.location.hash.substring(1); // Remove #
+        console.log("section", section);
+        if(section === "rational" || section === "scientific" || section === "inspirational" || section === "reactions") loadVideos(section, document.querySelector(`a[href="#"]`));
+        else if(section === "verses") loadVerses('verses', document.querySelector(`a[href="#"]`));
+        else DynamicLoader(section, document.querySelector(`a[href="#"]`));
+      }
+      else  loadVideos('rational', document.querySelector('.tab-btn'));
+  };
+  
 });
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
@@ -481,7 +491,7 @@ sidebarCateg.forEach(function (categ) {
 });
 
 // Load default "Rational" videos on page load
-loadVideos('rational', document.querySelector('.sidebar ul li a'));
+// loadVideos('rational', document.querySelector('.sidebar ul li a'));
 })
 
 const chapters={
@@ -739,7 +749,7 @@ function share(divId) {
   }
 
   let extractedText = contentDiv.innerText.replace(/\n\n/g, "\n");
-  extractedText += "\n\nFor more content visit https://reflecthub.github.io";
+  extractedText += "\n\nFor more content visit https://reflecthub.github.io/#blogs";
 
   if (navigator.share) {
       navigator.share({
@@ -771,7 +781,7 @@ async function DynamicLoader(payload, clickedButton) {
         loadingElement.style.display = "block";
 
         // Insert faith content
-        if(payload==="Faith"){
+        if(payload==="faith"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
           dynamicContent.innerHTML = `Declaring the faith`;
@@ -856,7 +866,7 @@ async function DynamicLoader(payload, clickedButton) {
         </div>
     `;
         }
-        else if(payload==="Afterlife"){
+        else if(payload==="afterlife"){
           const dynamicContent = document.getElementById('dynamicContent');
               dynamicContent.style.display = "block";
               dynamicContent.innerHTML = `Why afterlife matters?`;
@@ -1403,7 +1413,7 @@ async function DynamicLoader(payload, clickedButton) {
                 }
             </style>
           </div>`}
-        else if(payload==="Quran science"){
+        else if(payload==="quran science"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
           dynamicContent.innerHTML = `Estimated reading time: 5 minutes`;
@@ -1494,12 +1504,13 @@ async function DynamicLoader(payload, clickedButton) {
 
         `
         }
-        else if(payload==="Blog"){
+        else if(payload==="blogs"){
           const dynamicContent = document.getElementById('dynamicContent');
           dynamicContent.style.display = "block";
-          dynamicContent.innerHTML = `Blog`;
+          dynamicContent.innerHTML = `Blogs`;
+          videoContainer.innerHTML=""
           videoContainer.innerHTML=`
-          <div class="blog-container ">
+          <div class="blog-container " id="blogs">
           <div class="flex-card pop-out pop-up-animate1" id="opening">
                   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                       <button class="copyBtn" onclick="copy('opening')">
@@ -1545,6 +1556,73 @@ async function DynamicLoader(payload, clickedButton) {
 </div>
 
 
+<div class="flex-card pop-out pop-up-animate1" id="existence">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('existence')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h2 class="flex-header">2. Existence of the Creator</h2>
+        
+        <button class="shareBtn" onclick="share('existence')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        The existence of a Creator is evident through logic, observation, and reason. Every object in our daily life has a maker—whether it's a house, a phone, or a watch. It is illogical to accept that man-made items have a designer while denying that the vast, complex universe has a Creator.<br>
+        <b>From the tiniest living cell to the vast galaxies, humans cannot create life from nothing, yet some still challenge the existence of God.</b> Everything in existence points to a deliberate design and a Supreme Creator.
+    </p>
+    
+    <p class="flex-text blog-gray">
+        Simple observations refute the denial of a Creator.
+        <br><span style='font-size:30px;'>▼</span><br>
+        If you saw a book, you would never assume its pages arranged themselves by accident—then how can one claim that DNA, the blueprint of life, is a product of chance?
+        <br><span style='font-size:30px;'>▼</span><br>
+        A painting requires an artist, a building requires an architect—then how can the intricate design of the universe exist without an intelligent Creator?
+        <br><span style='font-size:30px;'>▼</span><br>
+        Every system, from the human eye to the gravitational forces holding planets in place, operates with precision. Chaos does not create order—only intelligence does.
+    </p>
+
+    <br><p class="flex-text">References in Quran :</p>
+    
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        أَمْ خُلِقُوا۟ مِنْ غَيْرِ شَىْءٍ أَمْ هُمُ ٱلْخَٰلِقُونَ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "Or were they created by nothing, or are they [themselves] the creators?"<br>
+        [Quran 52:35]
+        </span></b>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        وَفِى ٱلْأَرْضِ ءَايَٰتٌۭ لِّلْمُوقِنِينَ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "And on the earth are signs for the certain [in faith]."<br>
+        [Quran 51:20]
+        </span></b>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        سَنُرِيهِمْ ءَايَٰتِنَا فِى ٱلْآفَاقِ وَفِىٓ أَنفُسِهِمْ حَتَّىٰ يَتَبَيَّنَ لَهُمْ أَنَّهُ ٱلْحَقُّ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "We will show them Our signs in the horizons and within themselves until it becomes clear to them that it is the truth."<br>
+        [Quran 41:53]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-gray">
+        You see a chick hatch out of an egg and ignore it like it's nothing—yet this is a miracle far beyond human capability. Let alone the heavens and the universe, this simple act of life is a greater miracle than many seek, yet they turn away. <br><br>
+        The Quran repeatedly invites mankind to reflect on the wonders of creation, for those who ponder will find clear signs pointing to the undeniable existence of the Creator.
+    </p>
+</div>
+
+
 
 
 <div class="flex-card pop-out pop-up-animate1" id="oneness">
@@ -1553,7 +1631,7 @@ async function DynamicLoader(payload, clickedButton) {
         <i class="fa-regular fa-clone"></i>
     </button>
     
-    <h2 class="flex-header">2. The Oneness of God - Tawheed</h2>
+    <h2 class="flex-header">3. The Oneness of God - Tawheed</h2>
     
     <button class="shareBtn" onclick="share('oneness')">
         <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1601,6 +1679,75 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 
+<div class="flex-card pop-out pop-up-animate1" id="resurrection">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('resurrection')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h2 class="flex-header">4. Resurrection - The Ultimate Reality</h2>
+        
+        <button class="shareBtn" onclick="share('resurrection')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        The concept of resurrection—life after death—is a fundamental belief in Islam. It signifies the day when all of humanity will be brought back to life for judgment. <br>
+        Logical reasoning supports resurrection. The universe operates under a system of cause and effect, where every action has consequences sooner or later. <b>Man was once nonexistent, yet God brought him into being. How then can he deny resurrection? Just as he was created from nothing, so too will he be brought back after death. </b>
+    </p>
+    
+    <p class="flex-text blog-gray">
+        Everyday examples illustrate the plausibility of resurrection.
+        <br><span style='font-size:30px;'>▼</span><br>
+        A barren land, once lifeless, comes to life after rainfall, demonstrating how the dead can be revived.
+        <br><span style='font-size:30px;'>▼</span><br>
+        A person asleep is unaware of their surroundings, yet they awaken to full consciousness—similarly, the dead will awaken on the Day of Judgment.
+        <br><span style='font-size:30px;'>▼</span><br>
+        Just as a craftsman can dismantle and rebuild his creation, the One who created life the first time can surely bring it back again.
+    </p>
+
+    <br><p class="flex-text">References in Quran :</p>
+    
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        وَهُوَ ٱلَّذِى يُحْىِ ٱلْمَوْتَىٰ وَهُوَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌۭ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "And He it is Who gives life to the dead, and He is Able to do all things."<br>
+        [Quran 42:9]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        أَوَلَمْ يَرَ ٱلْإِنسَٰنُ أَنَّا خَلَقْنَٰهُ مِن نُّطْفَةٍۢ فَإِذَا هُوَ خَصِيمٌۭ مُّبِينٌۭ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "Does man not consider that We created him from a mere drop of fluid, yet he openly challenges Us?"<br>
+        [Quran 36:77]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        هَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌۭ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًۭٔا مَّذْكُورًا<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "Has there [not] come upon man a period of time when he was nothing to be mentioned?"<br>
+        [Quran 76:1]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-gray">
+        Belief in resurrection is not just an article of faith but a moral compass, reminding humanity that actions in this life will have consequences in the hereafter. The Quran repeatedly calls upon people to reflect on the reality of resurrection and prepare for the eternal life to come.
+    </p>
+</div>
+
+
+
+
+
 
               <div class="flex-card pop-out pop-up-animate1" id="linguistics">
                  <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -1608,7 +1755,7 @@ async function DynamicLoader(payload, clickedButton) {
         <i class="fa-regular fa-clone"></i>
     </button>
     
-    <h2 class="flex-header">3. Astonishing Linguistics in Quran</h2>
+    <h2 class="flex-header">5. Astonishing Linguistics in Quran</h2>
     
     <button class="shareBtn" onclick="share('linguistics')">
         <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1653,7 +1800,7 @@ async function DynamicLoader(payload, clickedButton) {
         <i class="fa-regular fa-clone"></i>
     </button>
     
-    <h2 class="flex-header">4. Ring Composition in Chapter-2 of Quran</h2>
+    <h2 class="flex-header">6. Ring Composition in Chapter-2 of Quran</h2>
     
     <button class="shareBtn" onclick="share('ring')">
         <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
