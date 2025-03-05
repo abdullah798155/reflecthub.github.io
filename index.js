@@ -1843,6 +1843,112 @@ async function DynamicLoader(payload, clickedButton) {
             This arrangement forms a chiastic structure, emphasizing the interconnectedness of the themes discussed.
         </p>
     </div>
+
+
+
+
+    <div class="flex-card pop-out pop-up-animate1" id="prophets">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('prophets')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h2 class="flex-header">7. Role of Prophets in Islam</h2>
+        
+        <button class="shareBtn" onclick="share('prophets')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        Prophets are chosen individuals sent by Allah to guide humanity. They serve as role models, bringing divine teachings and warning against corruption.<br>
+        <b>Why Prophets?</b> Humans need guidance beyond reason alone. Without divine instruction, morality would be subjective, leading to chaos. Prophets ensure that people receive clear, unchanged guidance from their Creator.
+    </p>
+
+    <p class="flex-text blog-gray">
+        <b>Why only Humans and not Angels?</b>  
+        <br><span style='font-size:30px;'>▼</span><br>
+        If angels were prophets, humans would excuse themselves from following them, saying, "We are not like them."  
+        <br><span style='font-size:30px;'>▼</span><br>
+        A prophet must understand human struggles—hunger, loss, and emotions—to serve as a relatable guide.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        Thus, Allah chose prophets from among humans, making them the best examples for mankind.
+    </p>
+
+    <p class="flex-text blog-violet">
+        <b>Why were Books needed?</b><br>
+        Humans forget, manipulate, and change words over time. Divine books preserve the original message and provide a reference for all generations.  
+    </p>
+
+    <p class="flex-text blog-gray">
+        <b>Some Prophets in Islam:</b>
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Adam (AS)</b> - The first man and prophet, created by Allah and taught the names of all things.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Noah (AS)</b> - The man of the ship, who warned his people for centuries before the great flood.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Abraham (AS)</b> - The friend of Allah, who broke idols and debated his people with wisdom.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Moses (AS)</b> - The one who parted the sea, leading his people to freedom from Pharaoh’s tyranny.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Solomon (AS)</b> - The prophet-king, granted control over the wind, jinn, and animals.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Jesus (AS)</b> - The son of Mary, who performed miracles such as healing the blind and reviving the dead by Allah's permission.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Muhammad (ﷺ)</b> - The seal of the prophets, sent as a mercy to mankind with the final revelation, the Quran.  
+    </p>
+
+    <br><p class="flex-text">References in Quran :</p>
+    
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        وَمَا أَرْسَلْنَا مِن قَبْلِكَ إِلَّا رِجَالًۭا نُّوحِىٓ إِلَيْهِم مِّنْ أَهْلِ ٱلْقُرَىٰ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "And We did not send before you [as messengers] except men to whom We revealed from among the people of cities."<br>
+        [Quran 12:109]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        إِنَّا أَوْحَيْنَآ إِلَيْكَ كَمَآ أَوْحَيْنَآ إِلَىٰ نُوحٍۢ وَٱلنَّبِيِّۦنَ مِنۢ بَعْدِهِ<br>
+        </span><br> <b>
+        <span style='font-size:20px;'>
+        "Indeed, We have revealed to you, [O Muhammad], as We revealed to Noah and the prophets after him."<br>
+        [Quran 4:163]
+        </span></b>
+    </p>
+
+    <p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    وَلَقَدْ بَعَثْنَا فِى كُلِّ أُمَّةٍۢ رَّسُولًا أَنِ ٱعْبُدُوا۟ ٱللَّهَ وَٱجْتَنِبُوا۟ ٱلطَّٰغُوتَ<br>
+    </span><br> <b>
+    <span style='font-size:20px;'>
+    "And We certainly sent into every nation a messenger, [saying], 'Worship Allah and avoid false gods.'"<br>
+    [Quran 16:36]
+    </span></b>
+</p>
+
+
+    <p class="flex-text blog-gray">
+        <b>Why did Prophets Need Miracles?</b><br>
+        Miracles proved that prophets were truly sent by Allah. They served as signs to convince those who doubted.  
+        <br><br>
+        <b>Some Miracles of Prophets:</b>
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Abraham (AS)</b> - Thrown into a blazing fire, but Allah made it cool and safe for him.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Moses (AS)</b> - Parted the Red Sea with his staff, saving his people from Pharaoh.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Solomon (AS)</b> - Could speak to animals and command the wind and jinn.  
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Jesus (AS)</b> - Healed the blind, cured the leper, and revived the dead—all by Allah’s permission.  
+        <br><br>
+        These miracles were clear proofs of divine authority. Yet, the greatest miracle of all remains the Quran, a book preserved for all time.
+    </p>
+</div>
+
         </div>
 
 
