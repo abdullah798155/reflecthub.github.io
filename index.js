@@ -1956,7 +1956,7 @@ async function DynamicLoader(payload, clickedButton) {
             <i class="fa-regular fa-clone"></i>
         </button>
         
-        <h2 class="flex-header">6. The People of the Book</h2>
+        <h2 class="flex-header">8. The People of the Book</h2>
         
         <button class="shareBtn" onclick="share('people_of_book')">
             <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
