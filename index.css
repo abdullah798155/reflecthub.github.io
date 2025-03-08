@@ -1546,3 +1546,47 @@ display: none; /* Hide tabs on small screens */
     opacity: 1;
     transform: scale(1);
 }
+
+
+
+    .table-container {
+        max-width: 90%; /* Make the table occupy 80% of the container width */
+        margin: 0 auto;  /* Center the table horizontally */
+        padding: 20px 0; /* Add some padding on top and bottom */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Quicksand', sans-serif;
+        border: 1px solid #555; /* Increased border width */
+        border-radius: 40px; /* Increased border radius for rounded corners */
+    }
+
+    th, td {
+        border: 1px solid #555; /* Increased border width */
+        padding: 15px; /* Increased padding */
+        text-align: left;
+    }
+
+    th {
+        background-color: #f4f4f4;
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    /* Responsive Styles for Small Screens */
+    @media (max-width: 600px) {
+        th, td {
+            font-size: 12px;
+            padding: 10px;
+        }
+        .table-container{
+            max-width: 100%;
+        }
+    }
+
+
