@@ -2029,6 +2029,284 @@ async function DynamicLoader(payload, clickedButton) {
 </div>
 
 
+<div class="flex-card pop-out pop-up-animate1" id="trials_tribulations">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('trials_tribulations')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h2 class="flex-header">9. Trials and Tribulations</h2>
+        
+        <button class="shareBtn" onclick="share('trials_tribulations')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        Life is full of <b>trials and tribulations</b>, and they serve as tests from Allah. 
+        Hardships purify the soul, strengthen faith, and distinguish the patient from the impatient. 
+        Every person, whether believer or disbeliever, experiences difficulties in life, but in Islam, these trials have a divine purpose.
+    </p>
+    <br>
+
+    <p class="flex-text blog-gray">
+        <b>Examples from the Prophets:</b>
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Nuh (Noah, PBUH)</b> preached for centuries but was mocked and rejected by his people.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Ibrahim (Abraham, PBUH)</b> was thrown into fire for his faith, yet he remained steadfast.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Ismail (Ishmael, PBUH)</b> was ready to be sacrificed in obedience to Allah’s command.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Yaqub (Jacob, PBUH)</b> lost his beloved son but displayed immense patience.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Yusuf (Joseph, PBUH)</b> was betrayed by his brothers and imprisoned unjustly.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Musa (Moses, PBUH)</b> struggled against Pharaoh’s tyranny to free his people.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Isa (Jesus, PBUH)</b> faced rejection and plots against his life.<br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Prophet Muhammad (PBUH)</b> endured hardships, exile, and battles in spreading Islam.
+    </p>
+    <br>
+
+    <p class="flex-text blog-gray">
+        <b>Why Does Allah Test Us?</b><br>
+        Trials are not a sign of Allah’s displeasure; rather, they are a means of growth and purification.  
+        <b>They remind us of our dependence on Him</b>, encourage patience, and elevate our status in the Hereafter.  
+        Even prophets, the most beloved to Allah, faced severe hardships—showing that trials are part of life’s journey.
+    </p>
+    <br>
+
+    <p class="flex-text"><b>References in Quran :</b></p>
+    <br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ
+        </span><br><br> 
+        <b>
+        <span style='font-size:20px;'>
+        "Do people think that they will be left to say, 'We believe' and will not be tested?"  
+        [Quran 29:2]
+        </span>
+        </b>
+    </p>
+    <br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        وَلَنَبْلُوَنَّكُم بِشَىْءٍۢ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍۢ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّٰبِرِينَ
+        </span><br><br> 
+        <b>
+        <span style='font-size:20px;'>
+        "And We will surely test you with something of fear and hunger and a loss of wealth and lives and fruits,  
+        but give glad tidings to the patient."  
+        [Quran 2:155]
+        </span>
+        </b>
+    </p>
+    <br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        إِنَّ مَعَ ٱلْعُسْرِ يُسْرًۭا
+        </span><br><br> 
+        <b>
+        <span style='font-size:20px;'>
+        "Indeed, with hardship comes ease."  
+        [Quran 94:6]
+        </span>
+        </b>
+    </p>
+    <br>
+
+    <p class="flex-text blog-gray">
+        <b>Trials Lead to Strength</b><br>
+        Hardships are temporary, and with every difficulty, there is relief.  
+        A believer who trusts in Allah’s wisdom knows that trials refine the soul and bring greater rewards in the Hereafter.
+    </p>
+    <br>
+</div>
+
+
+
+
+<div class="flex-card pop-out pop-up-animate1" id="abrahamic_vs_dharmic">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('abrahamic_vs_dharmic')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h2 class="flex-header">10. Abrahamic vs Dharmic Religions</h2>
+        
+        <button class="shareBtn" onclick="share('abrahamic_vs_dharmic')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        The <b>Abrahamic</b> and <b>Dharmic</b> religions represent two distinct paths in the world’s spiritual landscape.  
+        <b>Abrahamic religions</b> include Judaism, Christianity, and Islam, all of which trace their roots back to <b>Prophet Abraham (Ibrahim, AS)</b> and share the belief in one supreme God.  
+        On the other hand, <b>Dharmic religions</b>, such as Hinduism, Buddhism, Jainism, and Sikhism, emerged primarily in the Indian subcontinent, with a focus on the <b>cycle of life, karma</b>, and the <b>pursuit of enlightenment</b>.
+    </p>
+    <br>
+
+    <p class="flex-text blog-gray">
+        While both categories seek spiritual fulfillment, their <b>core beliefs</b>, <b>practices</b>, and <b>views on God, resurrection, and salvation</b> vary significantly.  
+        The <b>Abrahamic faiths</b> are predominantly <b>monotheistic</b>—worshiping one God—while <b>Dharmic religions</b> often feature <b>polytheistic</b> or <b>pantheistic</b> elements, where the divine can be represented in many forms or as an underlying force.
+    </p>
+    <br>
+
+    <p class="flex-text blog-gray">
+        To better understand the differences and similarities between these religious systems, let's compare them using the table below:
+    </p>
+    <br>
+
+    <!-- Responsive Table -->
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Contents</th>
+                <th>Abrahamic</th>
+                <th>Dharmic</th>
+            </tr>
+            <tr>
+                <td><b>Belief</b></td>
+                <td>MONOTHEISM - Belief in One God (Judaism, Christianity, Islam)</td>
+                <td>POLYTHEISM - Belief in more than One God (Hinduism, Buddhism, Jainism)</td>
+            </tr>
+            <tr>
+                <td><b>View of God</b></td>
+                <td>One Personal Supreme God</td>
+                <td>Divine presence in everything or impersonal force (Brahman in Hinduism)</td>
+            </tr>
+            <tr>
+                <td><b>Resurrection</b></td>
+                <td>Belief in life after death and resurrection (Judgment Day)</td>
+                <td>Reincarnation (Samsara) and Liberation (Moksha/Nirvana)</td>
+            </tr>
+            <tr>
+                <td><b>Salvation</b></td>
+                <td>Faith in God and good deeds</td>
+                <td>Enlightenment, Self-realization, and Karma (liberation from Samsara)</td>
+            </tr>
+            <tr>
+                <td><b>Scriptures</b></td>
+                <td>Torah, Bible, Quran</td>
+                <td>Vedas, Sutras, Tripitaka, Bhagavad Gita</td>
+            </tr>
+            <tr>
+                <td><b>Prayer</b></td>
+                <td>Daily prayers (e.g., Salah in Islam)</td>
+                <td>Meditation, rituals, and chants (e.g., Mantras in Hinduism)</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <p class="flex-text"><b>References in Quran:</b></p>
+    <br>
+
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+        إِنَّ ٱلدِّينَ عِندَ ٱللَّهِ ٱلۡإِسْلَٰمُ ۚ وَمَآ اختلفَ ٱلَّذِينَ أُوتُوا۟ ٱلۡكِتَٰبَ إِلَّا مِنۢ بَعْدِ مَا جَآءَهُمُ ٱلْعِلْمُ بَغۡيًاۚ وَمَن يَكْفُرْ بِآيَٰتِ ٱللَّهِ فَإِنَّ ٱللَّهَ سَرِيعُ ٱلْحِسَابِ
+        </span><br><br>
+        <b>
+        <span style='font-size:20px;'>
+        "Indeed, the religion in the sight of Allah is Islam. And those who were given the Scripture did not differ except after knowledge had come to them, out of selfishness. And whoever denies the signs of Allah, then indeed, Allah is swift in reckoning."  
+        [Quran 3:19]
+        </span>
+        </b>
+    </p>
+    <br>
+
+<p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    وَٱذْكُرْ فِى ٱلْكِتَٰبِ إِبْرَٰهِيمَ إِنَّهُۥ كَانَ صِدِّيقًۭا نَّبِيًّۭا  
+    إِذْ قَالَ لِأَبِيهِ يَـٰٓأَبَتِ لِمَ تَعْبُدُ مَا لَا يَسْمَعُ وَلَا يُبْصِرُ وَلَا يُغْنِى عَنكَ شَيْـًۭٔا  
+    </span><br><br>
+    <b>
+    <span style='font-size:20px;'>
+    "And mention in the Book (the story of) Abraham. Indeed, he was a man of truth and a prophet.  
+    When he said to his father, 'O my father, why do you worship that which does not hear,  
+    nor see, nor benefit you at all?'"  
+    [Quran 19:41-42]
+    </span>
+    </b>
+</p>
+<br>
+<p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    وَيَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ وَيَقُولُونَ هَـٰٓؤُلَآءِ شُفَعَـٰٓؤُنَا عِندَ ٱللَّهِ  
+    </span><br><br>
+    <b>
+    <span style='font-size:20px;'>
+    "And they worship besides Allah that which neither harms them nor benefits them,  
+    and they say, 'These are our intercessors with Allah.'"  
+    [Quran 10:18]
+    </span>
+    </b>
+</p>
+<br>
+
+<p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    أَيُشْرِكُونَ مَا لَا يَخْلُقُ شَيْـًۭٔا وَهُمْ يُخْلَقُونَ  
+    وَلَا يَسْتَطِيعُونَ لَهُمْ نَصْرًۭا وَلَآ أَنفُسَهُمْ يَنصُرُونَ  
+    </span><br><br>
+    <b>
+    <span style='font-size:20px;'>
+    "Do they associate with Allah those who create nothing,  
+    while they themselves are created?  
+    And they cannot help them, nor can they even help themselves."  
+    [Quran 7:191-192]
+    </span>
+    </b>
+</p>
+<br>
+
+<p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    وَٱلَّذِينَ يَدْعُونَ مِن دُونِ ٱللَّهِ لَا يَخْلُقُونَ شَيْـًۭٔا وَهُمْ يُخْلَقُونَ  
+    أَمْوَٰتٌ غَيْرُ أَحْيَآءٍۢ وَمَا يَشْعُرُونَ أَيَّانَ يُبْعَثُونَ  
+    </span><br><br>
+    <b>
+    <span style='font-size:20px;'>
+    "And those whom they invoke besides Allah create nothing,  
+    while they themselves are created.  
+    They are dead, not alive, and they do not perceive when they will be resurrected."  
+    [Quran 16:20-21]
+    </span>
+    </b>
+</p>
+<br>
+
+<p class="flex-text blog-blue">
+   <span style='font-size:30px;'>
+    قُلْ أَفَتَعْبُدُونَ مِن دُونِ ٱللَّهِ مَا لَا يَمْلِكُ لَكُمْ ضَرًّۭا وَلَا نَفْعًۭا وَٱللَّهُ هُوَ ٱلسَّمِيعُ ٱلْعَلِيمُ  
+    </span><br><br>
+    <b>
+    <span style='font-size:20px;'>
+    "Say: Do you worship besides Allah  
+    that which has no power to harm or benefit you?  
+    And Allah is the All-Hearing, All-Knowing."  
+    [Quran 5:76]
+    </span>
+    </b>
+</p>
+<br>
+
+    <p class="flex-text blog-gray">
+        In conclusion, the <b>Abrahamic</b> and <b>Dharmic</b> religions offer two different worldviews and paths to spiritual fulfillment. While the Abrahamic religions emphasize the <b>oneness of God</b> and focus on the worship of a single divine entity, the Dharmic religions often promote the idea of <b>divinity in everything</b>, emphasizing the cyclical nature of life and <b>spiritual liberation</b>.  
+        Understanding these differences is vital to fostering <b>interfaith dialogue</b> and promoting mutual respect among diverse belief systems.
+    </p>
+    <br>
+</div>
+
+
+
+
       </div>
 
 
