@@ -1509,7 +1509,7 @@ async function DynamicLoader(payload, clickedButton) {
         dynamicContent.style.display = "block";
         dynamicContent.innerHTML = `Reflections 🌿 `;
         videoContainer.innerHTML=`
-         <div class="blog-container " id="blogs">
+            <div class="blog-container " id="blogs">
         <div class="flex-card pop-out pop-up-animate1" id="opening">
             <h2 class="flex-header">Reflection #1</h2>
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
@@ -1749,12 +1749,80 @@ async function DynamicLoader(payload, clickedButton) {
 </div>
 
 
+<div class="flex-card pop-out pop-up-animate1" id="preservation_quran">
+    <h2 class="flex-header">Reflection #5</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('preservation_quran')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h1 class="flex-header">Preservation of the Quran</h1>
+        
+        <button class="shareBtn" onclick="share('preservation_quran')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        The Quran is the <b>only</b> religious scripture in history that has been preserved without alteration. Unlike previous revelations that were lost, rewritten, or corrupted, the Quran remains <b>exactly</b> as it was revealed to Prophet Muhammad (ﷺ) over 1400 years ago. This preservation is not due to human effort alone—<b>Allah Himself has promised to guard it from any corruption.</b>
+    </p><br>
+
+    <p class="flex-text blog-gray">
+        <b>How the Quran is Preserved:</b>
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Oral Transmission:</b> The Quran was memorized by the Prophet’s companions and continues to be memorized by millions today.<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Written Record:</b> It was recorded during the Prophet’s time and compiled into a single book<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Divine Protection:</b> Unlike previous scriptures, the Quran has remained untouched—<b>not a letter has changed</b>.<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Consistency Worldwide:</b> Whether in Africa, Asia, America or Europe, the Quran recited today is identical since its beginning.<br><br>
+    </p><br>
+
+    <p style="font-family: 'Quicksand', sans-serif;"><b>The Quran: The Book That Can Never Be Lost</b></p><br>
+    <p class="flex-text blog-violet" style="text-align: left !important;">
+        ✦ <b>If all books vanished today</b>, only the Quran could be restored word-for-word—because it lives in the hearts of millions.<br><br>
+        ✦ <b>Even digital storage can be erased</b>, but the Quran exists beyond paper, servers, or ink.<br><br>
+        ✦ <b>It is memorized from cover to cover, letter by letter</b>—a protection no other book enjoys.<br><br>
+        ✦ <b>A 7-year-old child and a 70-year-old scholar recite the same Quran</b>—unchanged for since its beginning<br><br>
+        ✦ <b>The Quran is the only book preserved in both oral and written form</b>, fulfilling Allah’s promise of divine protection.
+    </p><br>
+
+    <p class="flex-text">References from Quran:</p><br>
+
+    <p class="flex-text blog-blue">
+        <span style="font-size: 30px;">
+            إِنَّا نَحۡنُ نَزَّلۡنَا ٱلذِّكۡرَ وَإِنَّا لَهُۥ لَحَـٰفِظُونَ
+        </span><br><br> 
+        <span style="font-size: 20px;">
+        <b>“Indeed, We have sent down the Reminder (Quran), and indeed, We will be its Guardian.”</b>
+        </span><br><b>[Surah Al-Hijr 15:9]</b>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+        <span style="font-size: 30px;">
+            وَلَا يَأۡتُونَكَ بِمَثَلٍ إِلَّا جِئۡنَٰكَ بِٱلۡحَقِّ وَأَحۡسَنَ تَفۡسِيرًۭا
+        </span><br><br> 
+        <span style="font-size: 20px;">
+        <b>“And they do not come to you with an argument except that We bring you the truth and the best explanation.”</b>
+        </span><br><b>[Surah Al-Furqan 25:33]</b>
+    </p><br>
+
+    <p class="flex-text blog-gray">
+        <b>📜 The Challenge of Preservation:</b>  
+        No human can produce a chapter like the Quran. Despite attempts, it remains unmatched in eloquence, depth, and structure.
+    </p><br>
+
+    <p class="flex-text" style="font-style: italic;">
+        The ink may dry, the paper may burn, and the screens may go black—but the Quran will never be lost, for it is engraved in the hearts of believers. 📖✨
+    </p>
+</div>
 
 
 
 
  <div class="flex-card pop-out pop-up-animate1" id="linguistics">
-                <h2 class="flex-header">Reflection #5</h2>
+                <h2 class="flex-header">Reflection #6</h2>
                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <button class="copyBtn" onclick="copy('linguistics')">
       <i class="fa-regular fa-clone"></i>
@@ -1800,7 +1868,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
           <div class="flex-card pop-out pop-up-animate1" id="ring">
-            <h2 class="flex-header">Reflection #6</h2>
+            <h2 class="flex-header">Reflection #7</h2>
       <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <button class="copyBtn" onclick="copy('ring')">
       <i class="fa-regular fa-clone"></i>
@@ -1854,7 +1922,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
   <div class="flex-card pop-out pop-up-animate1" id="prophets">
-    <h2 class="flex-header">Reflection #7</h2>
+    <h2 class="flex-header">Reflection #8</h2>
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('prophets')">
           <i class="fa-regular fa-clone"></i>
@@ -1959,7 +2027,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="people_of_book">
-    <h2 class="flex-header">Reflection #8</h2>
+    <h2 class="flex-header">Reflection #9</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('people_of_book')">
             <i class="fa-regular fa-clone"></i>
@@ -2039,7 +2107,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="trials_tribulations">
-    <h2 class="flex-header">Reflection #9</h2>
+    <h2 class="flex-header">Reflection #10</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('trials_tribulations')">
             <i class="fa-regular fa-clone"></i>
@@ -2143,7 +2211,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="abrahamic_vs_dharmic">
-    <h2 class="flex-header">Reflection #10</h2>
+    <h2 class="flex-header">Reflection #11</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('abrahamic_vs_dharmic')">
             <i class="fa-regular fa-clone"></i>
@@ -2315,9 +2383,8 @@ async function DynamicLoader(payload, clickedButton) {
     <br>
 </div>
 
-
 <div class="flex-card pop-out pop-up-animate1" id="beauty_monotheism">
-    <h2 class="flex-header">Reflection #11</h2>
+    <h2 class="flex-header">Reflection #12</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('beauty_monotheism')">
         <i class="fa-regular fa-clone"></i>
@@ -2385,8 +2452,8 @@ async function DynamicLoader(payload, clickedButton) {
   </div>
   
 
-    <div class="flex-card pop-out pop-up-animate1" id="worldly_amusements">
-    <h2 class="flex-header">Reflection #12</h2>
+  <div class="flex-card pop-out pop-up-animate1" id="worldly_amusements">
+    <h2 class="flex-header">Reflection #13</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('worldly_amusements')">
             <i class="fa-regular fa-clone"></i>
@@ -2463,7 +2530,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="adam_mankind">
-    <h2 class="flex-header">Reflection #13</h2>
+    <h2 class="flex-header">Reflection #14</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('adam_mankind')">
           <i class="fa-regular fa-clone"></i>
@@ -2538,7 +2605,7 @@ async function DynamicLoader(payload, clickedButton) {
   </div>
 
 <div class="flex-card pop-out pop-up-animate1" id="prophet_ibrahim">
-    <h2 class="flex-header">Reflection #14</h2>
+    <h2 class="flex-header">Reflection #15</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('prophet_ibrahim')">
             <i class="fa-regular fa-clone"></i>
@@ -2619,7 +2686,7 @@ async function DynamicLoader(payload, clickedButton) {
   
 
 <div class="flex-card pop-out pop-up-animate1" id="insights_yusuf">
-    <h2 class="flex-header">Reflection #15</h2>
+    <h2 class="flex-header">Reflection #16</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('insights_yusuf')">
             <i class="fa-regular fa-clone"></i>
@@ -2713,7 +2780,90 @@ async function DynamicLoader(payload, clickedButton) {
     </p>
   </div>
   
+  <div class="flex-card pop-out pop-up-animate1" id="prophet_jesus">
+    <h2 class="flex-header">Reflection #17</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('prophet_jesus')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h1 class="flex-header">Prophet Jesus (Isa) – Servant of Allah</h1>
+        
+        <button class="shareBtn" onclick="share('prophet_jesus')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
 
+    <p class="flex-text blog-violet">
+        Jesus (Isa عليه السلام) is one of the most revered prophets in Islam. While all Abrahamic faiths acknowledge his existence, their interpretations differ drastically. In Islam, he is a mighty messenger born miraculously to Maryam without a father, but never divine. Christians elevated him to "Son of God" or even "God incarnate", while many Jews rejected his prophethood altogether.
+    </p><br>
+
+    <p class="flex-text blog-gray">
+        <b>How Beliefs About Jesus Diverged:</b>
+        <br><span style='font-size:30px;'>▼</span><br>
+        <b>Christians</b> gradually began worshipping Jesus, influenced by Roman theology and church councils like Nicaea, declaring him divine.<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        They introduced the concept of Trinity: Father, Son, Holy Spirit—though Jesus never claimed this in clear terms.<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Jews</b> rejected him entirely, accusing him of blasphemy, and even plotted against him.<br><br>
+        <span style='font-size:30px;'>▼</span><br>
+        <b>Islam</b> restores the truth: Jesus is not God, but a Prophet who called to the worship of Allah alone.
+    </p><br>
+    
+    <p style="font-family: 'Quicksand', sans-serif;"><b>What the Quran Says About Jesus</b></p><br>
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        قَالَ إِنِّي عَبْدُ ٱللَّهِ ءَاتَىٰنِىَ ٱلْكِتَـٰبَ وَجَعَلَنِى نَبِيًّۭا
+        </span><br><br> 
+        <span style='font-size:20px;'>
+        <b>“[Jesus] said, 'Indeed, I am the servant of Allah. He has given me the Scripture and made me a prophet.’”</b><br>
+        <b>[Surah Maryam 19:30]</b>
+        </span>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        مَا ٱلْمَسِيحُ ٱبْنُ مَرْيَمَ إِلَّا رَسُولٌۭ قَدْ خَلَتْ مِن قَبْلِهِ ٱلرُّسُلُ ۖ وَأُمُّهُۥ صِدِّيقَةٌۭ ۖ كَانَا يَأْكُلَانِ ٱلطَّعَامَ
+        </span><br><br> 
+        <span style='font-size:20px;'>
+        <b>“The Messiah, son of Mary, was no more than a messenger. His mother was a woman of truth. They both used to eat food.”</b><br>
+        <b>[Surah Al-Ma'idah 5:75]</b>
+        </span>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        يَوْمَ يَجْمَعُ ٱللَّهُ ٱلرُّسُلَ فَيَقُولُ مَاذَآ أُجِبْتُمْ ۖ قَالُوا۟ لَا عِلْمَ لَنَآ ۖ إِنَّكَ أَنتَ عَلَّـٰمُ ٱلْغُيُوبِ
+        ... أَأَنتَ قُلتَ لِلنَّاسِ ٱتَّخِذُونِى وَأُمِّىَ إِلَـٰهَيْنِ مِن دُونِ ٱللَّهِ ۖ قَالَ سُبْحَـٰنَكَ مَا يَكُونُ لِىٓ أَنْ أَقُولَ مَا لَيْسَ لِى بِحَقٍّ
+        </span><br><br> 
+        <span style='font-size:20px;'>
+        <b>“[On the Day of Judgment] Allah will say: 'O Jesus, Son of Mary! Did you say to the people, "Take me and my mother as gods besides Allah?"’ He will say, 'Glory be to You! It was not for me to say what I had no right to say.’”</b><br>
+        <b>[Surah Al-Ma’idah 5:109–120 summary]</b>
+        </span><br><br>
+        <a href="https://www.youtube.com/watch?v=8bnrhQn7dlk" target="_blank">Listen Full conversation between Jesus and Allah(swt)</a>
+    </p><br>
+
+    <p class="flex-text blog-violet" style="text-align: left !important;">
+        ✦ <b>Jesus was a man—he ate, slept, and prayed.</b> How can the creation be God?<br><br>
+        ✦ <b>Even Jesus denied any claim of divinity.</b> The Quran quotes him refuting such blasphemy.<br><br>
+        ✦ <b>Allah is angered at the claim of sonship.</b> “It is not befitting for the Most Merciful to take a son.” (Surah Maryam 19:92)<br><br>
+        ✦ <b>Divine titles are exclusive to Allah alone.</b> No prophet—no matter how miraculous—shares in His divinity.<br><br>
+        ✦ <b>The true message of Jesus was Tawheed (Oneness).</b> He called people to worship Allah alone, like every prophet before him.
+    </p><br>
+
+    <p class="flex-text blog-gray">
+        <b>🔍 A Thought to Ponder:</b>  
+        Can a being that eats, breathes, and is born truly be God? Logic, scripture, and even Jesus himself say no. The real honor of Jesus lies in his truth, not in deification.
+    </p><br>
+
+    <p class="flex-text" style="font-style: italic;">
+        Let us honor Jesus not by raising him above his status to God or Son of God — but by believing as he did: in the worship of One God.
+    </p>
+</div>
+
+
+  
+  
 </div>
 
         `
