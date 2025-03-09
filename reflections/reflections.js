@@ -1,14 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     const hash = window.location.hash;
+
     if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
+        // Delay to ensure layout is ready
         setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth" });
-        }, 100); // Delay helps layout settle
-      }
+            const targetElement = document.querySelector(hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+                // Optionally clear the hash jump after smooth scroll
+                history.replaceState(null, null, ' ');
+            }
+        }, 100);
     }
-  });
+
+    // Optional: Intercept future clicks too
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetSelector = this.getAttribute('href');
+            const targetElement = document.querySelector(targetSelector);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+                history.pushState(null, null, targetSelector); // updates URL without jump
+            }
+        });
+    });
+});
+
   
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
