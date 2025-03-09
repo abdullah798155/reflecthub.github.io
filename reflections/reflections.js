@@ -1,19 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    console.warn(`Element not found for: ${targetId}`);
-                }
-            });
+    // Smooth scroll on click
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetSelector = this.getAttribute('href');
+            const targetElement = document.querySelector(targetSelector);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
-    }, 100); // delay ensures all elements are ready, especially in PWA
+    });
+
+    // ✅ Scroll into view if page loaded with hash (e.g., after reload in PWA)
+    const hash = window.location.hash;
+    if (hash) {
+        // Wait a bit to ensure elements are rendered (PWA might delay it)
+        setTimeout(() => {
+            const el = document.querySelector(hash);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 1000); // slight delay helps in PWA
+    }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
