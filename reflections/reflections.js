@@ -1,33 +1,38 @@
+//if it is mobile screen then rin this code
+if (window.innerWidth < 768) {
+    document.addEventListener("DOMContentLoaded", function () {
+        const hash = window.location.hash;
+        if (hash) {
+          const el = document.querySelector(hash);
+          if (el) {
+            setTimeout(() => {
+              el.scrollIntoView({ behavior: "smooth" });
+            }, 100); // Delay helps layout settle
+          }
+        }
+      });
+}
+else{
 document.addEventListener("DOMContentLoaded", function () {
-    const hash = window.location.hash;
-
-    if (hash) {
-        // Delay to ensure layout is ready
-        setTimeout(() => {
-            const targetElement = document.querySelector(hash);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
-                // Optionally clear the hash jump after smooth scroll
-                history.replaceState(null, null, ' ');
-            }
-        }, 100);
-    }
-
-    // Optional: Intercept future clicks too
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+
             const targetSelector = this.getAttribute('href');
             const targetElement = document.querySelector(targetSelector);
+
             if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth" });
-                history.pushState(null, null, targetSelector); // updates URL without jump
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
 });
+}
 
-  
+
+
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
 const hamburger = document.querySelector('.hamburger-menu');
