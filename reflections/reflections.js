@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    setTimeout(() => {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
 
-            const targetSelector = this.getAttribute('href');
-            const targetElement = document.querySelector(targetSelector);
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    console.warn(`Element not found for: ${targetId}`);
+                }
+            });
         });
-    });
+    }, 100); // delay ensures all elements are ready, especially in PWA
 });
+
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
 const hamburger = document.querySelector('.hamburger-menu');
