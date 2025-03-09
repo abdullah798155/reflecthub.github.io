@@ -2385,7 +2385,7 @@ async function DynamicLoader(payload, clickedButton) {
   </div>
   
 
-  <div class="flex-card pop-out pop-up-animate1" id="worldly_amusements">
+    <div class="flex-card pop-out pop-up-animate1" id="worldly_amusements">
     <h2 class="flex-header">Reflection #12</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('worldly_amusements')">
@@ -2418,18 +2418,6 @@ async function DynamicLoader(payload, clickedButton) {
     </p><br>
 
     <p class="flex-text"><b>References in Quran :</b></p><br>
-
-    <p class="flex-text blog-blue">
-        <span style='font-size:30px;'>
-        ٱعْلَمُوٓا۟ أَنَّمَا ٱلْحَيَوٰةُ ٱلدُّنْيَا لَعِبٌۭ وَلَهْوٌۭ وَزِينَةٌۭ وَتَفَاخُرٌۢ بَيْنَكُمْ وَتَكَاثُرٌۭ فِى ٱلْأَمْوَٰلِ وَٱلْأَوْلَٰدِ ۖ 
-        </span><br><br>
-        <b>
-        <span style='font-size:20px;'>
-        "Know that the life of this world is but play, amusement, adornment, boasting, and competing in wealth and children..."  
-        [Quran 57:20]
-        </span>
-        </b>
-    </p><br>
 
     <p class="flex-text blog-blue">
         <span style='font-size:30px;'>
@@ -2471,6 +2459,260 @@ async function DynamicLoader(payload, clickedButton) {
         ✨ Let the Dunya be in your hands, not your heart. Journey light—your soul travels far.
     </p>
 </div>
+
+
+
+<div class="flex-card pop-out pop-up-animate1" id="adam_mankind">
+    <h2 class="flex-header">Reflection #13</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <button class="copyBtn" onclick="copy('adam_mankind')">
+          <i class="fa-regular fa-clone"></i>
+      </button>
+      
+      <h1 class="flex-header">Adam – The Beginning of Mankind</h1>
+      
+      <button class="shareBtn" onclick="share('adam_mankind')">
+          <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+      </button>
+    </div>
+  
+    <p class="flex-text blog-violet">
+      Adam (AS) is the first human created by Allah and the first prophet in Islam. Made from clay and honored with knowledge, Adam marks the beginning of mankind’s journey on Earth. Allah taught him the names of all things and made angels prostrate before him—except Iblis, who refused out of pride.
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+      <b>From Heaven to Earth – The Story Unfolds:</b>
+      <br><span style='font-size:30px;'>▼</span><br>
+      Allah created Adam from clay and breathed into him His spirit.  
+      <br><span style='font-size:30px;'>▼</span><br>
+      He was placed in Jannah (Paradise) and paired with Hawwa (Eve).  
+      <br><span style='font-size:30px;'>▼</span><br>
+      They were allowed to enjoy everything—except one specific tree.  
+      <br><span style='font-size:30px;'>▼</span><br>
+      Iblis whispered, they disobeyed, and as a result, were sent to Earth.  
+      <br><span style='font-size:30px;'>▼</span><br>
+      But Allah taught Adam words of repentance and forgave him, setting a model for mankind: Fall, repent, rise again.
+    </p><br>
+  
+    <p style="font-family: 'Quicksand', sans-serif;"><b>Insights from Adam’s Life:</b></p><br>
+    <p class="flex-text blog-violet" style="text-align: left !important;">
+      ✦ <b>Knowledge is an honor.</b> Adam was taught the names of all things—showing the virtue of learning.<br><br>
+      ✦ <b>Pride leads to downfall.</b> Iblis was banished for arrogance and refusing a divine command.<br><br>
+      ✦ <b>Humans are fallible but redeemable.</b> Mistakes are part of the journey, but sincere repentance is always accepted.<br><br>
+      ✦ <b>Shaytan’s whispers are real.</b> He didn’t disappear after Adam—he continues his mission till today.<br><br>
+      ✦ <b>The mercy of Allah is vast.</b> Even the first mistake in history was forgiven with a few heartfelt words.
+    </p><br>
+  
+    <p style="font-family: 'Quicksand', sans-serif;"><b>💡 Symbolism: The Tree of Discipline</b></p><br>
+    <p class="flex-text blog-gray">
+      The forbidden tree wasn’t about hunger or fruit—it was a divine test of self-restraint. In every era, mankind has a “tree” they are told to avoid. The lesson? True freedom isn’t doing what you want, but obeying the One who created you.
+    </p><br>
+  
+    <p class="flex-text">References from Quran:</p><br>
+  
+    <p class="flex-text blog-blue">
+         <span style='font-size:30px;'>
+         وَإِذْ قَالَ رَبُّكَ لِلْمَلَائِكَةِ إِنِّي خَالِقٌۭ بَشَرًۭا مِّن صَلْصَـٰلٍۢ مِّنْ حَمَإٍۢ مَّسْنُونٍۢ
+         </span><br><br> 
+         <b>
+         <span style='font-size:20px;'>
+         "And [mention, O Muhammad], when your Lord said to the angels, 'Indeed, I will create a human being from clay, from molded black mud.'"  
+         [Quran 15:28]
+         </span>
+         </b>
+      </p><br>
+  
+      <p class="flex-text blog-blue">
+         <span style='font-size:30px;'>
+         فَتَلَقَّىٰٓ ءَادَمُ مِن رَّبِّهِۦ كَلِمَـٰتٍۢ فَتَابَ عَلَيْهِ ۚ إِنَّهُۥ هُوَ ٱلتَّوَّابُ ٱلرَّحِيمُ
+         </span><br><br> 
+         <b>
+         <span style='font-size:20px;'>
+         "Then Adam received from his Lord [some] words, and He accepted his repentance. Indeed, it is He who is the Accepting of repentance, the Merciful."  
+         [Quran 2:37]
+         </span>
+         </b>
+      </p><br>
+  
+    <p class="flex-text" style="font-style: italic;">From a single soul, Allah created humanity—reminding us that no matter how far we fall, the door to return remains open. 🍃</p>
+  </div>
+
+<div class="flex-card pop-out pop-up-animate1" id="prophet_ibrahim">
+    <h2 class="flex-header">Reflection #14</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('prophet_ibrahim')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h1 class="flex-header">Prophet Abraham (Ibrahim AS)</h1>
+        
+        <button class="shareBtn" onclick="share('prophet_ibrahim')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+  
+    <p class="flex-text blog-violet">
+        <b>Ibrahim (Abraham, AS)</b> is one of the greatest prophets in Islam and is honored as the <b>father of monotheism</b>. He was tested in many ways and passed each test with unwavering faith. Allah elevated him by declaring:
+    </p><br>
+  
+    <p class="flex-text blog-blue">
+      <span style='font-size:30px;'>وَإِذِ ٱبْتَلَىٰٓ إِبْرَٰهِـۧمَ رَبُّهُۥ بِكَلِمَـٰتٍۢ فَأَتَمَّهُنَّ ۖ قَالَ إِنِّى جَاعِلُكَ لِلنَّاسِ إِمَامًۭا</span><br><br>
+      <b><span style='font-size:20px;'>
+      "And [mention, O Muhammad], when Abraham was tried by his Lord with commands and he fulfilled them. He said, 'Indeed, I will make you a leader for the people.'"  
+      [Quran 2:124]
+      </span></b>
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+        <b>The Quest for the True God</b><br>
+        Ibrahim lived among people who worshipped idols and celestial bodies. As a young man, he questioned these beliefs publicly. He looked to the sky, saying:
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+        <span style='font-size:30px;'>▼</span><br>
+        ➤ He saw a star and said, “This is my lord.” But when it set, he said, “I do not like those that disappear.”  
+        <br><br>
+        ➤ He saw the moon rising and said, “This is my lord.” But when it too set, he said, “If my Lord does not guide me, I will surely be among the misguided.”  
+        <br><br>
+        ➤ Then he saw the sun and said, “This is greater.” But when it set, he declared his turning away from all these and his full submission to Allah, the Creator of the heavens and the earth.
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+        <b>Dialogue with the Arrogant King</b><br>
+        Another moment of brilliance in Ibrahim’s life was his debate with a tyrant king who claimed divinity.
+    </p><br>
+  
+    <p class="flex-text blog-blue">
+      <span style='font-size:30px;'>إِذْ قَالَ إِبْرَٰهِـۧمُ رَبِّىَ ٱلَّذِى يُحْىِۦ وَيُمِيتُ ۖ قَالَ أَنَا۠ أُحْىِۦ وَأُمِيتُ ۖ</span><br><br>
+      <b><span style='font-size:20px;'>
+      "Abraham said, 'My Lord is the one who gives life and causes death.' He said, 'I give life and cause death.'"  
+      </span></b><br><br>
+  
+      <span style='font-size:30px;'>قَالَ إِبْرَٰهِـۧمُ فَإِنَّ ٱللَّهَ يَأْتِى بِٱلشَّمْسِ مِنَ ٱلْمَشْرِقِ فَأْتِ بِهَا مِنَ ٱلْمَغْرِبِ</span><br><br>
+      <b><span style='font-size:20px;'>
+      "Abraham said, 'Indeed, Allah brings up the sun from the east, so bring it up from the west.' So the disbeliever was utterly defeated."  
+      [Quran 2:258]
+      </span></b>
+    </p><br>
+  
+    <p style="font-family: 'Quicksand', sans-serif;"><b>His Role Across All Abrahamic Religions:</b></p>
+    <p class="flex-text blog-violet" style="text-align: left !important;">
+        ✦ <b>Islam:</b> Ibrahim is seen as the model of pure monotheism (Hanif). He built the Ka'bah with his son Isma'il and initiated the rites of Hajj.<br><br>
+        ✦ <b>Christianity:</b> Revered as a patriarch, especially for his faith and as an ancestor of Jesus (AS).<br><br>
+        ✦ <b>Judaism:</b> Considered the founding father of the covenant, ancestor of the Israelites through Isaac.<br><br>
+        ✦ <b>Unity through him:</b> Despite theological differences, all three religions trace spiritual or genealogical roots to Ibrahim—he is a symbol of faith, struggle, and submission.<br><br>
+    </p>
+  
+    <p class="flex-text"><b>Additional Quranic Reference:</b></p><br>
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>مَا كَانَ إِبْرَٰهِـۧمُ يَهُودِيًّۭا وَلَا نَصْرَانِيًّۭا وَلَـٰكِن كَانَ حَنِيفًۭا مُّسْلِمًۭا ۚ وَمَا كَانَ مِنَ ٱلْمُشْرِكِينَ</span><br><br>
+       <b><span style='font-size:20px;'>
+       "Abraham was neither a Jew nor a Christian, but he was one inclining toward truth, a Muslim [submitting to Allah]. And he was not of the polytheists."  
+       [Quran 3:67]
+       </span></b>
+    </p><br>
+  
+    <p class="flex-text">
+        <i>True leadership comes from submission, not status 🕊️</i>
+    </p>
+  </div>
+  
+
+<div class="flex-card pop-out pop-up-animate1" id="insights_yusuf">
+    <h2 class="flex-header">Reflection #15</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('insights_yusuf')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+        
+        <h1 class="flex-header">Insights into Joseph (Yusuf AS)</h1>
+        
+        <button class="shareBtn" onclick="share('insights_yusuf')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+  
+    <p class="flex-text blog-violet">
+        Prophet <b>Yusuf (AS)</b>, known in English as Joseph, was the son of <b>Yaqub (Jacob, AS)</b>, and a descendant of <b>Ibrahim (Abraham, AS)</b>.  
+        His life is beautifully detailed in <b>Surah Yusuf</b>, a chapter entirely dedicated to his story—filled with emotion, trial, patience, and divine wisdom.
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+        <b>Summary of His Life</b><br>
+        Yusuf’s story begins with a dream and ends with power, forgiveness, and family reunion. Despite facing jealousy, false accusations, slavery, and prison, he remained patient and loyal to Allah throughout his life.
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+        <b>Chronology of Events</b>  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Yusuf shares a dream with his father—sun, moon, and stars prostrating to him  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ His brothers, jealous of him, throw him in a well  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Rescued by travelers and sold as a slave in Egypt  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Falsely accused by the wife of the minister and imprisoned  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Interprets dreams in prison, later summoned by the king  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Appointed to a high position, overseeing the country’s resources  
+        <br><span style='font-size:30px;'>▼</span><br>
+        ➤ Reunites with his brothers, forgives them, and brings his parents to Egypt  
+    </p><br>
+  
+    <p style="font-family: 'Quicksand', sans-serif;"><b>Insights from Yusuf’s Life:</b></p><br>
+    <p class="flex-text blog-violet" style="text-align: left !important;">
+        ✦ <b>Dreams can be divine inspirations</b>, and they may unfold over years—trust Allah’s timing.<br><br>
+        ✦ <b>Jealousy destroys families</b>. His brothers' envy led to decades of grief.<br><br>
+        ✦ <b>Even when falsely accused, truth rises in the end</b>—Yusuf’s character shined in prison and palace alike.<br><br>
+        ✦ <b>Forgiveness is strength</b>. Yusuf forgave his brothers without revenge.<br><br>
+        ✦ <b>Allah elevates the patient</b>. From a well to a throne—his sabr led to honor.<br><br>
+    </p>
+    
+  
+    <br><p class="flex-text"><b>References from the Quran:</b></p><br>
+  
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+       نَحْنُ نَقُصُّ عَلَيْكَ أَحْسَنَ ٱلْقَصَصِ بِمَآ أَوْحَيْنَآ إِلَيْكَ هَـٰذَا ٱلْقُرْءَانَ ۖ وَإِن كُنتَ مِن قَبْلِهِۦ لَمِنَ ٱلْغَٰفِلِينَ
+       </span><br><br> 
+       <b>
+       <span style='font-size:20px;'>
+       "We relate to you, [O Muhammad], the best of stories in what We have revealed to you of this Qur'an although you were, before it, among the unaware."  
+       [Quran 12:3]
+       </span>
+       </b>
+    </p><br>
+  
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+       فَصَبْرٌۭ جَمِيلٌۭ ۖ وَٱللَّهُ ٱلْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ
+       </span><br><br> 
+       <b>
+       <span style='font-size:20px;'>
+       "So patience is most fitting. And Allah is the one sought for help against that which you describe."  
+       [Quran 12:18]
+       </span>
+       </b>
+    </p><br>
+  
+    <p class="flex-text blog-blue">
+       <span style='font-size:30px;'>
+       إِنَّهُۥ مَن يَتَّقِ وَيَصْبِرْ فَإِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ
+       </span><br><br> 
+       <b>
+       <span style='font-size:20px;'>
+       "Indeed, he who fears Allah and is patient, then indeed, Allah does not allow to be lost the reward of those who do good."  
+       [Quran 12:90]
+       </span>
+       </b>
+    </p><br>
+  
+    <p class="flex-text">
+        <i>People with patience have beautiful endings 🌸</i>
+    </p>
+  </div>
+  
 
 </div>
 
