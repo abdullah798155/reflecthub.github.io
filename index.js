@@ -1509,14 +1509,15 @@ async function DynamicLoader(payload, clickedButton) {
         dynamicContent.style.display = "block";
         dynamicContent.innerHTML = `Reflections 🌿 `;
         videoContainer.innerHTML=`
-        <div class="blog-container " id="blogs">
+         <div class="blog-container " id="blogs">
         <div class="flex-card pop-out pop-up-animate1" id="opening">
+            <h2 class="flex-header">Reflection #1</h2>
                 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
                     <button class="copyBtn" onclick="copy('opening')">
                         <i class="fa-regular fa-clone"></i>
                     </button>
                     
-                    <h2 class="flex-header">1. The Opening - Al-Fatiha</h2>
+                    <h1 class="flex-header">The Opening - Al-Fatiha</h1>
                     
                     <button class="shareBtn" onclick="share('opening')">
                         <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1548,7 +1549,7 @@ async function DynamicLoader(payload, clickedButton) {
       6. Guide us along the Straight Path,<br>
       7. the Path of those You have blessed—not those You are displeased with, or those who are astray<br>
       </span></b>
-  </p>
+  </p><br>
   <p class="flex-text blog-gray">
       The depth and beauty of Al-Fatiha lie in its comprehensive message. It acknowledges the Lordship of Allah, expresses devotion, and seeks divine guidance. This chapter forms the core of every Muslim’s spiritual connection with Allah and is a powerful reminder of faith, dependence, and righteousness.
   </p>
@@ -1556,12 +1557,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="existence">
+    <h2 class="flex-header">Reflection #2</h2>
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('existence')">
           <i class="fa-regular fa-clone"></i>
       </button>
       
-      <h2 class="flex-header">2. Existence of the Creator</h2>
+      <h1 class="flex-header">Existence of the Creator</h1>
       
       <button class="shareBtn" onclick="share('existence')">
           <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1571,8 +1573,8 @@ async function DynamicLoader(payload, clickedButton) {
   <p class="flex-text blog-violet">
       The existence of a Creator is evident through logic, observation, and reason. Every object in our daily life has a maker—whether it's a house, a phone, or a watch. It is illogical to accept that man-made items have a designer while denying that the vast, complex universe has a Creator.<br>
       <b>From the tiniest living cell to the vast galaxies, humans cannot create life from nothing, yet some still challenge the existence of God.</b> Everything in existence points to a deliberate design and a Supreme Creator.
-  </p>
-  
+  </p><br>
+  <br>
   <p class="flex-text blog-gray">
       Simple observations refute the denial of a Creator.
       <br><span style='font-size:30px;'>▼</span><br>
@@ -1603,7 +1605,8 @@ async function DynamicLoader(payload, clickedButton) {
       "And on the earth are signs for the certain [in faith]."<br>
       [Quran 51:20]
       </span></b>
-  </p><br>
+  </p>
+  <br>
 
   <p class="flex-text blog-blue">
      <span style='font-size:30px;'>
@@ -1613,7 +1616,7 @@ async function DynamicLoader(payload, clickedButton) {
       "We will show them Our signs in the horizons and within themselves until it becomes clear to them that it is the truth."<br>
       [Quran 41:53]
       </span></b>
-  </p>
+  </p><br>
 
   <p class="flex-text blog-gray">
       You see a chick hatch out of an egg and ignore it like it's nothing—yet this is a miracle far beyond human capability. Let alone the heavens and the universe, this simple act of life is a greater miracle than many seek, yet they turn away. <br><br>
@@ -1625,12 +1628,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="oneness">
+    <h2 class="flex-header">Reflection #3</h2>
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <button class="copyBtn" onclick="copy('oneness')">
       <i class="fa-regular fa-clone"></i>
   </button>
   
-  <h2 class="flex-header">3. The Oneness of God - Tawheed</h2>
+  <h1 class="flex-header">The Oneness of God - Tawheed</h1>
   
   <button class="shareBtn" onclick="share('oneness')">
       <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1640,7 +1644,7 @@ async function DynamicLoader(payload, clickedButton) {
   <p class="flex-text blog-violet">
        Tawheed, or the oneness of God, is the central and most fundamental belief in Islam.<br>
       Logical reasoning supports the oneness of God. If there were two or more gods, conflicts of will and authority would arise. <b>For instance, if one god wished to create and another wished to destroy, the universe would be in chaos. A true God must have absolute sovereignty, and if there were multiple, none would be truly supreme (failing to fulfill the criteria of god).</b>
-  </p>
+  </p><br>
   <p class="flex-text blog-gray">
       This principle can be understood through everyday examples.
        <br><span style='font-size:30px;'>▼</span><br>
@@ -1659,7 +1663,7 @@ async function DynamicLoader(payload, clickedButton) {
       "Had there been gods besides Allah in the heavens and the earth, both realms would have been corrupted. Exalted is Allah, Lord of the Throne, above what they describe."<br>
       [Quran 21:22]
       </span></b>
-  </p>
+  </p><br>
 
   <p class="flex-text blog-blue">
      <span style='font-size:30px;'>
@@ -1669,7 +1673,7 @@ async function DynamicLoader(payload, clickedButton) {
       "Nor is there any god with Him. Otherwise, each god would have taken away what he created, and some would have tried to dominate others. Glory be to Allah above what they describe."<br>
       [Quran 23:91]
       </span></b>
-  </p>
+  </p><br>
 
   <p class="flex-text blog-gray">
       Tawheed is not just a theological doctrine but a way of life. It dictates that all worship, obedience, and reliance should be directed solely to Allah. The Quran repeatedly emphasizes His oneness and perfection, inviting humanity to reflect and acknowledge His supreme authority.
@@ -1679,12 +1683,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="resurrection">
+    <h2 class="flex-header">Reflection #4</h2>
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('resurrection')">
           <i class="fa-regular fa-clone"></i>
       </button>
       
-      <h2 class="flex-header">4. Resurrection - The Ultimate Reality</h2>
+      <h1 class="flex-header">Resurrection - The Ultimate Reality</h1>
       
       <button class="shareBtn" onclick="share('resurrection')">
           <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1748,13 +1753,14 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 
-            <div class="flex-card pop-out pop-up-animate1" id="linguistics">
+ <div class="flex-card pop-out pop-up-animate1" id="linguistics">
+                <h2 class="flex-header">Reflection #5</h2>
                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <button class="copyBtn" onclick="copy('linguistics')">
       <i class="fa-regular fa-clone"></i>
   </button>
-  
-  <h2 class="flex-header">5. Astonishing Linguistics in Quran</h2>
+
+  <h1 class="flex-header">Astonishing Linguistics in Quran</h1>
   
   <button class="shareBtn" onclick="share('linguistics')">
       <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1765,7 +1771,7 @@ async function DynamicLoader(payload, clickedButton) {
                   <span style='font-size:30px;'>لَا ٱلشَّمْسُ يَنۢبَغِى لَهَآ أَن تُدْرِكَ ٱلْقَمَرَ وَلَا ٱلَّيْلُ سَابِقُ ٱلنَّهَارِ وَكُلٌّ فِى فَلَكٍ يَسْبَحُونَ (٤٠)<br></span>
                   <b>"It is not for the sun to catch up with the moon, nor does the night outrun the day. Each is travelling in an orbit of their own."<br>
                   [Quran chapter 36,verse 40]</b>
-                  </p>
+                  </p><br>
                  <p class="flex-text blog-gray"  >
                      This verse beautifully illustrates the precision and balance in Allah’s creation. It highlights the perfect order in the cosmos, where celestial bodies follow their designated paths without collision or disruption—each fulfilling its role in harmony.<br>
                      Also this verse demonstrates an astonishing linguistic feature: the arrangement of words mirrors the concept of celestial motion.
@@ -1787,19 +1793,20 @@ async function DynamicLoader(payload, clickedButton) {
 
                      The root فلك (falak) means "orbit" and itself has a rounded phonetic quality, symbolizing circular motion.
                 </p>
-          </div>
+</div>
 
 
 
 
 
           <div class="flex-card pop-out pop-up-animate1" id="ring">
+            <h2 class="flex-header">Reflection #6</h2>
       <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
   <button class="copyBtn" onclick="copy('ring')">
       <i class="fa-regular fa-clone"></i>
   </button>
   
-  <h2 class="flex-header">6. Ring Composition in Chapter-2 of Quran</h2>
+  <h1 class="flex-header">Ring Composition in Chapter-2 of Quran</h1>
   
   <button class="shareBtn" onclick="share('ring')">
       <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1847,12 +1854,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
   <div class="flex-card pop-out pop-up-animate1" id="prophets">
+    <h2 class="flex-header">Reflection #7</h2>
   <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
       <button class="copyBtn" onclick="copy('prophets')">
           <i class="fa-regular fa-clone"></i>
       </button>
       
-      <h2 class="flex-header">7. Role of Prophets in Islam</h2>
+      <h1 class="flex-header"> Role of Prophets in Islam</h1>
       
       <button class="shareBtn" onclick="share('prophets')">
           <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -1951,12 +1959,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="people_of_book">
+    <h2 class="flex-header">Reflection #8</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('people_of_book')">
             <i class="fa-regular fa-clone"></i>
         </button>
         
-        <h2 class="flex-header">8. The People of the Book</h2>
+        <h1 class="flex-header">The People of the Book</h1>
         
         <button class="shareBtn" onclick="share('people_of_book')">
             <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -2030,12 +2039,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="trials_tribulations">
+    <h2 class="flex-header">Reflection #9</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('trials_tribulations')">
             <i class="fa-regular fa-clone"></i>
         </button>
         
-        <h2 class="flex-header">9. Trials and Tribulations</h2>
+        <h1 class="flex-header">Trials and Tribulations</h1>
         
         <button class="shareBtn" onclick="share('trials_tribulations')">
             <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -2133,12 +2143,13 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 <div class="flex-card pop-out pop-up-animate1" id="abrahamic_vs_dharmic">
+    <h2 class="flex-header">Reflection #10</h2>
     <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
         <button class="copyBtn" onclick="copy('abrahamic_vs_dharmic')">
             <i class="fa-regular fa-clone"></i>
         </button>
         
-        <h2 class="flex-header">10. Abrahamic vs Dharmic Religions</h2>
+        <h1 class="flex-header">Abrahamic vs Dharmic Religions</h1>
         
         <button class="shareBtn" onclick="share('abrahamic_vs_dharmic')">
             <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
@@ -2172,32 +2183,32 @@ async function DynamicLoader(payload, clickedButton) {
                 <th>Dharmic</th>
             </tr>
             <tr>
-                <td><b>Belief</b></td>
+                <td>Belief</td>
                 <td>MONOTHEISM - Belief in One God (Judaism, Christianity, Islam)</td>
                 <td>POLYTHEISM - Belief in more than One God (Hinduism, Buddhism, Jainism)</td>
             </tr>
             <tr>
-                <td><b>View of God</b></td>
+                <td>View of God</td>
                 <td>One Personal Supreme God</td>
                 <td>Divine presence in everything or impersonal force (Brahman in Hinduism)</td>
             </tr>
             <tr>
-                <td><b>Resurrection</b></td>
+                <td>Resurrection</td>
                 <td>Belief in life after death and resurrection (Judgment Day)</td>
                 <td>Reincarnation (Samsara) and Liberation (Moksha/Nirvana)</td>
             </tr>
             <tr>
-                <td><b>Salvation</b></td>
+                <td>Salvation</td>
                 <td>Faith in God and good deeds</td>
                 <td>Enlightenment, Self-realization, and Karma (liberation from Samsara)</td>
             </tr>
             <tr>
-                <td><b>Scriptures</b></td>
+                <td>Sacred Texts</td>
                 <td>Torah, Bible, Quran</td>
                 <td>Vedas, Sutras, Tripitaka, Bhagavad Gita</td>
             </tr>
             <tr>
-                <td><b>Prayer</b></td>
+                <td>Prayer</td>
                 <td>Daily prayers (e.g., Salah in Islam)</td>
                 <td>Meditation, rituals, and chants (e.g., Mantras in Hinduism)</td>
             </tr>
@@ -2307,8 +2318,7 @@ async function DynamicLoader(payload, clickedButton) {
 
 
 
-      </div>
-
+</div>
 
         `
       }
