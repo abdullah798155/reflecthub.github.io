@@ -1,31 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Smooth scroll on click
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetSelector = this.getAttribute('href');
-            const targetElement = document.querySelector(targetSelector);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // ✅ Scroll into view if page loaded with hash (e.g., after reload in PWA)
     const hash = window.location.hash;
     if (hash) {
-        // Wait a bit to ensure elements are rendered (PWA might delay it)
+      const el = document.querySelector(hash);
+      if (el) {
         setTimeout(() => {
-            const el = document.querySelector(hash);
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-            }
-        }, 1000); // slight delay helps in PWA
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Delay helps layout settle
+      }
     }
-});
-
+  });
+  
 document.addEventListener('DOMContentLoaded', function () {
 const sidebar = document.querySelector('.sidebar');
 const hamburger = document.querySelector('.hamburger-menu');
