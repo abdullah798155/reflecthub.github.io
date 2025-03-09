@@ -1092,7 +1092,28 @@ transition: left 0.3s ease;
 z-index: 1000;
 overflow-y: auto;
 }
-
+/* Works in Chrome, Edge, and Safari */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Track color */
+    border-radius: 10px;
+  }
+  
+  .sidebar::-webkit-scrollbar-thumb {
+    background-color: #74dfd8b3; /* Scroll thumb color */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  
+  /* Optional: On hover */
+  .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #31fff5e3;
+  }
+  
 .sidebar.open {
 left: 0; /* Slide in when 'open' class is added */
 }
@@ -1659,7 +1680,7 @@ display: none; /* Hide tabs on small screens */
         font-weight: bold;
     }
     .reflections-container{
-            margin-top: 100px;
+            margin-top: 20px;
          
         }
     @media (max-width: 500px) {
