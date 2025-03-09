@@ -2316,7 +2316,161 @@ async function DynamicLoader(payload, clickedButton) {
 </div>
 
 
+<div class="flex-card pop-out pop-up-animate1" id="beauty_monotheism">
+    <h2 class="flex-header">Reflection #11</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <button class="copyBtn" onclick="copy('beauty_monotheism')">
+        <i class="fa-regular fa-clone"></i>
+      </button>
+  
+      <h1 class="flex-header">Beauty of Monotheism</h1>
+  
+      <button class="shareBtn" onclick="share('beauty_monotheism')">
+        <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+      </button>
+    </div>
+  
+    <p class="flex-text blog-violet">
+      <b>Monotheism (Tawhid)</b> is the belief in the Oneness of God—one Creator, Sustainer, and Ruler of all that exists.<br>
+      It is the central message of Islam and the foundation of peace within the soul, knowing that everything is in the hands of One All-Wise and All-Powerful Lord.
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+      <b>What makes Monotheism beautiful?</b><br>
+      <span style='font-size:30px;'>▼</span><br>
+      <b>Clarity:</b> No confusion about multiple deities or conflicting powers.<br>
+      <b>Purpose:</b> Knowing you're created by One God gives life meaning and direction.<br>
+      <b>Unity:</b> All humans are equally created by the same Lord—removing pride based on race, tribe, or status.<br>
+      <b>Accountability:</b> One Judge who sees all brings justice and hope to the oppressed.<br>
+      <b>Freedom:</b> Worshipping only Allah frees a person from slavery to desires, people, or status.
+    </p><br>
+  
+    <p class="flex-text blog-violet">
+      <b>Tawhid liberates the heart</b><br>
+      When one believes that no harm or benefit comes except by Allah’s will, the heart finds peace.<br>
+      There’s no need to please many—only to remain sincere to One.
+    </p><br>
+  
+    <p class="flex-text"><b>References in Quran :</b></p><br>
+  
+    <p class="flex-text blog-blue">
+      <span style='font-size:30px;'>
+        وَإِلَٰهُكُمْ إِلَٰهٌۭ وَٰحِدٌۭ ۖ لَّآ إِلَٰهَ إِلَّا هُوَ ٱلرَّحْمَـٰنُ ٱلرَّحِيمُ
+      </span><br><br>
+      <b><span style='font-size:20px;'>
+        "And your God is One God. There is no deity [worthy of worship] except Him—the Most Compassionate, Most Merciful."<br>
+        [Quran 2:163]
+      </span></b>
+    </p><br>
+  
+    <p class="flex-text blog-blue">
+      <span style='font-size:30px;'>
+        قُلْ هُوَ ٱللَّهُ أَحَدٌۭ
+      </span><br><br>
+      <b><span style='font-size:20px;'>
+        "Say, He is Allah, [who is] One."<br>
+        [Quran 112:1]
+      </span></b>
+    </p><br>
+  
+    <p class="flex-text blog-gray">
+      <b>All Prophets preached One God</b><br>
+      From Adam to Muhammad ﷺ, every prophet came with the same core message: <b>“Worship Allah alone and avoid all false gods.”</b><br>
+      Monotheism was never new—it’s the eternal truth.
+    </p><br>
+  
+    <p class="flex-text " style="font-style: italic;">
+      True peace begins when the heart bows to only One ☝️🕊️
+    </p>
+  </div>
+  
 
+  <div class="flex-card pop-out pop-up-animate1" id="worldly_amusements">
+    <h2 class="flex-header">Reflection #12</h2>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <button class="copyBtn" onclick="copy('worldly_amusements')">
+            <i class="fa-regular fa-clone"></i>
+        </button>
+
+        <h1 class="flex-header">Worldly Amusements – A Beautiful Lie</h1>
+
+        <button class="shareBtn" onclick="share('worldly_amusements')">
+            <i class="fa-solid fa-share-from-square" style="color: #549c8a;"></i>
+        </button>
+    </div>
+
+    <p class="flex-text blog-violet">
+        The world is full of glitter, distractions, and amusements. From wealth and fame to entertainment and luxury, the temporary nature of worldly pleasures often blinds us from deeper truths.<br>
+        Islam does not forbid enjoyment, but constantly reminds us: <b>this life is not the goal</b>, it’s a test. What we chase often fades, and what we ignore—like faith and purpose—endures beyond death.
+    </p><br>
+
+    <p class="flex-text blog-gray">
+        <b>What Makes This Life a Deception?</b><br>
+        <span style='font-size:30px;'>▼</span><br>
+        Because its beauty is short-lived. Youth fades, wealth vanishes, trends die, and lives end. The soul, however, moves on.<br>
+        People often realize too late that they spent their lives collecting things they cannot carry into the Hereafter.<br>
+        The Quran calls this life a *delusion of enjoyment*—meant to distract those who forget their Creator.
+    </p><br>
+
+    <p class="flex-text blog-violet">
+        <b>Balance, Not Rejection</b><br>
+        Islam doesn’t call for full rejection of the world but teaches <b>detachment with responsibility</b>. Use the world as a means, not the end. Build your Akhirah while living in the Dunya—like a traveler resting under a tree before continuing the journey.
+    </p><br>
+
+    <p class="flex-text"><b>References in Quran :</b></p><br>
+
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        ٱعْلَمُوٓا۟ أَنَّمَا ٱلْحَيَوٰةُ ٱلدُّنْيَا لَعِبٌۭ وَلَهْوٌۭ وَزِينَةٌۭ وَتَفَاخُرٌۢ بَيْنَكُمْ وَتَكَاثُرٌۭ فِى ٱلْأَمْوَٰلِ وَٱلْأَوْلَٰدِ ۖ 
+        </span><br><br>
+        <b>
+        <span style='font-size:20px;'>
+        "Know that the life of this world is but play, amusement, adornment, boasting, and competing in wealth and children..."  
+        [Quran 57:20]
+        </span>
+        </b>
+    </p><br>
+
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        ٱعْلَمُوٓا۟ أَنَّمَا ٱلْحَيَوٰةُ ٱلدُّنْيَا لَعِبٌۭ وَلَهْوٌۭ وَزِينَةٌۭ وَتَفَاخُرٌۢ بَيْنَكُمْ وَتَكَاثُرٌۭ فِى ٱلْأَمْوَٰلِ وَٱلْأَوْلَٰدِ ۖ<br>
+        كَمَثَلِ غَيْثٍ أَعْجَبَ ٱلْكُفَّارَ نَبَاتُهُۥ ثُمَّ يَهِيجُ فَتَرَىٰهُ مُصْفَرًّۭا ثُمَّ يَكُونُ حُطَـٰمًۭا ۖ وَفِى ٱلْـَٔاخِرَةِ عَذَابٌۭ شَدِيدٌۭ وَمَغْفِرَةٌۭ مِّنَ ٱللَّهِ وَرِضْوَٰنٌۭ ۚ<br>
+        وَمَا ٱلْحَيَوٰةُ ٱلدُّنْيَآ إِلَّا مَتَـٰعُ ٱلْغُرُورِ
+        </span><br><br>
+        <b>
+        <span style='font-size:20px;'>
+        "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children—<br>
+        like the example of a rain whose [resulting] plant growth pleases the tillers; then it dries and you see it turned yellow; then it becomes [scattered] debris.<br>
+        And in the Hereafter is severe punishment and forgiveness from Allah and approval. And what is the worldly life except the enjoyment of delusion?"<br>
+        [Quran 57:20]
+        </span>
+        </b>
+    </p><br>
+    
+    <p class="flex-text blog-blue">
+        <span style='font-size:30px;'>
+        زُيِّنَ لِلنَّاسِ حُبُّ ٱلشَّهَوَٰتِ مِنَ ٱلنِّسَآءِ وَٱلْبَنِينَ وَٱلْقَنَـٰطِيرِ ٱلْمُقَنطَرَةِ مِنَ ٱلذَّهَبِ وَٱلْفِضَّةِ وَٱلْخَيْلِ ٱلْمُسَوَّمَةِ وَٱلْأَنْعَـٰمِ وَٱلْحَرْثِ ۗ<br>
+        ذَٰلِكَ مَتَـٰعُ ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَٱللَّهُ عِندَهُۥ حُسْنُ ٱلْمَـَٔابِ
+        </span><br><br>
+        <b>
+        <span style='font-size:20px;'>
+        "Beautified for people is the love of that which they desire—of women and children, heaped-up sums of gold and silver, fine branded horses, and cattle and tilled land.<br>
+        That is the enjoyment of worldly life, but Allah has with Him the best return."<br>
+        [Quran 3:14]
+        </span>
+        </b>
+    </p><br>
+    
+
+    <p class="flex-text blog-gray">
+        <b>Live Lightly</b><br>
+        Don’t carry the burdens of the world so heavily that your soul forgets where it's headed. The wise heart enjoys this world without becoming enslaved by it. Every passing moment is a reminder: *The real life begins after death.*
+    </p><br>
+
+    <p class="flex-text" style="font-style: italic; color: gray;">
+        ✨ Let the Dunya be in your hands, not your heart. Journey light—your soul travels far.
+    </p>
+</div>
 
 </div>
 
