@@ -441,4 +441,43 @@ function copy(divId) {
        
       
       });
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".button-container");
       
+        // Set initial state (collapsed)
+        container.style.overflow = "hidden";
+        container.style.maxHeight = "0";
+        container.style.transition = "max-height 0.5s ease-out";
+      
+        // Create the toggle button
+        const toggleBtn = document.createElement("button");
+        toggleBtn.textContent = "▼ Show Topics";
+        toggleBtn.style.cssText = `
+          margin: 10px auto;
+          display: block;
+          background-color: #3f6969;
+          color: white;
+          padding: 8px 16px;
+          border: none;
+          border-radius: 6px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        `;
+      
+        // Insert the toggle button before the container
+        container.parentNode.insertBefore(toggleBtn, container);
+      
+        // Toggle behavior
+        let expanded = false;
+        toggleBtn.addEventListener("click", () => {
+          if (!expanded) {
+            container.style.maxHeight = container.scrollHeight + "px";
+            toggleBtn.textContent = "▲ Hide Topics";
+          } else {
+            container.style.maxHeight = "0";
+            toggleBtn.textContent = "▼ Show Topics";
+          }
+          expanded = !expanded;
+        });
+      });
