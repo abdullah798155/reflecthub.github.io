@@ -1657,7 +1657,7 @@ display: none; /* Hide tabs on small screens */
     /* For small screens (mobile) */
     @media (max-width: 600px) {
         #title {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
     }
 
@@ -1671,7 +1671,7 @@ display: none; /* Hide tabs on small screens */
     /* For large screens (desktops) */
     @media (min-width: 1025px) {
         #title {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         
     }
