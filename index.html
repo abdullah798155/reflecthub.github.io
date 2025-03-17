@@ -56,69 +56,94 @@
 
     <!-- Navbar -->
    <div id="notification" style="display: none;"></div>
-    <nav style="margin: 1% 1.5% 0 1.5%; border-radius: 10px; background-color: #2f4f4f; padding: 10px; display: flex; align-items: center; justify-content: space-between;" id="navbar-mobile">
-    
-      <!-- Left Side: Hamburger & Logo -->
-      <div style="display: flex; align-items: center; gap: 15px;">
-          <!-- Hamburger Menu -->
-          <div class="hamburger-menu" style="cursor: pointer; font-size: 36px; color: white; padding: 2px; background-color: rgb(67, 133, 133); border-radius: 5px;">
-              ☰
-          </div>
+   <nav style="
+   position: relative;
+   margin: 1% 1.5% 0 1.5%;
+   border-radius: 16px;
+   background: linear-gradient(135deg, #2b3f3f, #2f4c4c);
+   padding: 10px 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+   font-family: 'Quicksand', sans-serif;
+   min-height: 58px;
+   overflow: hidden;
+   z-index: 1;
+ " id="navbar-mobile" >
+ 
+   <!-- ✨ Shimmer animation background -->
+   
+ 
+   <!-- 🧠 Main navbar content -->
+   <div style="position: relative; z-index: 2; display: flex; justify-content: space-between; width: 100%; align-items: center;">
+ 
+     <!-- Left Side: Hamburger & Logo -->
+     <div style="display: flex; align-items: center; gap: 15px;">
+       <!-- Hamburger Menu -->
+       <div class="hamburger-menu" style="
+         cursor: pointer;
+         font-size: 29px;
+         color: white;
+         padding: 6px 10px;
+         background-color: rgba(67, 133, 133, 0.5);
+         border-radius: 8px;
+         border: 1px solid #6ce7d1;">
+         ☰
+       </div>
+ 
+       <!-- Logo + Title -->
+       <a href="https://reflecthub.github.io/" style="text-decoration: none; display: flex; align-items: center;">
+         <img src="./icon5.png" alt="Logo" style="height: 45px; width: auto;">
+         <h3 id="title" style="
+           font-weight: bold;
+           color: rgb(108, 231, 209);
+           text-shadow: 1px 1px 2px black;
+           margin: 0;
   
-          <!-- Logo -->
-          
-          <!-- Title -->
-        </div>
-        <a href="https://reflecthub.github.io/" style="text-decoration: none; display: flex; align-items: center;">
-          <img src="./icon5.png" alt="Logo" style="height: 50px; width: auto;">
-          <h3 style=" 
-              font-weight: bold;
-              color: rgb(108, 231, 209);
-              text-shadow: 1px 1px 2px black;
-              margin: 0;
-              font-size: 2rem;
-              font-family: 'Quicksand', sans-serif;
-          " id="title">
-              Reflect Hub
-          </h3>
-      </a>
-      
-        
-      <!-- Right Side: Contact & Translation -->
-      <div style="display: flex; align-items: center; gap: 15px;">
-          <div class="panel-icon pop-up-animate1" id="panelIcon" style="
-              background: rgba(255, 255, 255, 0.2);
-              padding: 8px 12px;
-              border-radius: 5px;
-              text-shadow: 
-              0 0 3px #96fff6, 
-              0 0 6px #96fff6, 
-              0 0 9px #96fff6, 
-              0 0 12px rgba(150, 255, 246, 0.7);
-              font-size: 11px;
-              color: white;
-              font-family: 'Quicksand', sans-serif;
-              cursor: pointer;">
-              Contact & Suggest me 
-          </div>
-        
-          <!-- Citation Info Box -->
-          <span class="citation" data-info="
-              <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;font-family: 'Quicksand', sans-serif;'>Translate</div>
-              <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                  <span>Click here to translate to any language 🌐<br><br>
-                      <i> -Default is set to Arabic (العربية)</i>
-                      <br><br>
-                      <b><i>Powered by Google Translate</i></b>
-                  </span>
-              </div>">
-              <a href="https://reflecthub-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en-US&_x_tr_pto=wapp" style="cursor: help;">
-                  <img src="./Logos/Translate.png" style="height: 40px; width: auto;">
-              </a>
-          </span>
-      </div>
-  
-  </nav>
+           font-family: 'Quicksand', sans-serif;" class="responsive-title">
+           Reflect Hub
+         </h3>
+       </a>
+     </div>
+ 
+     <!-- Right Side: Contact & Translation -->
+     <div style="display: flex; align-items: center; gap: 15px;">
+       <div class="panel-icon pop-up-animate1" id="panelIcon" style="
+         background: rgba(255, 255, 255, 0.08);
+         padding: 8px 14px;
+         border-radius: 8px;
+         border: 1px solid rgba(108, 231, 209, 0.3);
+         text-shadow: 0 0 5px #96fff6;
+         font-size: 12px;
+         color: white;
+         font-family: 'Quicksand', sans-serif;
+         cursor: pointer;">
+         Contact & Suggest me 
+       </div>
+ 
+       <!-- Citation Info Box -->
+       <span class="citation" data-info="
+         <div style='font-weight:bold; text-align:center; text-decoration: underline; font-family: Quicksand, sans-serif;'>Translate</div>
+         <div style='text-align:center;'>
+           <span>Click here to translate to any language 🌐<br><br>
+             <i>- Default is set to Arabic (العربية)</i><br><br>
+             <b><i>Powered by Google Translate</i></b>
+           </span>
+         </div>">
+         <a href="https://reflecthub-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en-US&_x_tr_pto=wapp" style="cursor: help;">
+           <img src="./Logos/Translate.png" style="height: 40px; width: auto; filter: drop-shadow(0 0 3px #6ce7d1);">
+         </a>
+       </span>
+     </div>
+     
+   </div>
+ </nav>
+ 
+
+
+
+
   
     
     
