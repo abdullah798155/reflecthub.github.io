@@ -2,7 +2,7 @@
     <h1>ReflectHub - Think Rationally!</h1>
 </div>
 <div align="center">
-Welcome to **ReflectHub** — a thoughtfully designed platform to ignite your mind and soul through <b>rational</b>, <b>scientific</b>, <b>inspirational</b>, <b>reactions</b> and <b>reflections</b>.
+Welcome to <b>ReflectHub</b> — a thoughtfully designed platform to ignite your mind and soul through <b>rational</b>, <b>scientific</b>, <b>inspirational</b>, <b>reactions</b> and <b>reflections</b>.<br>
 Here, we present content that encourages sincere thought, deep contemplation, and intellectual discovery.
 </div>
 
