@@ -1,9 +1,10 @@
 <div align="center">
     <h1>ReflectHub - Think Rationally!</h1>
 </div>
-
+<div align="center">
 Welcome to **ReflectHub** — a thoughtfully designed platform to ignite your mind and soul through **rational, scientific, inspirational**, and **faith-based** reflections. 🌟  
 Here, we present content that encourages sincere thought, deep contemplation, and intellectual discovery.
+</div>
 
 <p align="center">
     <img src="./image.png" alt="ReflectHub Logo" width="300" height="300">
