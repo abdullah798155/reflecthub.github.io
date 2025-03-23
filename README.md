@@ -45,7 +45,7 @@ ReflectHub is built with user experience in mind:
 
 ---
 
-## 📚 Categories
+## Categories
 
 ReflectHub’s content is curated under the following themes:
 
