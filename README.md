@@ -11,7 +11,7 @@ Here, we present content that encourages sincere thought, deep contemplation, an
 
 ---
 
-## 📌 Overview
+## Overview
 
 **ReflectHub** offers an elegant and accessible interface where you can browse handpicked Islamic videos, explore Quranic insights, and uncover scientific wonders—all curated to inspire reflective minds.
 
@@ -19,7 +19,7 @@ Here, we present content that encourages sincere thought, deep contemplation, an
 
 ---
 
-## 🗂 Table of Contents
+## Table of Contents
 
 1. [Website Structure](#website-structure)
 2. [Categories](#categories)
@@ -31,7 +31,7 @@ Here, we present content that encourages sincere thought, deep contemplation, an
 
 ---
 
-## 🧱 Website Structure
+## Website Structure
 
 ReflectHub is built with user experience in mind:
 
@@ -69,7 +69,7 @@ Reflect on powerful Quranic verses, beautifully laid out for meditation and lear
 
 ---
 
-## 📝 Reflections
+## Reflections
 
 Delve deeper into thought-provoking articles and insights:
 
@@ -83,7 +83,7 @@ For more reflections, visit our [Reflections Section](https://reflecthub.github.
 
 ---
 
-## 📬 Contact Information
+## Contact Information
 
 Feel free to reach out, suggest videos, or provide feedback!
 
@@ -96,7 +96,7 @@ Feel free to reach out, suggest videos, or provide feedback!
 
 ---
 
-## 🧭 How to Use
+## How to Use
 
 1. **Browse Categories** using the top menu.
 2. **Click to Watch** each video with a short context summary.
@@ -105,7 +105,7 @@ Feel free to reach out, suggest videos, or provide feedback!
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Big thanks to:
 
@@ -115,7 +115,7 @@ Big thanks to:
 
 ---
 
-## 🌐 External Resources
+## External Resources
 
 - 🔹 [Quran.com](https://www.quran.com): Read and explore the Quran in multiple languages.
 - 🔹 [Scientific Miracles in the Quran](https://www.miracles-of-quran.com/index.html): Eye-opening articles about science in the Quran.
