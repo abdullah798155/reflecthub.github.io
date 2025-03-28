@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+.credits-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.credits-scroll {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.channel-list {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+.channel-item {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.channel-item:hover {
+    opacity: 1;
+    color: #39ff14; /* Lime green */
+    transform: scale(1.05);
+}
+
+.channel-name {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.channel-type {
+    font-size: 1rem;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.credits-spacer {
+    margin: 4rem 0;
+    opacity: 0.5;
+}
+
+.credits-spacer .channel-name {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -200%; /* Extended to ensure full scroll */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .channel-name {
+        font-size: 1.5rem;
+    }
+    
+    .channel-type {
+        font-size: 0.8rem;
+    }
+}
