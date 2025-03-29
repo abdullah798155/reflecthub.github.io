@@ -110,7 +110,7 @@ Feel free to reach out, suggest videos, or provide feedback!
 
 Big thanks to:
 
-- **YouTube Creators** who offer educational, reflective, and spiritual content.
+- [**YouTube Creators**](https://reflecthub.github.io/credits) who offer educational, reflective, and spiritual content.
 - Friends, mentors, and visitors who provide continual feedback and support.
 - The growing ReflectHub community for sharing and participating! 💖
 
