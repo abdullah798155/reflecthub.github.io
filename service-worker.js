@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v59"; // Increment this to force cache update
+const CACHE_NAME = "abdullah-pwa-cache-v60"; // Increment this to force cache update
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -40,6 +40,10 @@ const NO_CACHE_FILES = [
   "/index.css",
   "/index.js",
   "/search.js",
+];
+
+// JSON files from ReflectServer that should **always be fetched fresh**
+const NO_CACHE_JSON_FILES = [
   "https://reflectserver.github.io/Content/verses.json",
   "https://reflectserver.github.io/Content/rational.json",
   "https://reflectserver.github.io/Content/scientific.json",
@@ -69,8 +73,17 @@ self.addEventListener("fetch", (event) => {
   }
 
 
-  // 🛑 Ignore non-GET requests (like POST, PUT, DELETE)
+  // 🛑 Ignore non-GET requests
   if (event.request.method !== "GET") {
+    return;
+  }
+
+  // 🚨 Always fetch fresh for ReflectServer JSON files
+  if (NO_CACHE_JSON_FILES.includes(event.request.url)) {
+    event.respondWith(
+      fetch(event.request, { cache: "no-store" })
+        .catch(() => new Response("Failed to fetch data", { status: 500 }))
+    );
     return;
   }
 
