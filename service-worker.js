@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v58"; // Update this version to force a cache refresh
+const CACHE_NAME = "abdullah-pwa-cache-v59"; // Increment this to force cache update
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -26,20 +26,20 @@ const ASSETS_TO_CACHE = [
   "/icon5.png",
   "/score.html",
   "/qr-code.svg"
-  
 ];
 
-// Files that should **never** be cached (always request fresh from the server)
+// Files that should **never** be cached (always fetch fresh from the server)
 const NO_CACHE_FILES = [
+  "/legacy/",
   "/legacy/index.html",
   "/legacy/legacy.css",
   "/legacy/legacy.js",
+  "/reflections/",
+  "/reflections/index.html",
   "/index.html",
   "/index.css",
   "/index.js",
   "/search.js",
-  "/reflections/index.html",
-  "/reflections/reflections.js",
   "https://reflectserver.github.io/Content/verses.json",
   "https://reflectserver.github.io/Content/rational.json",
   "https://reflectserver.github.io/Content/scientific.json",
@@ -47,29 +47,36 @@ const NO_CACHE_FILES = [
   "https://reflectserver.github.io/Content/reactions.json"
 ];
 
-// Install Service Worker and Cache Assets
+// 🟢 Install Event - Cache Static Assets
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log("Opened cache");
+      console.log("Opened cache:", CACHE_NAME);
       return cache.addAll(ASSETS_TO_CACHE);
     })
   );
-  self.skipWaiting(); // Activate the new service worker immediately
+  self.skipWaiting(); // Activate immediately
 });
 
-// Fetch Event - Handle JSON, HTML, CSS, and JS separately
+// 🔵 Fetch Event - Handle Different Caching Strategies
 self.addEventListener("fetch", (event) => {
-  const requestUrl = event.request.url;
-  const requestPath = new URL(requestUrl).pathname;
+  let requestUrl = new URL(event.request.url);
+  let requestPath = requestUrl.pathname;
 
-  // **Fix: Ignore non-GET requests (POST, PUT, DELETE, etc.)**
+  // Normalize directory requests to `index.html`
+  if (requestPath.endsWith("/")) {
+    requestPath += "index.html";
+  }
+
+  console.log("Fetching:", requestPath);
+
+  // 🛑 Ignore non-GET requests (like POST, PUT, DELETE)
   if (event.request.method !== "GET") {
     return;
   }
 
-  // Always fetch NO_CACHE_FILES fresh from the network
-  if (NO_CACHE_FILES.includes(requestPath) || NO_CACHE_FILES.includes(requestUrl)) {
+  // 🚨 Always fetch fresh versions of NO_CACHE_FILES
+  if (NO_CACHE_FILES.some((file) => requestPath.startsWith(file))) {
     event.respondWith(
       fetch(event.request, { cache: "no-store" })
         .catch(() => new Response("Failed to fetch data", { status: 500 }))
@@ -77,15 +84,15 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Serve cached assets for everything else
+  // ✅ Serve Cached Assets for Everything Else
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        return cachedResponse; // Return from cache if available
+        return cachedResponse; // Serve from cache
       }
       return fetch(event.request).then((response) => {
         return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, response.clone()); // Update cache
+          cache.put(event.request, response.clone()); // Cache new fetch
           return response;
         });
       });
@@ -93,7 +100,7 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-// Activate Service Worker and Remove Old Caches
+// 🟣 Activate Event - Remove Old Caches
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) =>
