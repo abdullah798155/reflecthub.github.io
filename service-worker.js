@@ -68,7 +68,6 @@ self.addEventListener("fetch", (event) => {
     requestPath += "index.html";
   }
 
-  console.log("Fetching:", requestPath);
 
   // 🛑 Ignore non-GET requests (like POST, PUT, DELETE)
   if (event.request.method !== "GET") {
