@@ -3133,25 +3133,29 @@ function disableDebug() {
   }
 }
 
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-  installBtn.style.display = 'none';
+let deferredPrompt = null;
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); // Prevent the mini-infobar from appearing on mobile
-    deferredPrompt = e;
-    installBtn.style.display = 'inline-block';
+// Try to capture the install prompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  console.log('✅ beforeinstallprompt captured');
+});
 
-    installBtn.addEventListener('click', () => {
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        deferredPrompt = null;
-      });
+document.getElementById('installBtn').addEventListener('click', () => {
+  if (deferredPrompt) {
+    // If the prompt is available, show it
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('✅ User accepted the A2HS prompt');
+      } else {
+        console.log('❌ User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
     });
-  });
-
+  } else {
+    // Fallback if prompt isn't available
+    alert("📲 To install the app:\n- Android: Open in Chrome and tap 'Add to Home Screen'\n- iOS: Tap Share → 'Add to Home Screen'");
+  }
+});
