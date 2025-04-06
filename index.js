@@ -3132,3 +3132,26 @@ function disableDebug() {
       console.log("⚫ Debugging styles DISABLED!");
   }
 }
+
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+  installBtn.style.display = 'none';
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault(); // Prevent the mini-infobar from appearing on mobile
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block';
+
+    installBtn.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+
