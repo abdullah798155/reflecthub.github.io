@@ -3156,6 +3156,6 @@ document.getElementById('installBtn').addEventListener('click', () => {
     });
   } else {
     // Fallback if prompt isn't available
-    alert("📲 To install the app:\n- Android: Open in Chrome and tap 'Add to Home Screen'\n- iOS: Tap Share → 'Add to Home Screen'");
+    alert("App already Installed !\n or \n📲 To install the app:\n- Android: Open in Chrome and tap 'Add to Home Screen'\n- iOS: Tap Share → 'Add to Home Screen'");
   }
 });
