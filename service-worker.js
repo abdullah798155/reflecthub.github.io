@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v60"; // Increment this to force cache update
+const CACHE_NAME = "abdullah-pwa-cache-v61"; // Increment this to force cache update
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
