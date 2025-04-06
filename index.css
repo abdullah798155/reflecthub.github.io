@@ -855,13 +855,18 @@ body {
 }
 
 .tabs.fade-up {
-    opacity: 0;
-    transform: translateY(-100%);
-    pointer-events: none;
+    animation:fadeUp 0.2s ease forwards;
 }
 
 .tabs.fade-down {
     animation: fadeDown 0.4s ease forwards;
+}
+#navbar-mobile.fade-up {
+    animation:fadeUp 0.2s ease forwards;
+}
+
+#navbar-mobile.fade-down {
+    animation: fadeDown 0.2s ease forwards;
 }
 
 @keyframes fadeDown {
@@ -873,6 +878,18 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
 }
 
 .tab-btn {
