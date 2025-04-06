@@ -481,3 +481,49 @@ function copy(divId) {
           expanded = !expanded;
         });
       });
+
+const tabs = document.getElementById('navbar-mobile')
+const FADE_UP_POSITION = 600;  // Scroll down threshold to hide
+const SCROLL_UP_AMOUNT = 20;  // Amount to scroll up to show tabs again
+
+let lastScrollPosition = 0;
+let scrollingUp = false;
+let scrollUpAmount = 0;
+
+document.body.addEventListener('scroll', () => {
+//if device is tab or mobile then dont show the tabs
+
+  const currentScroll = document.body.scrollTop;
+  
+  // Determine scroll direction
+  scrollingUp = currentScroll < lastScrollPosition;
+  
+  // If scrolling up, accumulate the scroll amount
+  if (scrollingUp) {
+      scrollUpAmount += (lastScrollPosition - currentScroll);
+  } else {
+      // Reset scroll up amount if scrolling down
+      scrollUpAmount = 0;
+  }
+
+  // Handle fade up when scrolling down past threshold
+  if (currentScroll > FADE_UP_POSITION && !scrollingUp) {
+      tabs.classList.add('fade-up');
+      tabs.classList.remove('fade-down');
+  }
+  
+  // Handle fade down when scrolled up enough
+  if (scrollUpAmount > SCROLL_UP_AMOUNT) {
+      tabs.classList.remove('fade-up');
+      tabs.classList.add('fade-down');
+      scrollUpAmount = 0;  // Reset the counter
+  }
+  
+  // Always show at the top
+  if (currentScroll === 0) {
+      tabs.classList.remove('fade-up');
+      tabs.classList.add('fade-down');
+  }
+
+  lastScrollPosition = currentScroll;
+});
