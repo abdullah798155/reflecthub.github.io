@@ -34,7 +34,7 @@ const NO_CACHE_FILES = [
   "/legacy/index.html",
   "/legacy/legacy.css",
   "/legacy/legacy.js",
-  "/about/"
+  "/about/",
   "/about/index.html",
   "/about/about.css",
   "/reflections/",
