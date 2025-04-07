@@ -1,504 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-919CJ19C8Q');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="ReflectHub">
-    <meta property="og:description" content="Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!">
-    <meta property="og:image" content="https://raw.githubusercontent.com/reflecthub/reflecthub.github.io/main/Homepage.png">
-    <meta property="og:url" content="https://reflecthub.github.io">
-    <meta property="og:type" content="website">
-    <title>ReflectHub</title>
-    <meta name="description" content="Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!" />
-
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="ReflectHub" />
-    <meta itemprop="description" content="Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!" />
-    <meta itemprop="image" content="https://raw.githubusercontent.com/reflecthub/reflecthub.github.io/main/Homepage.png" />
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://reflecthub.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ReflectHub" />
-    <meta property="og:description" content="Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/reflecthub/reflecthub.github.io/main/Homepage.png" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ReflectHub" />
-    <meta name="twitter:description" content="Watch these videos sincerely and reflect upon them deeply, so you may find truth and accept it!" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/reflecthub/reflecthub.github.io/main/Homepage.png" />
-
-    <!-- Meta Tags Generated via https://heymeta.com -->
-    <link rel="icon" type="image/x-icon" href="image.png">
-    <link rel="stylesheet" href="index.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
-
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | ReflectHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./about.css" />
 </head>
+<body>
+  <div class="bg-gradient"></div>
 
-<body style="background-color:#c8ffcd;">
-
-    <!-- Navbar -->
-   <div id="notification" style="display: none;"></div>
-   <nav style="
-   position: relative;
-   margin: 1% 1.5% 0 1.5%;
-   border-radius: 16px;
-   background-color: #2f4f4f;
-   padding: 10px 20px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-   font-family: 'Quicksand', sans-serif;
-   min-height: 58px;
-   overflow: hidden;
-   z-index: 1;
- " id="navbar-mobile" >
- 
-   <!-- ✨ Shimmer animation background -->
-   
- 
-   <!-- 🧠 Main navbar content -->
-   <div style="position: relative; z-index: 2; display: flex; justify-content: space-between; width: 100%; align-items: center;">
- 
-     <!-- Left Side: Hamburger & Logo -->
-     <div style="display: flex; align-items: center; gap: 15px;">
-       <!-- Hamburger Menu -->
-       <div class="hamburger-menu" style="
-         cursor: pointer;
-         font-size: 29px;
-         color: white;
-         padding: 6px 10px;
-         background-color: rgba(67, 133, 133, 0.5);
-         border-radius: 8px;
-         border: 1px solid #6ce7d1;">
-         ☰
-       </div>
- 
-       <!-- Logo + Title -->
-       <a href="https://reflecthub.github.io/" style="text-decoration: none; display: flex; align-items: center;">
-         <img src="./icon5.png" alt="Logo" style="height: 45px; width: auto;">
-         <h3 id="title" style="
-           font-weight: bold;
-           color: rgb(108, 231, 209);
-           text-shadow: 1px 1px 2px black;
-           margin: 0;
-  
-           font-family: 'Quicksand', sans-serif;" class="responsive-title">
-           ReflectHub
-         </h3>
-       </a>
-     </div>
- 
-     <!-- Right Side: Contact & Translation -->
-     <div style="display: flex; align-items: center; gap: 15px;">
-       <div class="panel-icon pop-up-animate1" id="panelIcon" style="
-         background: rgba(255, 255, 255, 0.08);
-         padding: 8px 14px;
-         border-radius: 8px;
-         border: 1px solid rgba(108, 231, 209, 0.3);
-         text-shadow: 0 0 5px #96fff6;
-         font-size: 12px;
-         color: white;
-         font-family: 'Quicksand', sans-serif;
-         cursor: pointer;">
-         Contact & Suggest me 
-       </div>
- 
-       <!-- Citation Info Box -->
-       <span class="citation" data-info="
-         <div style='font-weight:bold; text-align:center; text-decoration: underline; font-family: Quicksand, sans-serif;'>Translate</div>
-         <div style='text-align:center;'>
-           <span>Click here to translate to any language 🌐<br><br>
-             <i>- Default is set to Arabic (العربية)</i><br><br>
-             <b><i>Powered by Google Translate</i></b>
-           </span>
-         </div>">
-         <a href="https://reflecthub-github-io.translate.goog/legacy/?_x_tr_sl=en&_x_tr_tl=ar&_x_tr_hl=en-US&_x_tr_pto=wapp" style="cursor: help;">
-           <img src="./Logos/Translate.png" style="height: 40px; width: auto; filter: drop-shadow(0 0 3px #6ce7d1);">
-         </a>
-       </span>
-     </div>
-     
-   </div>
- </nav>
- 
-
-
-
-
-  
-    
-    
-      
-    
-    <div id="info-box" style='display:flex;justify-content:center; align-items:center'></div>
-    
-
-
-
-
- <div style="   background-color: #c8ffcd; margin-top: 1;" id="readnoti">
-
-        <h5 id="head" style="
-          text-align: center;
-          margin-top: 0;
-          font-family: 'Quicksand', sans-serif;
-          background-color: #c8ffcd;
-          font-weight: 800;
-          padding: 15px 20px;
-          margin-bottom: 0;
-          border-radius: 8px;
-          letter-spacing: 1.2px;
-          color: #2f4f4f;
-          position: relative;
-          font-size: 1.3rem;
-          overflow: hidden; /* Prevents the pseudo-element from overflowing outside */
-        " class="pop-up-animate1">
-          Read Quran <sup> <span style="display: inline-flex; justify-content: center; align-items: center; text-align: center; flex-direction: row;" 
-            class="citation" 
-            data-info="
-                  <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Why Quran?</div>
-                  <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                    <i>The Quran is the only book on earth which has been in its original form since its origin and has <b>never</b>  been corrupted and gone through any editing process.<br><br>
-                        <span style='background-color:#eab8e4; display:inline;'>It is certainly We Who have revealed the Reminder, and it is certainly We Who will preserve it [From corruption].<br>[Quran 15:9]</span><br><br>
-                        If all the books in the world were to disappear from face of earth, then Quran is the only book which can be bought back to its original form, cover to cover, word by word <br>[Because millions of people have memorized it cover to cover].<br><br>
-                        Quran also contains various Scientific and Historical facts which were unknown at the time of its revelation (You will get to know them by watching below videos).<br>
-                    </i>
-                  </div>">
-              [i]
-      </span></sup> and watch these <a href="/credits" style="text-decoration: underline dotted;color: #2f4f4f;" title="credits">videos</a><sup><span style="display: inline-flex; justify-content: center; align-items: center; text-align: center; flex-direction: row;"
-        class="citation" 
-        data-info="
-              <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Handpicked logical content</div>
-              <div style='display:flex; justify-content:center; align-items:center; text-align: center;flex-direction:column'>
-                <i>Videos are hosted on YouTube and belong to the respective content creators.
-                </i><br><br><p style='font-weight:bold;'>Rhyad, Talk Islam, Rational Believer, The Recital, MercifulServant, danishkim007, ThereIsNoClash , Bobby's Perspective, Thom J. Défilet (ريّان), muhammad Abdulaziz, The Ink of Scholars Channel, Digital Mimbar, Towards Eternity, Daniel Drury, Daud Kim</p>
-              </div>">
-          [i]
-    </span></sup> sincerely by reflecting upon them deeply, so that you may find truth and accept it!
-      <br><br>
-      <a href="https://www.quran.com" target="_blank" style="text-decoration: none;">
-        <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif;font-weight: 800;"
-          onmousedown="this.style.transform='scale(0.95)';" 
-          onmouseup="this.style.transform='scale(1)';" 
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 100px rgba(0, 172, 255, 1)';">
-          Read the Quran
-        </button>
-      </a>
-      
-      <a href="https://www.miracles-of-quran.com/index.html" target="_blank" style="text-decoration: none;">
-        <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-top: 5px; margin-left: 10px;
-          box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif; font-weight: 800;"
-          onmousedown="this.style.transform='scale(0.95)';" 
-          onmouseup="this.style.transform='scale(1)';" 
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 100px rgba(0, 172, 255, 1)';">
-          Scientific Miracles in Quran
-        </button>
-      </a>
-      <a href="./reflections"  style="text-decoration: none;">
-        <button style="display: inline-block; border-radius: 10px; cursor: pointer; padding: 10px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-top: 5px; margin-left: 10px;
-          box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          animation: glow-animation 1.5s infinite alternate, scale-animation 0.1s ease;font-family: 'Quicksand', sans-serif; font-weight: 800;"
-          onmousedown="this.style.transform='scale(0.95)';" 
-          onmouseup="this.style.transform='scale(1)';" 
-          onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 10px rgba(0, 172, 255, 0.6)';"
-          onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 0 100px rgba(0, 172, 255, 1)';">
-          Reflections 🌿
-        </button>
-      </a>
-      
-
-      
-      <style>
-        @keyframes glow-animation {
-          0% {
-            box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          }
-          50% {
-            box-shadow: 0 0 20px rgba(0, 172, 255, 1);
-          }
-          100% {
-            box-shadow: 0 0 10px rgba(0, 172, 255, 0.6);
-          }
-        }
-      
-        @keyframes scale-animation {
-          0% {
-            transform: scale(1);
-          }
-          100% {
-            transform: scale(0.95);
-          }
-        }
-      </style>
-      
-      
-      
-      
-        </h5 >
-       
-       
-  
-
-
-        <div style="display: flex; justify-content: center; align-items: center; height: 3.5vh;" class="pop-up-animate1" id="mobile-warn">
-          <span style="font-weight: bold; display: inline-flex; justify-content: center; align-items: center; text-align: center; font-size: 20px; flex-direction: row;" 
-                class="citation" 
-                data-info="
-                      <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Experience</div>
-                      <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-                        <i> <br><span style='color:lime; background-color:black;border-radius:20px;padding:2px;'>❗ Use Laptop/Desktop for better experience❗ </span><br><br>If you are on a mobile device then it is recommended to enable Desktop mode  <br> <b>1. On top right  Click on &#8942; or &#9776; <br> 2.  Select 'Switch to Desktop mode' &#9745;.<br><br><span style='color:red;font-size:14px'>⚠️ Some sections of this website does not provide best experience on mobile devices.</span></i></b>
-                      </div>">
-                  [💻?]
-          </span>
-      </div>
-
-<br>
-</div>
-
-  <div class="search-container">
-    <button id="search-button" class="search-btn">
-      <img src="https://ka-p.fontawesome.com/releases/v6.6.0/svgs/regular/magnifying-glass.svg?v=2&token=a463935e93" style="display: inline-block;height: 15px; width: 15px;">  
-      <span class="search-icon"> Search</span>
-      <span class="ctrl-k">ctrl + k</span>
-  </button>
-  
-  
-</div>
-
-<!-- Hidden search bar that appears with Ctrl+K -->
-<div id="search-wrapper">
-    <div class="blur-background"></div>
-    <div style="position: relative; width: 100%; padding: 20px;font-family: 'Quicksand', sans-serif;" class="pop-up-animate">
-        <input type="text" id="search-bar" placeholder="Search by description, channel name, title, video ID..." >
-        <div id="results"></div>
-        <div id="results1"></div>
-    </div>
-</div>
-<!-- Hamburger Icon for mobile -->
-
-<!-- Sidebar -->
-<div class="sidebar">
-    <div class="sidebar-content">
-        <!--to close-->
-        <span class="close-side" style="font-size: xx-large;cursor: pointer;">X</span><br>
-        
-        <h2 style="color: aliceblue; font-family: 'Quicksand'; border-bottom: 2px solid rgba(93, 182, 196, 0.7);padding: 5px;">Content</h2>
-    
-        <ul>
-            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('rational', this)">Rational 🧠</a></li>
-            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('scientific', this)">Scientific 🔬</a></li>
-            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('inspirational', this)">Inspirational ✨</a></li>
-            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVideos('reactions', this)">Reactions 💻</a></li>
-            <li><a href="#videoContainer" class="sidebar-categ" onclick="loadVerses('verses', this)">Verses from Quran 📖</a></li>
-            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('reflections', this)">Reflections 🌿</a></li>
-            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('faith', this)">Declaration of faith ☝️</a></li>
-            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('afterlife', this)">Why Afterlife 🌍?</a></li>
-            <li><a href="#" class="sidebar-categ" onclick="DynamicLoader('quran science', this)">Science in Quran 🌌</a></li>
-           
-        </ul>
-        <h2 style="color: aliceblue; font-family: 'Quicksand'; border-bottom: 2px solid rgba(93, 182, 196, 0.7);"></h2>
-        <ul>
-          <li><a href="./about" > &#9432; About</a></li>
-        </ul>
-    </div>
-</div>
-
-<div class="tabs" id="tabs">
-  <button href="#videoContainer" class="tab-btn active" onclick="loadVideos('rational', this)" title="Rational &#10;&#10; Where rational people think">Rational 🧠</button>
-  <button href="#videoContainer" class="tab-btn" onclick="loadVideos('scientific', this)" title="Scientific &#10;&#10; Exploring science and discoveries">Scientific 🔬</button>
-  <button href="#videoContainer" class="tab-btn" onclick="loadVideos('inspirational', this)" title="Inspirational &#10;&#10; Motivational and uplifting content">Inspirational ✨</button>
-  <button href="#videoContainer" class="tab-btn" onclick="loadVideos('reactions', this)" title="Reactions &#10;&#10; Analysis and responses to various topics">Reactions 💻</button>
-  <button href="#videoContainer" class="tab-btn" onclick="loadVerses('verses', this)" title="Verses from Quran &#10;&#10; Wisdom and guidance from the Quran">Verses from Quran 📖</button>
-  <button href="#" class="tab-btn" onclick="DynamicLoader('reflections', this)" title="Reflections &#10;&#10; Reflect wisely !">Reflections 🌿</button>
-  <button href="#" class="tab-btn" onclick="DynamicLoader('faith', this)" title="Declaration of Faith &#10;&#10; Understanding the core belief">Declaration of faith ☝️</button>
-
-  
- 
-</div>
-
-<!-- Overlay (for closing the sidebar when clicked outside) -->
-<div class="overlay"></div>
-
-<div class="loading" id="loading">
-    <div class="spinner"></div>
-    Loading videos...
-</div>
-
-
-<!-- <sup> <span style="display: inline-flex; justify-content: center; align-items: center; text-align: center; flex-direction: row;" 
-  class="citation" 
-  data-info="
-        <div style='font-weight:bold; display:flex; justify-content:center; align-items:center; text-decoration: underline; text-align: center;'>Why Quran?</div>
-        <div style='display:flex; justify-content:center; align-items:center; text-align: center;'>
-          <i>The Quran is the only book on earth which has been in its original form since its origin and has <b>never</b>  been corrupted and gone through any editing process.<br><br>
-              <span style='background-color:#eab8e4; display:inline;'>It is certainly We Who have revealed the Reminder, and it is certainly We Who will preserve it [From corruption].<br>[Quran 15:9]</span><br><br>
-              If all the books in the world were to disappear from face of earth, then Quran is the only book which can be bought back to its original form, cover to cover, word by word <br>[Because millions of people have memorized it cover to cover].<br><br>
-              Quran also contains various Scientific and Historical facts which were unknown at the time of its revelation (You will get to know them by watching below videos).<br>
-          </i>
-        </div>">
-        <h2 id="dynamicContent"></h2>
-      </span></sup> -->
-  <h2 id="dynamicContent"></h2>
-  <div class="container" id="videoContainer">
-      <!-- Videos will be inserted here -->
-  </div>
-
-    
-    
-<div class="footer footer-anchors" style="font-family: 'Quicksand', sans-serif !important; font-weight: 500;">
-  
- 
-  <div class="footer1">
-        <div style="display: flex; flex-direction: column;" id="sec1">
-          <h2>📞 Contact</h2>
-          <p>📩<a href="./Contact" style="text-decoration: none;padding: 5px; border-radius: 5px;">reflect.intel@gmail.com</a></p>
-          <p>💬<a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;">Feedback</a></p>
-          <p >🔎<a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;">Bug report</a></p>
-          <p><a href="" target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;"><img src='./Logos/discord.png' style="height:20px; width: 20px;"> blaze_0101</a></p>
-          <p><a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank" style="text-decoration: none;padding: 5px; border-radius: 5px;"> <img src='./Logos/github.svg' style="height:20px; width: 20px;"> Github</a></p><br>
-          <h2>🔗 Other Links</h2>
-          <p>✨ <a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155" style="text-decoration: none; border-radius: 5px;">QuranReflect</a></p>
-          <p>📄 <a target="_blank" href="./Reflecthub docs/ReflectHub-PDF.pdf" style="text-decoration: none; border-radius: 5px;">Reflecthub Docs</a></p>
+  <div class="page-container">
+    <section class="glass-card float-up" id="topview">
+        <div class="logo-wrap">
+        <a href="https://reflecthub.github.io">
+        <div class="combiner">
+        <img src="../icon5.png" alt="ReflectHub Logo" class="logo-img" />
+        <h1>ReflectHub</h1>
         </div>
-        <div style="display: flex; flex-direction: column;  justify-content: center; align-items: center;">
-         
-          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 1rem; flex-wrap: wrap; text-align: center; width: 100%;">
-            <img src="./icon5.png" style="height: auto; width: 80px; max-width: 80px; min-width: 80px; ">
-                <h2 style="color: aqua; margin-bottom: 0;  font-size: 24px;">ReflectHub</h2>
-                <p style="color: white;font-size: 1.2rem;"> <img src="./Logos/locate.svg" style="height: 17px; width: 17px;"> Hyderabad , IN</p>
-               
-            
-        </div>
-        
-        
-      
-        
-        
-          
-         
-        </div>
-        <div style="display: flex; flex-direction: column;">
-            <div class="panel-icon pop-up-animate1" id="panelIcon1">
-            <h6 >Contact & Suggest me</h6>
-        </div><br>
-        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <img src="./qr-code.svg" style="height: 150px; width: 150px; border-radius: 15px;">
-         </div>
-        <br>
-        <div style="text-align: center;"><p>Share:</p></div>
-        <div style="display: flex; flex-direction: row; align-items: flex-start; max-width: 200px; margin-left: 10px;">
-            <!-- Share on Twitter -->
-            <a href="https://twitter.com/share?url=https://reflecthub.github.io&text=Watch+these+videos+sincerely+and+reflect+upon+them+deeply,+so+you+may+find+truth+and+accept+it!" 
-            target="_blank" style="display: flex; flex-direction:column ; align-items: center; gap: 10px; margin-bottom: 10px; width: auto; text-decoration: none;">
-            <img src="./Logos/twitter.png" style="height: 30px; width: 30px;">
-            <p style="margin: 0; font-size: 14px;">Twitter</p>
-            </a>
-            
-            <!-- Share on Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://reflecthub.github.io&quote=Watch+these+videos+sincerely+and+reflect+upon+them+deeply,+so+you+may+find+truth+and+accept+it!" 
-            target="_blank" style="display: flex;flex-direction:column ; align-items: center; gap: 10px; margin-bottom: 10px; width: auto; text-decoration: none;">
-            <img src="./Logos/facebook.png" style="height: 30px; width: 30px;">
-            <p style="margin: 0; font-size: 14px;">Facebook</p>
         </a>
-        
-        <!-- Share on Reddit -->
-        <a href="https://www.reddit.com/submit?url=https://reflecthub.github.io&title=Watch+these+videos+sincerely+and+reflect+upon+them+deeply,+so+you+may+find+truth+and+accept+it!" 
-                target="_blank" style="display: flex;flex-direction:column ; align-items: center; gap: 10px; width: auto; text-decoration: none;">
-                <img src="./Logos/reddit.png" style="height: 30px; width: 30px;">
-                <p style="margin: 0; font-size: 14px;">Reddit</p>
-            </a>
-        </div>
-        <button id="installBtn" style="padding:10px 20px; font-size:16px; background:#4CAF50; color:white; border:none; border-radius:5px; cursor:pointer;font-family: 'Quicksand', sans-serif">
-          Install App
-        </button>
-        
-        <div style="display: flex; justify-content: center; align-items:center;">
-        </div>
-        </div>
+        <p><img src="../Logos/locate.svg" class="icon"> Hyderabad, IN</p>
+      </div>
+    </section>
 
-  </div>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;" id="footer-bottom">
-   
-    <p style="color: rgb(226, 225, 225);">&copy; ReflectHub 2025</p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center;  padding: 10px; max-width: 100%;">
-      <p style="margin: 0;"><a href="./terms" style="text-decoration: none !important; white-space: nowrap;">Terms</a></p>
-      <p style="margin: 0;"><a href="" style="text-decoration: none !important;">&bull;&nbsp;</a></p>
-      <p style="margin: 0;"><a href="./privacy" style="text-decoration: none !important; white-space: nowrap;">Privacy</a></p>
-      <p style="margin: 0;"><a href="" style="text-decoration: none !important;">&bull;&nbsp;</a></p>
-      <p style="margin: 0;"><a href="./legacy" style="text-decoration: none !important; white-space: nowrap;">Legacy</a></p>
-      <p style="margin: 0;"><a href="" style="text-decoration: none !important;">&bull;&nbsp;</a></p>
-      <p style="margin: 0;"><a href="./about" style="text-decoration: none !important; white-space: nowrap;">About</a></p>
-      <p style="margin: 0;"><a href="" style="text-decoration: none !important;">&bull;&nbsp;</a></p>
-      <p style="margin: 0;"><a href="./response" style="text-decoration: none !important; white-space: nowrap;">Server</a></p>
-      <p style="margin: 0;"><a href="" style="text-decoration: none !important;">&bull;&nbsp;</a></p>
-      <p style="margin: 0;"><a href="./credits" style="text-decoration: none !important; white-space: nowrap;">Credits</a></p>
-    </div>
-    
-   
-</div>
-        
-</div>
-        
-<div class="popup" id="popup">
-    <div class="popup-content" style="background-color: #5b6d6dc2;
-backdrop-filter: blur(7px);font-family: 'Quicksand', sans-serif;font-weight: 600;color: white;" >
-        <span class="close" id="closePopup">&times;</span>
-        <div style="text-align: center;">
-          <h2 style="
-              border-bottom: 2px solid rgba(93, 182, 196, 0.7); 
-              display: inline-block; 
-              margin: auto;">
-              About Me
-          </h2>
-      </div><br>
-      
-        <p>Hello!&nbsp;<a href="https://www.instagram.com/md_abdullah_0101/" target="_blank" style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">I am Mohammed Abdullah</a></p>
-        <p class="swipers2">I am compiling a list of islamic videos which rational people may reflect upon and might accept the truth.</p><br>
-        <p>Contact me below to suggest me some videos</p>
-        <div >
-        <p>Email : <a href="./Contact"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">reflect.intel@gmail.com</a></p>
-        <p >Leave a <a href="https://forms.gle/Df9x2k9nbfRffjy59"  target="_blank" style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">Feedback</a></p>
-        <p >Report a <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6"  target="_blank"   style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">Bug</a></p>
-        <p >Discord: <a href="#"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">blaze_0101</a></p>
-        <span>Other Links:</span>
-        <a target="_blank" href="https://quranreflect.com/?authors=%40abdullah798155"  style="text-decoration: none;background-color: #96fff6e3; color: rgb(116, 114, 114);padding: 5px; border-radius: 5px;">QuranReflect</a>
+    <section class="glass-card delay-1 float-up">
+      <h2>👤 About Me</h2>
+      <h3>Hello, I'm <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">Mohammed Abdullah</a>.</h3>
+      <p>I am compiling a list of islamic videos which rational people may reflect upon and might accept the truth.</p>
+    </section>
 
-        </div>
+    <section class="glass-card delay-2 float-up">
+      <h2>📬 Contact</h2>
+      <ul>
+        <li>📧 <a href="../Contact">reflect.intel@gmail.com</a></li>
+        <li>💬 <a href="https://forms.gle/Df9x2k9nbfRffjy59" target="_blank">Leave Feedback</a></li>
+        <li>🐞 <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6" target="_blank">Report Bug</a></li>
+        <li>💻 Discord: <span class="pill">blaze_0101</span></li>
+      </ul>
+    </section>
+
+    <section class="glass-card delay-3 float-up">
+      <h2>🔗 Other Links</h2>
+      <ul>
+        <li>✨ <a href="https://quranreflect.com/?authors=%40abdullah798155" target="_blank">QuranReflect</a></li>
+        <li>📄 <a href="../Reflecthub docs/ReflectHub-PDF.pdf" target="_blank">ReflectHub Docs</a></li>
+        <li>🐙 <a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank">GitHub </a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <h2>&copy; ReflectHub 2025</h2>
+      <a href="../terms">Terms</a> · 
+      <a href="../privacy">Privacy</a> · 
+      <a href="../legacy">Legacy</a> · 
+      <a href="../response">Server</a> · 
+      <a href="../credits">Credits</a>
+    </footer>
   </div>
-  </div>
-    
- 
-    
-    
-    <script src="index.js"></script>
-    <script src="./search.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 </body>
-
 </html>
