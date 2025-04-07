@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v63"; // Increment this to force cache update
+const CACHE_NAME = "abdullah-pwa-cache-v64"; // Increment this to force cache update
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -20,8 +20,6 @@ const ASSETS_TO_CACHE = [
   "/credits/index.html",
   "/credits/credits.js",
   "/credits/credits.css",
-  "/about/index.html",
-  "/about/about.css",
   "/drop.html",
   "/future.html",
   "/image.png",
@@ -36,6 +34,9 @@ const NO_CACHE_FILES = [
   "/legacy/index.html",
   "/legacy/legacy.css",
   "/legacy/legacy.js",
+  "/about/"
+  "/about/index.html",
+  "/about/about.css",
   "/reflections/",
   "/reflections/index.html",
   "/index.html",
