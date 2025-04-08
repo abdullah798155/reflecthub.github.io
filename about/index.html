@@ -1,62 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | ReflectHub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./about.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReflectHub - About</title>
+  <link rel="stylesheet" href="about.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='52' fill='white'>&#9432;</text></svg>">
 </head>
 <body>
-  <div class="bg-gradient"></div>
-
-  <div class="page-container">
-    <section class="glass-card float-up" id="topview">
-        <div class="logo-wrap">
-        <a href="https://reflecthub.github.io">
-        <div class="combiner">
-        <img src="../icon5.png" alt="ReflectHub Logo" class="logo-img" />
-        <h1>ReflectHub</h1>
+  <div class="cursor-glow"></div>
+  
+  <header>
+    <nav class="nav-container">
+      <a href="https://reflecthub.github.io" class="logo">
+        <div class="logo-wrapper">
+          <img src="../image.png" alt="ReflectHub Logo">
+          <span>ReflectHub</span>
         </div>
-        </a>
-        <p><img src="../Logos/locate.svg" class="icon"> Hyderabad, IN</p>
+      </a>
+      <div class="nav-links">
+        <a href="https://reflecthub.github.io" class="nav-link">Home</a>
+        <a href="#" class="nav-link active">About</a>
+        <a href="../Contact" class="nav-link">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="reveal-text">About <span class="gradient-text">ReflectHub</span></h1>
+        <p class="location reveal-text-delay">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22C16 18 20 14.4183 20 10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10C4 14.4183 8 18 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Hyderabad, India
+        </p>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <div class="arrow">
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </section>
 
-    <section class="glass-card delay-1 float-up">
-      <h2>👤 About Me</h2>
-      <h3>Hello, I'm <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank">Mohammed Abdullah</a>.</h3>
-      <p>I am compiling a list of islamic videos which rational people may reflect upon and might accept the truth.</p>
+    <section class="about-me card">
+      <div class="card-content">
+        <div class="section-header">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2.90625 20.2499C3.82775 18.6534 5.15328 17.328 6.75 16.4062C8.34672 15.4843 10.1534 15 12 15C13.8466 15 15.6533 15.4843 17.25 16.4062C18.8467 17.328 20.1722 18.6534 21.0938 20.2499" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>About Me</h2>
+        </div>
+        <h3>Hello, I'm <a href="https://www.instagram.com/md_abdullah_0101/" target="_blank" class="highlight-link">Mohammed Abdullah</a>.</h3>
+        <p>I am compiling a list of Islamic videos which rational people may reflect upon and might accept the truth. My goal is to create a thoughtful collection of content that inspires meaningful reflection.</p>
+      </div>
     </section>
 
-    <section class="glass-card delay-2 float-up">
-      <h2>📬 Contact</h2>
-      <ul>
-        <li>📧 <a href="../Contact">reflect.intel@gmail.com</a></li>
-        <li>💬 <a href="https://forms.gle/Df9x2k9nbfRffjy59" target="_blank">Leave Feedback</a></li>
-        <li>🐞 <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6" target="_blank">Report Bug</a></li>
-        <li>💻 Discord: <span class="pill">blaze_0101</span></li>
-      </ul>
+    <section class="contact card">
+      <div class="card-content">
+        <div class="section-header">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 5.25L12 13.5L3 5.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 5.25H21V18C21 18.1989 20.921 18.3897 20.7803 18.5303C20.6397 18.671 20.4489 18.75 20.25 18.75H3.75C3.55109 18.75 3.36032 18.671 3.21967 18.5303C3.07902 18.3897 3 18.1989 3 18V5.25Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10.3633 12L3.23145 18.538" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20.7692 18.5381L13.6373 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <a href="../Contact" class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <p>reflect.intel@gmail.com</p>
+            </div>
+          </a>
+          <a href="https://forms.gle/Df9x2k9nbfRffjy59" target="_blank" class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12H16M8 16H12M8 8H16M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3>Feedback</h3>
+              <p>Share your thoughts</p>
+            </div>
+          </a>
+          <a href="https://forms.gle/Qs7LWWRrjH3M4vZV6" target="_blank" class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 11L12 15L16 11M19 10C19 11.1819 18.7672 12.3522 18.3149 13.4442C17.8626 14.5361 17.1997 15.5282 16.364 16.364C15.5282 17.1997 14.5361 17.8626 13.4442 18.3149C12.3522 18.7672 11.1819 19 10 19C8.8181 19 7.64778 18.7672 6.55585 18.3149C5.46392 17.8626 4.47177 17.1997 3.63604 16.364C2.80031 15.5282 2.13738 14.5361 1.68508 13.4442C1.23279 12.3522 1 11.1819 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3>Report Bug</h3>
+              <p>Help us improve</p>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5299 9.46998L9.46992 14.53C8.81992 13.88 8.41992 12.99 8.41992 12C8.41992 10.02 10.0199 8.41998 11.9999 8.41998C12.9899 8.41998 13.8799 8.81998 14.5299 9.46998Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.8198 5.76998C16.0698 4.44998 14.0698 3.72998 11.9998 3.72998C8.46984 3.72998 5.17984 5.80998 2.88984 9.40998C1.98984 10.82 1.98984 13.19 2.88984 14.6C3.67984 15.84 4.59984 16.91 5.59984 17.77" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.41992 19.5301C9.55992 20.0101 10.7699 20.2701 11.9999 20.2701C15.5299 20.2701 18.8199 18.1901 21.1099 14.5901C22.0099 13.1801 22.0099 10.8101 21.1099 9.40005C20.7799 8.88005 20.4199 8.39005 20.0499 7.93005" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.5099 12.7C15.2499 14.11 14.0999 15.26 12.6899 15.52" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.47 14.53L2 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22 2L14.53 9.47" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <h3>Discord</h3>
+              <p class="badge">blaze_0101</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="glass-card delay-3 float-up">
-      <h2>🔗 Other Links</h2>
-      <ul>
-        <li>✨ <a href="https://quranreflect.com/?authors=%40abdullah798155" target="_blank">QuranReflect</a></li>
-        <li>📄 <a href="../Reflecthub docs/ReflectHub-PDF.pdf" target="_blank">ReflectHub Docs</a></li>
-        <li>🐙 <a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank">GitHub </a></li>
-      </ul>
+    <section class="links card">
+      <div class="card-content">
+        <div class="section-header">
+          <div class="icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 13C11.3132 14.3131 13.3017 14.3131 14.615 13C15.9282 11.6869 15.9282 9.69838 14.615 8.38522C13.3017 7.07207 11.3132 7.07207 10 8.38522" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.38522 15C7.07207 13.6868 7.07207 11.6983 8.38522 10.385C9.69838 9.07188 11.6869 9.07188 13 10.385" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Quick Links</h2>
+        </div>
+        <div class="links-grid">
+          <a href="https://quranreflect.com/?authors=%40abdullah798155" target="_blank" class="link-card">
+            <div class="link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 16H5C4.44772 16 4 15.5523 4 15V6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6V15C20 15.5523 19.5523 16 19 16H16M12 16V20M12 20H8M12 20H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 9H16M8 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>QuranReflect</h3>
+              <p>Join the community</p>
+            </div>
+          </a>
+          <a href="../Reflecthub docs/ReflectHub-PDF.pdf" target="_blank" class="link-card">
+            <div class="link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 16V3C19 2.73478 18.8946 2.48043 18.7071 2.29289C18.5196 2.10536 18.2652 2 18 2H9L3 8V18C3 18.2652 3.10536 18.5196 3.29289 18.7071C3.48043 18.8946 3.73478 19 4 19H16M19 16L16 19M19 16H9M19 16V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 2V8H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Documentation</h3>
+              <p>Learn more</p>
+            </div>
+          </a>
+          <a href="https://github.com/reflecthub/reflecthub.github.io/blob/main/README.md" target="_blank" class="link-card">
+            <div class="link-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21C9.5 20.77 9.5 20.14 9.5 19.31C6.73 19.91 6.14 17.97 6.14 17.97C5.68 16.81 5.03 16.5 5.03 16.5C4.12 15.88 5.1 15.9 5.1 15.9C6.1 15.97 6.63 16.93 6.63 16.93C7.5 18.45 8.97 18 9.54 17.76C9.63 17.11 9.89 16.67 10.17 16.42C7.95 16.17 5.62 15.31 5.62 11.5C5.62 10.39 6 9.5 6.65 8.79C6.55 8.54 6.2 7.5 6.75 6.15C6.75 6.15 7.59 5.88 9.5 7.17C10.29 6.95 11.15 6.84 12 6.84C12.85 6.84 13.71 6.95 14.5 7.17C16.41 5.88 17.25 6.15 17.25 6.15C17.8 7.5 17.45 8.54 17.35 8.79C18 9.5 18.38 10.39 18.38 11.5C18.38 15.32 16.04 16.16 13.81 16.41C14.17 16.72 14.5 17.33 14.5 18.26C14.5 19.6 14.5 20.68 14.5 21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 6.48 17.52 2 12 2Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h3>GitHub</h3>
+              <p>View source code</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
+  </main>
 
-    <footer>
-      <h2>&copy; ReflectHub 2025</h2>
-      <a href="../terms">Terms</a> · 
-      <a href="../privacy">Privacy</a> · 
-      <a href="../legacy">Legacy</a> · 
-      <a href="../response">Server</a> · 
-      <a href="../credits">Credits</a>
-    </footer>
-  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="copyright">
+          <p>&copy; ReflectHub 2025</p>
+        </div>
+        <div class="footer-links">
+          <a href="../terms">Terms</a>
+          <a href="../privacy">Privacy</a>
+          <a href="../legacy">Legacy</a>
+          <a href="../response">Server</a>
+          <a href="../credits">Credits</a>
+        </div>
+      </div>
+     
+    </div>
+  </footer>
+  <script>
+    /* Add cursor position tracking */
+document.addEventListener('DOMContentLoaded', function() {
+  const cursorGlow = document.querySelector('.cursor-glow');
+  
+  document.addEventListener('mousemove', (e) => {
+    cursorGlow.style.opacity = '0.3';
+    cursorGlow.style.left = `${e.clientX}px`;
+    cursorGlow.style.top = `${e.clientY}px`;
+  });
+  
+  document.addEventListener('mouseout', () => {
+    cursorGlow.style.opacity = '0';
+  });
+
+  // Add smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+});
+  </script>
 </body>
 </html>
