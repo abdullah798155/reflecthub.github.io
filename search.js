@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     description: video.description,
                     channelName: video.channelName,
                     link:video.link,
-                    thumbnail: video.thumbnail
+                    thumbnail: video.thumbnail,
+                    keywords:video.keywords
                 }));
                 allVideos = allVideos.concat(filteredData);
             }
