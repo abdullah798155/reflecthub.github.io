@@ -1,4 +1,4 @@
-const CACHE_NAME = "abdullah-pwa-cache-v65"; // Increment this to force cache update
+const CACHE_NAME = "abdullah-pwa-cache-v67"; // Increment this to force cache update
 
 const ASSETS_TO_CACHE = [
   "/Logos/Translate.png",
@@ -131,4 +131,5 @@ self.addEventListener("activate", (event) => {
   );
   self.clients.claim(); // Take control of clients immediately
 });
+
 
